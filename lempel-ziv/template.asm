@@ -1,14 +1,12 @@
-.include "printutils.asm"
+.include "utils.asm"
 
 .data
+	beginMain:        .asciiz "Starting main procedure\n"
 
-	beginMain:  .asciiz "Starting main procedure\n"
-	endProgram: .asciiz "Exiting\n"
-	
 .text
 	# Main procedure
 	main:
-		pstr beginMain
+		pstr  beginMain
 
 		# Your code goes in here
 		
