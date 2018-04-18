@@ -18,7 +18,7 @@
 .macro phex %reg
 	move $t9, $a0    # Print Hex Macro
 	li   $v0, 34
-	move   $a0, %reg
+	move $a0, %reg
 	syscall
 	move $a0, $t9
 .end_macro
