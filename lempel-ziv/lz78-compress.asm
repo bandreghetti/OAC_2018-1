@@ -28,8 +28,9 @@
 		jal countBytes
 		sw $v0, fileSize
 		
-		malloc outputDict, $v0
 		malloc outputChars, $v0
+		sll $v0, $v0, 2
+		malloc outputDict, $v0
 		fopen inputFP, inputFileName, 0
 		
 		 
@@ -53,16 +54,47 @@
 		countBreak:
 		move $v0, $s0
 		lw $s0, 0($sp)
-		addi $sp, $sp +4
+		addi $sp, $sp, +4
 		jr $ra
 
+	# $s0 = address to the output dictionary indexes
+	# $s1 = address to the output chars
+	# $t0 = index for counting how many file characters the procedure has processed
+	# $t1 = index for counting how many dictionary indexes were checked
+	# $t2 = next char to compress
+	# $t3 = current output dictionary index to save to outputDict
+	# $t4 = current dict index address to test against $t3 (temporarily it holds the address to load itself)
 	compressData:
-		
+		addi $sp, $sp, -8
+		sw $s0, 4($sp)
+		sw $s1, 8($sp)
 		move $t0, $zero
+		lw $s0, outputDict
+		lw $s1, outputChars
 		whileCompress:
-		fread nextChar, 1, inputFP
-		beqz $v0, compressBreak
-		
-			
-		
+			fread nextChar, 1, inputFP
+			beqz $v0, compressBreak
+			lb $t2, nextChar
+			move $t1, $zero
+			move $t3, $zero
+			whileDict:
+				beq $t0, $t1, dictBreak 
+				add $t4, $s0, $t1
+				sll $t4, $t4, 2
+				lw  $t4, ($t4)
+				#if $t3 equals $t4 (current output index equals tested dict index)
+				#test if the char corresponding to that index is the same as $t2
+				#if so,
+					#save dict index to $t3
+					#download a new character from the file (using fopen)
+					#test if EOF (if so jump to compressBreak)
+					#increment $t1
+					#go back to whileDict
+				#if not,
+					#increment $t1
+					#go back to whileDict
+			dictBreak:
 		compressBreak:
+		sw $s1, 8($sp)
+		sw $s0, 4($sp)
+		addi $sp, $sp, +8
