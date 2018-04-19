@@ -26,3 +26,14 @@
 	li   $a0, %errval
 	syscall
 .end_macro
+
+.macro nbits %regout %regin
+	move %regout, $zero
+	move $t8, %regin
+	whileNbits:
+		beqz $t8, breakNbits
+		srl $t8, $t8, 1
+		addi %regout, %regout, 1
+		j whileNbits
+		breakNbits:
+.end_macro
