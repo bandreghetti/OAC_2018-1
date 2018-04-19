@@ -7,11 +7,15 @@
 	inputFileName:    .space  80
 	.align 2
 	inputFP:          .word   0
-	.align 2
-	nextChar:         .space  1
 	compressedData:   .word   0
 	countBuffer:      .space  1024
 	fileSize:         .word   0
+	.align 2
+	outputDict:       .word   0
+	.align 2
+	outputChars:      .word   0
+	.align 2
+	nextChar:         .space  1
 
 .text
 	# Main procedure
@@ -23,8 +27,12 @@
 		fopen inputFP, inputFileName, 0
 		jal countBytes
 		sw $v0, fileSize
-		phexm fileSize
-		newl
+		
+		malloc outputDict, $v0
+		malloc outputChars, $v0
+		fopen inputFP, inputFileName, 0
+		
+		 
 	#while:
 	#	fread nextChar, 1, inputFP
 	#	beqz $v0, loopbreak
@@ -47,3 +55,14 @@
 		lw $s0, 0($sp)
 		addi $sp, $sp +4
 		jr $ra
+
+	compressData:
+		
+		move $t0, $zero
+		whileCompress:
+		fread nextChar, 1, inputFP
+		beqz $v0, compressBreak
+		
+			
+		
+		compressBreak:

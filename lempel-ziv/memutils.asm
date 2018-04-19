@@ -2,5 +2,5 @@
 # Maybe use sbrk syscall instead?
 .macro malloc %pointer, %size
 	sw  $gp, %pointer    # Malloc macro
-	addi $gp, $gp, %size
+	add $gp, $gp, %size
 .end_macro
