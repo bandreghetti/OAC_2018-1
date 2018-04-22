@@ -7,6 +7,12 @@
 	sw $v0, %fp
 .end_macro
 
+.macro fclose %fp
+	li $v0, 16 # File Close
+	lw $a0, %fp
+	syscall
+.end_macro
+
 .macro fread %buffer, %numbytes, %fp
 	li $v0, 14 # File Read
 	lw $a0, %fp

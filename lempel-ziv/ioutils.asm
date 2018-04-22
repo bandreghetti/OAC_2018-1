@@ -58,6 +58,15 @@
 	move $a0, $t9
 .end_macro
 
+# Print integer from register %reg
+.macro pint %reg
+	move $t9, $a0
+	li   $v0, 1
+	move $a0, %reg
+	syscall
+	move $a0, $t9
+.end_macro
+
 # Print a \n to the console
 .macro newl
 	move $t9, $a0    # Print \n Macro

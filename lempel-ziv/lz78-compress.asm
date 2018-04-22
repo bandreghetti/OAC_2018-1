@@ -27,20 +27,17 @@
 		fopen inputFP, inputFileName, 0
 		jal countBytes
 		sw $v0, fileSize
+		fclose inputFP
 		
+		sll $t0, $v0, 2
+		malloc outputDict, $t0
 		malloc outputChars, $v0
-		sll $v0, $v0, 2
-		malloc outputDict, $v0
-		fopen inputFP, inputFileName, 0
 		
-		 
-	#while:
-	#	fread nextChar, 1, inputFP
-	#	beqz $v0, loopbreak
-	#	pcharm nextChar
-	#	j while
-	#loopbreak:
-	#	newl
+		fopen inputFP, inputFileName, 0
+		jal compressData
+		fclose inputFP
+		
+		
 		
 		exit
 
@@ -59,11 +56,13 @@
 
 	# $s0 = address to the output dictionary indexes
 	# $s1 = address to the output chars
-	# $t0 = index for counting how many file characters the procedure has processed
+	# $t0 = index for counting the size of the dictionary
 	# $t1 = index for counting how many dictionary indexes were checked
 	# $t2 = next char to compress
 	# $t3 = current output dictionary index to save to outputDict
 	# $t4 = current dict index address to test against $t3 (temporarily it holds the address to load itself)
+	# $t5 = char correponding to current dict index being tested (temporarily it holds the address to load itself)
+	# $t6 = used as temporary address to write to outputChars and outputDict arrays
 	compressData:
 		addi $sp, $sp, -8
 		sw $s0, 4($sp)
@@ -79,22 +78,39 @@
 			move $t3, $zero
 			whileDict:
 				beq $t0, $t1, dictBreak 
-				add $t4, $s0, $t1
-				sll $t4, $t4, 2
+				sll $t4, $t1, 2
+				add $t4, $s0, $t4
 				lw  $t4, ($t4)
-				#if $t3 equals $t4 (current output index equals tested dict index)
-				#test if the char corresponding to that index is the same as $t2
-				#if so,
-					#save dict index to $t3
-					#download a new character from the file (using fopen)
-					#test if EOF (if so jump to compressBreak)
-					#increment $t1
-					#go back to whileDict
-				#if not,
-					#increment $t1
-					#go back to whileDict
+				beq $t3, $t4, dictEqual #if $t3 equals $t4 (current output index equals tested dict index)
+				addi $t1, $t1, 1
+				j whileDict	
+				dictEqual:
+					add $t5, $s1, $t1
+					lb  $t5, ($t5)
+					beq $t2, $t5, charEqual #test if the char corresponding to dict index $t1 is the same as $t2
+					                        #if not,
+					addi $t1, $t1, 1            #increment $t1
+					j whileDict                 #go back to whileDict
+					charEqual:              #if so,
+					move $t3, $t1               #save t1 to $t3
+					fread nextChar, 1, inputFP  #load a new character from the file
+					beqz $v0, compressBreak     #test if EOF (if so jump to compressBreak)
+					lb $t2, nextChar
+					addi $t1, $t1, 1
+					j whileDict
 			dictBreak:
+			pint  $t3
+			pchar $t2
+			addi $t0, $t0, 1
+			add  $t6, $s1, $t0
+			sb   $t2, ($t6)
+			sll  $t6, $t0, 2
+			add  $t6, $s0, $t6
+			sw   $t3, ($t6)
+			j whileCompress
 		compressBreak:
+		newl
 		sw $s1, 8($sp)
 		sw $s0, 4($sp)
 		addi $sp, $sp, +8
+		jr $ra
