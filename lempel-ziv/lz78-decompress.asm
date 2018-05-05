@@ -80,7 +80,6 @@
 				beqz $v0, decompressBreak
 				lw $t2, nextChar 
 				addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
-				move $t1, $zero
 				beq $t2, 0, whileIndex0
 				lw $t7, nextChar 
 				addi $t7, $t7, -48
