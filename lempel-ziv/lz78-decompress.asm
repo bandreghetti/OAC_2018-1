@@ -7,7 +7,9 @@
 	beginMain:          .asciiz "Starting main procedure\n"
 	inputFileMessage:   .asciiz "Please enter the name of the file you want to decompress:\n"
 	inputFileName:      .space  80
+	outputFileName:     .asciiz "out/text.txt"
 	.align 2
+	
 	FP:            .word   0
 	compressedData:     .word   0
 	countBuffer:        .space  1024
@@ -75,11 +77,13 @@
 		move $t0, $zero
 		lw $s0, outputDict
 		lw $s1, outputChars
+		fopen FP, outputFileName, 1
 		whileDecompress:
 		        	fread nextChar, 1, FP
 				beqz $v0, decompressBreak
 				lw $t2, nextChar 
 				addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
+				move $t1, $zero
 				beq $t2, 0, whileIndex0
 				lw $t7, nextChar 
 				addi $t7, $t7, -48
@@ -95,6 +99,8 @@
 			        	   pchar $t2
 			        	   add $t6, $s1, $t0
 			        	   sb $t2, ($t6) #Save in char array
+			        	   sb  $t2, outputCharBuffer
+					   fwrite outputCharBuffer, 1, FP
 			        	   j whileDecompress
 			        	  
 			        whileIndexNot0:	
@@ -114,6 +120,8 @@
 			        		  sb $t2, ($t5) #Save in remaining sequence array
 			        		  bne $t7, $zero, IndexNot0  
 			        		  pchar $t5
+			        		  sb  $t5, outputCharBuffer
+						  fwrite outputCharBuffer, 1, FP
 			        		  j whileDecompress 
 			        		  Index0: 
 			        	   	  	PrintRest:#print vector from backwards
@@ -121,6 +129,8 @@
 			        	   			add $t5, $s1, $t4
 			        		  		lb $t2, ($t5)
 			        	   			pchar $t2
+			        	   			sb  $t2, outputCharBuffer
+								fwrite outputCharBuffer, 1, FP
 			        	   			addi $t4, $t4, -1
 			        	   			j PrintRest
 			        	   	 IndexNot0:
@@ -142,6 +152,7 @@
 				add  $t6, $s0, $t6
 				li   $t3, -1
 				sw   $t3, ($t6)
+				fclose FP
 			        lw $s1, 8($sp)
 				lw $s0, 4($sp)
 				addi $sp, $sp, +8
