@@ -24,7 +24,7 @@
 .text
 	# Main procedure
 	main:
-		#Just copied from lz78-Compress 
+		
 		pstr  beginMain
 		pstr  inputFileMessage
 		kbin  inputFileName
@@ -49,7 +49,7 @@
 		
 		exit
 		
-	countBytes: #Just copied from lz78-Compress (Do we have to change this?)
+	countBytes: 
 		addi $sp, $sp, -4
 		sw $s0, 0($sp)
 		fread countBuffer, 1024, FPin
@@ -84,11 +84,9 @@
 		        	fread nextChar, 1, FPin
 				beqz $v0, decompressBreak
 				lbu $t2, nextChar 
-				#addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
 				move $t1, $zero
 				beq $t2, 0, whileIndex0
 				lbu $t7, nextChar 
-				#addi $t7, $t7, -48
 				j whileIndexNot0
 			        whileIndex0: 
 			        	   fread nextChar, 1, FPin
@@ -141,7 +139,7 @@
 			        	   	 	   lbu $t7, ($t6) #Find next index line
 			        	   	 	   bne $t7, $zero, IndexNot0
 			        	   	 	   j Index0		 
-			        decompressBreak: #copied from lz78-compress
+			        decompressBreak: 
 			        newl
 				
 			        lw $s1, 8($sp)
