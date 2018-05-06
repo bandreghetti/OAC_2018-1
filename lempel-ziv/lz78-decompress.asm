@@ -34,14 +34,14 @@
 		fclose FP
 		
 		#Just copied from lz78-Compress 
-		sll $t0, $v0, 2
-		malloc outputDict, $t0
-		malloc outputChars, $v0
+		lw  $t0, fileSize
+		sll $t1, $t0, 2
+		malloc outputDict, $t1
+		malloc outputChars, $t0
 		
 		fopen FP, inputFileName, 0
 		jal decompressData
 		fclose FP
-	
 		
 		exit
 		
