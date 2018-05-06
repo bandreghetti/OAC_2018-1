@@ -17,6 +17,7 @@
 	endCompress:        .asciiz "Compression is finished.\n"
 	beginDict:          .asciiz "Writing output dictionary to \"out/dict.txt\":\n"
 	beginOutput:        .asciiz "Writing compressed output file to \"out/out.lzw\"...\n"
+	sizeMessage:        .asciiz "File Size: "
 	.align 2
 	FP:                 .word   0
 	compressedData:     .word   0
@@ -38,12 +39,16 @@
 		
 		fopen FP, inputFileName, 0
 		jal countBytes
+		move $t0, $v0
 		sw $v0, fileSize
+		pstr sizeMessage
+		pint $t0
+		newl
 		fclose FP
 		
 		lw  $t0, fileSize
-		sll $t1, $t0, 2
-		malloc outputDict, $t1
+		
+		malloc outputDict, $t0
 		malloc outputChars, $t0
 		
 		fopen FP, inputFileName, 0
@@ -62,7 +67,7 @@
 	# $t2 = current dict index
 	# $t3 = current char
 	writeOutputFile:
-		addi $sp, $sp, -8 # writeOutputFile
+		addiu $sp, $sp, -8 # writeOutputFile
 		sw $s0, 4($sp)
 		sw $s1, 8($sp)
 		
@@ -74,18 +79,17 @@
 		li $t0, 1
 		writeLZW:
 			add $t1, $s1, $t0
-			lb  $t3, ($t1)
-			sll $t1, $t0, 2
-			add $t1, $s0, $t1
-			lw  $t2, ($t1)
-			beq $t2, -1, writeOutputBreak
+			lbu  $t3, ($t1)
+			add $t1, $s0, $t0
+			lbu  $t2, ($t1)
+			beq $t2, 255, writeOutputBreak
 			sb  $t3, outputCharBuffer
 			sb  $t2, outputDictBuffer
 			fwrite outputDictBuffer, 1, FP
 			fwrite outputCharBuffer, 1, FP
 			addi $t0, $t0, 1
 			j writeLZW
-		writeOutputBreak:		
+		writeOutputBreak:	
 		lw $s1, 8($sp)
 		lw $s0, 4($sp)
 		addi $sp, $sp, +8
@@ -109,29 +113,28 @@
 		fopen FP, outputDictFileName, 1
 		move $t0, $zero
 		writeDict:
-			bgeu $t0, 256, writeDictBreak
+			bgeu $t0, 255, writeDictBreak
 			add $t1, $s1, $t0
-			lb  $t3, ($t1)
-			sll $t1, $t0, 2
-			add $t1, $s0, $t1
-			lw  $t2, ($t1)
-			beq $t2, -1, writeDictBreak
-			#pint $t0
+			lbu  $t3, ($t1)
+			add $t1, $s0, $t0
+			lbu  $t2, ($t1)
+			beq $t2, 255, writeDictBreak
+			pint $t0
 			intwrite $t0, FP
-			#pcharm colon
+			pcharm colon
 			fwrite colon, 1, FP
-			#pcharm space
+			pcharm space
 			fwrite space, 1, FP
-			#pint $t2
+			pint $t2
 			intwrite $t2, FP
-			#pcharm comma
+			pcharm comma
 			fwrite comma, 1, FP
-			#pcharm space
+			pcharm space
 			fwrite space, 1, FP
-			#pchar $t3
+			pchar $t3
 			sb  $t3, outputCharBuffer
 			fwrite outputCharBuffer, 1, FP
-			#newl
+			newl
 			fwrite newline, 1, FP
 			addi $t0, $t0, 1
 			j writeDict
@@ -176,21 +179,20 @@
 		whileCompress:
 			fread nextChar, 1, FP
 			beqz $v0, compressBreak
-			lb $t2, nextChar
+			lbu $t2, nextChar
 			move $t1, $zero
 			move $t3, $zero
 			whileDict:
-				beq $t0, $t1, dictBreak #test if you finished testing current dict (if so, jump to dictBreak)
-				bgeu $t1, 256, dictBreak
-				sll $t4, $t1, 2
-				add $t4, $s0, $t4
-				lw  $t4, ($t4)          #load next dict index entry 
+				bgt $t1, $t0, dictBreak #test if you finished testing current dict (if so, jump to dictBreak)
+				bgeu $t1, 255, dictBreak
+				add $t4, $s0, $t1
+				lbu  $t4, ($t4)          #load next dict index entry
 				beq $t3, $t4, dictEqual #if $t3 equals $t4 (current output index equals tested dict index)
 				addi $t1, $t1, 1
-				j whileDict	
+				j whileDict
 				dictEqual:
 					add $t5, $s1, $t1
-					lb  $t5, ($t5)
+					lbu  $t5, ($t5)
 					beq $t2, $t5, charEqual #test if the char corresponding to dict index $t1 is the same as $t2
 					                        #if not,
 					addi $t1, $t1, 1            #increment $t1
@@ -199,26 +201,24 @@
 					move $t3, $t1               #save t1 to $t3
 					fread nextChar, 1, FP  #load a new character from the file
 					beqz $v0, compressBreak     #test if EOF (if so jump to compressBreak)
-					lb $t2, nextChar
+					lbu $t2, nextChar
 					addi $t1, $t1, 1	    #increment $t1
 					j whileDict                 #go back to whileDict
 			dictBreak:
-			#pint  $t3
-			#pchar $t2
+			pint  $t3
+			pchar $t2
 			addi $t0, $t0, 1
 			add  $t6, $s1, $t0
 			sb   $t2, ($t6)
-			sll  $t6, $t0, 2
-			add  $t6, $s0, $t6
-			sw   $t3, ($t6)
+			add  $t6, $s0, $t0
+			sb   $t3, ($t6)
 			j whileCompress
 		compressBreak:
-		#newl
+		newl
 		addi $t0, $t0, 1
-		sll  $t6, $t0, 2
-		add  $t6, $s0, $t6
-		li   $t3, -1
-		sw   $t3, ($t6)
+		add  $t6, $s0, $t0
+		li   $t3, 255
+		sb   $t3, ($t6)
 		
 		lw $s1, 8($sp)
 		lw $s0, 4($sp)

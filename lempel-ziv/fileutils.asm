@@ -46,23 +46,23 @@
 	move $t5, $zero
 	whileIntWrite:
 		beqz $t7, breakIntWrite
-		div  $t9, $t6, $t7
+		divu  $t9, $t6, $t7
 		beqz $t9, remZero
 		notLeftZero:
-		addi $t9, $t9, 48
+		addiu $t9, $t9, 48
 		li $t5, 1
 		sb   $t9, byteBuffer
-		addi $t9, $t9, -48
+		addiu $t9, $t9, -48
 		syscall
 		li   $v0, 15
 		j avoidBranch
 		remZero:
 		bnez $t5, notLeftZero
 		avoidBranch:
-		mul  $t8, $t7, $t9
-		sub  $t6, $t6, $t8
+		mulu  $t8, $t7, $t9
+		subu  $t6, $t6, $t8
 		li   $t8, 10
-		div  $t7, $t7, $t8
+		divu  $t7, $t7, $t8
 		j whileIntWrite
 	breakIntWrite:
 	bnez $t5, avoidZero
