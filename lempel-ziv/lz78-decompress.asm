@@ -82,11 +82,11 @@
 		        	fread nextChar, 1, FPin
 				beqz $v0, decompressBreak
 				lw $t2, nextChar 
-				addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
+				#addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
 				move $t1, $zero
 				beq $t2, 0, whileIndex0
 				lw $t7, nextChar 
-				addi $t7, $t7, -48
+				#addi $t7, $t7, -48
 				j whileIndexNot0
 			        whileIndex0: 
 			        	   fread nextChar, 1, FPin
@@ -96,7 +96,6 @@
 			        	   add $t6, $s0, $t6
 			        	   sw $t1, ($t6) #Save in index array
  			        	   lw $t2, nextChar
- 			        	   pchar $t2
 			        	   sb  $t2, outputCharBuffer
 			        	   fwrite outputCharBuffer, 1, FPout
 			        	   add $t6, $s1, $t0
@@ -119,7 +118,6 @@
 			        		  add $t5, $s1, $t4
 			        		  sb $t2, ($t5) #Save in remaining sequence array
 			        		  bne $t7, $zero, IndexNot0  
-			        		  pchar $t2
 			        		  sb  $t2, outputCharBuffer
 			        	   	  fwrite outputCharBuffer, 1, FPout
 			        		  j whileDecompress 
@@ -128,7 +126,6 @@
 			        	   			beq $t4, $t0, whileDecompress
 			        	   			add $t5, $s1, $t4
 			        		  		lb $t2, ($t5)
-			        		  		pchar $t2
 			        		  		addi $t4, $t4, -1
 			        		  		sb  $t2, outputCharBuffer
 			        	  			fwrite outputCharBuffer, 1, FPout
