@@ -1,0 +1,172 @@
+/dev/sda6: clean, 890964/7872512 files, 28028675/31489280 blocks
+[[0;1;31mFAILED[0m] Failed to activate swap /swapfile.
+See 'systemctl status swapfile.swap' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for Swap.
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;1;33mDEPEND[0m] Dependency failed for Encrypted Volumes.
+[[0;32m  OK  [0m] Started Show Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started Forward Password Requests to Plymouth Directory Watch.
+[[0;32m  OK  [0m] Created slice system-systemd\x2dbacklight.slice.
+         Starting Load/Save Screen Backlight Brightness of backlight:intel_backlight...
+[[0;32m  OK  [0m] Started Load/Save Screen Backlight Brightness of backlight:intel_backlight.
+[[0m[0;31m*     [0m] (1 of 2) A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (10s / 1min 30s)[K[[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Starting Load/Save RF Kill Switch Status...
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+[[0;32m  OK  [0m] Reached target Sound Card.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+[[0;1;31m*[0m[0;31m*    [0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (16s / 1min 30s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (17s / 1min 30s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (17s / 1min 30s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (18s / 1min 30s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (18s / 1min 30s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (19s / 1min 30s)[K[     [0;31m*[0m] A start job is running for dev-disk-by\x2duuid-E423\x2d4837.device (19s / 1min 30s)[K[[0;32m  OK  [0m] Found device ST1000LM024_HN-M101MBB SYSTEM.
+         Starting File System Check on /dev/disk/by-uuid/E423-4837...
+         Starting Load/Save RF Kill Switch Status...
+[[0;32m  OK  [0m] Started File System Check Daemon to report status.
+         Starting Show Plymouth Boot Screen...
+         Activating swap /swapfile...
+         Starting Cryptography Setup for cryptswap1...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;1;33mDEPEND[0m] Dependency failed for Swap.
+[[0;1;33mDEPEND[0m] Dependency failed for Encrypted Volumes.
+[[0;1;31mFAILED[0m] Failed to activate swap /swapfile.
+See 'systemctl status swapfile.swap' for details.
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+[[0;32m  OK  [0m] Started Show Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started File System Check on /dev/disk/by-uuid/E423-4837.
+         Mounting /boot/efi...
+[[0;32m  OK  [0m] Mounted /boot/efi.
+[[0;32m  OK  [0m] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+         Starting Clean up any mess left by 0dns-up...
+         Starting Enable support for additional executable binary formats...
+         Starting Set console font and keymap...
+         Starting AppArmor initialization...
+         Starting Tell Plymouth To Write Out Runtime Data...
+[[0;32m  OK  [0m] Started Clean up any mess left by 0dns-up.
+         Mounting Arbitrary Executable File Formats File System...
+[[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
+[[0;32m  OK  [0m] Mounted Arbitrary Executable File Formats File System.
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Started Enable support for additional executable binary formats.
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Started Network Time Synchronization.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Started Set console font and keymap.
+[[0;32m  OK  [0m] Started AppArmor initialization.
+[[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Listening on CUPS Scheduler.
+[[0;32m  OK  [0m] Started ACPI Events Check.
+         Starting Cryptography Setup for cryptswap1...
+[[0;32m  OK  [0m] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Started Message of the Day.
+[[0;32m  OK  [0m] Started CUPS Scheduler.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started systemd-resolved-update-resolvconf.path.
+[[0;32m  OK  [0m] Reached target Paths.
+         Starting Docker Socket for the API.
+[[0;32m  OK  [0m] Started Trigger anacron every hour.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+         Starting Raise network interfaces...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on Docker Socket for the API.
+         Starting Cryptography Setup for cryptswap1...
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Reached target Basic System.
+         Starting LSB: Speech Dispatcher...
+         Starting System Logging Service...
+         Starting LSB: automatic crash report generation...
+[[0;32m  OK  [0m] Started Set the CPU Frequency Scaling governor.
+         Starting Thermal Daemon Service...
+         Starting Disk Manager...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+[[0;32m  OK  [0m] Started Thermal Daemon Service.
+         Starting Network Manager...
+         Starting Detect the available GPUs and deal with any system changes...
+         Starting Save/Restore Sound Card State...
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+         Starting Modem Manager...
+         Starting LSB: Handles Warsaw - core...
+         Starting Restore /etc/resolv.conf if the system crashed before the ppp link was shut down...
+[[0;32m  OK  [0m] Reached target Login Prompts.
+         Starting LSB: Record successful boot for GRUB...
+         Starting Accounts Service...
+         Starting Bluetooth service...
+[[0;32m  OK  [0m] Started CUPS Scheduler.
+         Starting Login Service...
+[[0;32m  OK  [0m] Started ACPI event daemon.
+[[0;32m  OK  [0m] Started irqbalance daemon.
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Snappy daemon...
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Started Raise network interfaces.
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Started Restore /etc/resolv.conf if the system crashed before the ppp link was shut down.
+[[0;32m  OK  [0m] Started Save/Restore Sound Card State.
+[[0;32m  OK  [0m] Started Bluetooth service.
+[[0;32m  OK  [0m] Started LSB: Speech Dispatcher.
+[[0;32m  OK  [0m] Started Login Service.
+         Starting Hostname Service...
+[[0;32m  OK  [0m] Reached target Bluetooth.
+         Starting Authorization Manager...
+         Starting Cryptography Setup for cryptswap1...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Started LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Started Hostname Service.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Started Avahi mDNS/DNS-SD Stack.
+[[0;32m  OK  [0m] Started Make remote CUPS printers available locally.
+[[0;32m  OK  [0m] Started LSB: Handles Warsaw - core.
+[[0;32m  OK  [0m] Started Authorization Manager.
+[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started Modem Manager.
+[[0;32m  OK  [0m] Started Disk Manager.
+[[0;32m  OK  [0m] Started Snappy daemon.
+[[0;32m  OK  [0m] Started Detect the available GPUs and deal with any system changes.
+         Starting Cryptography Setup for cryptswap1...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Started Network Manager.
+         Starting Network Manager Wait Online...
+[[0;32m  OK  [0m] Reached target Network.
+         Starting Permit User Sessions...
+         Starting Network Name Resolution...
+[[0;32m  OK  [0m] Started Permit User Sessions.
+         Starting Hold until boot process finishes up...
+         Starting GNOME Display Manager...
+         Starting Cryptography Setup for cryptswap1...
+         Starting Network Manager Script Dispatcher Service...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Started Network Name Resolution.
+[[0;32m  OK  [0m] Reached target Host and Network Name Lookups.
+         Starting Cryptography Setup for cryptswap1...
+[[0;1;31mFAILED[0m] Failed to start Cryptography Setup for cryptswap1.
+See 'systemctl status systemd-cryptsetup@cryptswap1.service' for details.
+[[0;1;33mDEPEND[0m] Dependency failed for dev-mapper-cryptswap1.device.
+[[0;1;33mDEPEND[0m] Dependency failed for /dev/mapper/cryptswap1.
+[[0;32m  OK  [0m] Started GNOME Display Manager.
+[[0;32m  OK  [0m] Started Network Manager Script Dispatcher Service.

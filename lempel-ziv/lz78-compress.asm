@@ -71,7 +71,7 @@
 		lw $s0, outputDict
 		lw $s1, outputChars
 		fopen FP, outputFileName, 1
-		move $t0, $zero
+		li $t0, 1
 		writeLZW:
 			add $t1, $s1, $t0
 			lb  $t3, ($t1)
@@ -109,29 +109,29 @@
 		fopen FP, outputDictFileName, 1
 		move $t0, $zero
 		writeDict:
-			bge $t0, 256, writeDictBreak
+			bgeu $t0, 256, writeDictBreak
 			add $t1, $s1, $t0
 			lb  $t3, ($t1)
 			sll $t1, $t0, 2
 			add $t1, $s0, $t1
 			lw  $t2, ($t1)
 			beq $t2, -1, writeDictBreak
-			pint $t0
+			#pint $t0
 			intwrite $t0, FP
-			pcharm colon
+			#pcharm colon
 			fwrite colon, 1, FP
-			pcharm space
+			#pcharm space
 			fwrite space, 1, FP
-			pint $t2
+			#pint $t2
 			intwrite $t2, FP
-			pcharm comma
+			#pcharm comma
 			fwrite comma, 1, FP
-			pcharm space
+			#pcharm space
 			fwrite space, 1, FP
-			pchar $t3
+			#pchar $t3
 			sb  $t3, outputCharBuffer
 			fwrite outputCharBuffer, 1, FP
-			newl
+			#newl
 			fwrite newline, 1, FP
 			addi $t0, $t0, 1
 			j writeDict
@@ -181,6 +181,7 @@
 			move $t3, $zero
 			whileDict:
 				beq $t0, $t1, dictBreak #test if you finished testing current dict (if so, jump to dictBreak)
+				bgeu $t1, 256, dictBreak
 				sll $t4, $t1, 2
 				add $t4, $s0, $t4
 				lw  $t4, ($t4)          #load next dict index entry 
@@ -202,8 +203,8 @@
 					addi $t1, $t1, 1	    #increment $t1
 					j whileDict                 #go back to whileDict
 			dictBreak:
-			pint  $t3
-			pchar $t2
+			#pint  $t3
+			#pchar $t2
 			addi $t0, $t0, 1
 			add  $t6, $s1, $t0
 			sb   $t2, ($t6)
@@ -212,7 +213,7 @@
 			sw   $t3, ($t6)
 			j whileCompress
 		compressBreak:
-		newl
+		#newl
 		addi $t0, $t0, 1
 		sll  $t6, $t0, 2
 		add  $t6, $s0, $t6
