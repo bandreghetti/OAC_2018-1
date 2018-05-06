@@ -2,17 +2,23 @@
 
 .data
 
-	outputCharBuffer:    .space  1
+	outputDictBuffer:   .space  1
+	outputCharBuffer:   .space  1
 	newline:            .asciiz "\n"
 	colon:              .asciiz ":"
 	space:              .asciiz " "
 	comma:              .asciiz ","
 	outputDictFileName: .asciiz "out/dict.txt"
+	outputFileName:     .asciiz "out/out.lzw"
 	beginMain:          .asciiz "Starting main procedure\n"
 	inputFileMessage:   .asciiz "Please enter the name of the file you want to compress:\n"
 	inputFileName:      .space  80
+	beginCompress:      .asciiz "Starting compression procedure\n"
+	endCompress:        .asciiz "Compression is finished.\n"
+	beginDict:          .asciiz "Writing output dictionary to \"out/dict.txt\":\n"
+	beginOutput:        .asciiz "Writing compressed output file to \"out/out.lzw\"...\n"
 	.align 2
-	FP:            .word   0
+	FP:                 .word   0
 	compressedData:     .word   0
 	countBuffer:        .space  1024
 	fileSize:           .word   0
@@ -35,17 +41,55 @@
 		sw $v0, fileSize
 		fclose FP
 		
-		sll $t0, $v0, 2
-		malloc outputDict, $t0
-		malloc outputChars, $v0
+		lw  $t0, fileSize
+		sll $t1, $t0, 2
+		malloc outputDict, $t1
+		malloc outputChars, $t0
 		
 		fopen FP, inputFileName, 0
 		jal compressData
 		fclose FP
 		
 		jal writeDictFile
+		jal writeOutputFile
 		
 		exit
+
+	# $s0 = address to the output dictionary indexes
+	# $s1 = address to the output 
+	# $t0 = how many output value pairs were written
+	# $t1 = temporary address holder
+	# $t2 = current dict index
+	# $t3 = current char
+	writeOutputFile:
+		addi $sp, $sp, -8 # writeOutputFile
+		sw $s0, 4($sp)
+		sw $s1, 8($sp)
+		
+		pstr beginOutput
+		
+		lw $s0, outputDict
+		lw $s1, outputChars
+		fopen FP, outputFileName, 1
+		move $t0, $zero
+		writeLZW:
+			add $t1, $s1, $t0
+			lb  $t3, ($t1)
+			sll $t1, $t0, 2
+			add $t1, $s0, $t1
+			lw  $t2, ($t1)
+			beq $t2, -1, writeOutputBreak
+			sb  $t3, outputCharBuffer
+			sb  $t2, outputDictBuffer
+			fwrite outputDictBuffer, 1, FP
+			fwrite outputCharBuffer, 1, FP
+			addi $t0, $t0, 1
+			j writeLZW
+		writeOutputBreak:		
+		lw $s1, 8($sp)
+		lw $s0, 4($sp)
+		addi $sp, $sp, +8
+		jr $ra
 
 	# $s0 = address to the output dictionary indexes
 	# $s1 = address to the output 
@@ -53,23 +97,25 @@
 	# $t1 = temporary address holder
 	# $t2 = current dict index
 	# $t3 = current char
-	# $t4 = temporary char/int holder
 	writeDictFile:
 		addi $sp, $sp, -8 # writeDictFile
 		sw $s0, 4($sp)
 		sw $s1, 8($sp)
+		
+		pstr beginDict
 		
 		lw $s0, outputDict
 		lw $s1, outputChars
 		fopen FP, outputDictFileName, 1
 		move $t0, $zero
 		writeDict:
+			bge $t0, 256, writeDictBreak
 			add $t1, $s1, $t0
 			lb  $t3, ($t1)
 			sll $t1, $t0, 2
 			add $t1, $s0, $t1
 			lw  $t2, ($t1)
-			beq $t2, -1, writeBreak
+			beq $t2, -1, writeDictBreak
 			pint $t0
 			intwrite $t0, FP
 			pcharm colon
@@ -89,7 +135,7 @@
 			fwrite newline, 1, FP
 			addi $t0, $t0, 1
 			j writeDict
-		writeBreak:		
+		writeDictBreak:		
 		lw $s1, 8($sp)
 		lw $s0, 4($sp)
 		addi $sp, $sp, +8
@@ -121,6 +167,9 @@
 		addi $sp, $sp, -8
 		sw $s0, 4($sp)
 		sw $s1, 8($sp)
+		
+		pstr beginCompress
+		
 		move $t0, $zero
 		lw $s0, outputDict
 		lw $s1, outputChars
