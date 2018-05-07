@@ -30,13 +30,15 @@
 		kbin  inputFileName
 		
 		fopen FPin, inputFileName, 0
+		bne $v0, -1, fileOkay
+		exit
+		fileOkay:
 		jal countBytes
 		sw $v0, fileSize
 		fclose FPin
 		
 		lw  $t0, fileSize
-		sll $t1, $t0, 2
-		malloc outputDict, $t1
+		malloc outputDict, $t0
 		malloc outputChars, $t0
 		
 		fopen FPin, inputFileName, 0
@@ -81,21 +83,20 @@
 		whileDecompress:
 		        	fread nextChar, 1, FPin
 				beqz $v0, decompressBreak
-				lw $t2, nextChar 
+				lbu $t2, nextChar 
 				#addi $t2, $t2, -48 #to solve ascii tabel problem (char 0 = decimal 48)
 				move $t1, $zero
 				beq $t2, 0, whileIndex0
-				lw $t7, nextChar 
+				lbu $t7, nextChar 
 				#addi $t7, $t7, -48
 				j whileIndexNot0
 			        whileIndex0: 
 			        	   fread nextChar, 1, FPin
 			        	   beqz $v0, decompressBreak
 			        	   addi $t0, $t0, 1
-			        	   sll $t6, $t0, 2
-			        	   add $t6, $s0, $t6
-			        	   sw $t1, ($t6) #Save in index array
- 			        	   lw $t2, nextChar
+			        	   add $t6, $s0, $t0
+			        	   sb $t1, ($t6) #Save in index array
+ 			        	   lbu $t2, nextChar
 			        	   sb  $t2, outputCharBuffer
 			        	   fwrite outputCharBuffer, 1, FPout
 			        	   add $t6, $s1, $t0
@@ -104,9 +105,8 @@
 			        	  
 			        whileIndexNot0:	
 			        	   	  addi $t0, $t0, 1
-			        	   	  sll $t6, $t0, 2
-			        	   	  add $t6, $s0, $t6
-			        	   	  sw $t2, ($t6) #Save in index array
+			        	   	  add $t6, $s0, $t0
+			        	   	  sb $t2, ($t6) #Save in index array
 			        	   	  addi $t4, $t0, 0 
 			        	   	  fread nextChar, 1, FPin 
 			        	   	  lb $t2, nextChar
@@ -137,18 +137,13 @@
 			        	   	 	   addi $t4, $t4, 1
 			        		 	   add $t5, $s1, $t4
 			        		 	   sb $t2, ($t5) #Save in remaining sequence array
-			        		 	   sll $t6, $t7, 2
-			        	   	 	   add $t6, $s0, $t6
-			        	   	 	   lw $t7, ($t6) #Find next index line
+			        	   	 	   add $t6, $s0, $t7
+			        	   	 	   lbu $t7, ($t6) #Find next index line
 			        	   	 	   bne $t7, $zero, IndexNot0
 			        	   	 	   j Index0		 
 			        decompressBreak: #copied from lz78-compress
 			        newl
-				addi $t0, $t0, 1
-				sll  $t6, $t0, 2
-				add  $t6, $s0, $t6
-				li   $t3, -1
-				sw   $t3, ($t6)
+				
 			        lw $s1, 8($sp)
 				lw $s0, 4($sp)
 				addi $sp, $sp, +8

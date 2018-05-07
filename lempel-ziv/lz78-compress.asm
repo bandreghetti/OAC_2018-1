@@ -38,6 +38,9 @@
 		kbin  inputFileName
 		
 		fopen FP, inputFileName, 0
+		bne $v0, -1, fileOkay
+		exit
+		fileOkay:
 		jal countBytes
 		move $t0, $v0
 		sw $v0, fileSize
@@ -119,22 +122,22 @@
 			add $t1, $s0, $t0
 			lbu  $t2, ($t1)
 			beq $t2, 255, writeDictBreak
-			pint $t0
+			#pint $t0
 			intwrite $t0, FP
-			pcharm colon
+			#pcharm colon
 			fwrite colon, 1, FP
-			pcharm space
+			#pcharm space
 			fwrite space, 1, FP
-			pint $t2
+			#pint $t2
 			intwrite $t2, FP
-			pcharm comma
+			#pcharm comma
 			fwrite comma, 1, FP
-			pcharm space
+			#pcharm space
 			fwrite space, 1, FP
-			pchar $t3
+			#pchar $t3
 			sb  $t3, outputCharBuffer
 			fwrite outputCharBuffer, 1, FP
-			newl
+			#newl
 			fwrite newline, 1, FP
 			addi $t0, $t0, 1
 			j writeDict
@@ -205,8 +208,8 @@
 					addi $t1, $t1, 1	    #increment $t1
 					j whileDict                 #go back to whileDict
 			dictBreak:
-			pint  $t3
-			pchar $t2
+			#pint  $t3
+			#pchar $t2
 			addi $t0, $t0, 1
 			add  $t6, $s1, $t0
 			sb   $t2, ($t6)
@@ -214,7 +217,7 @@
 			sb   $t3, ($t6)
 			j whileCompress
 		compressBreak:
-		newl
+		#newl
 		addi $t0, $t0, 1
 		add  $t6, $s0, $t0
 		li   $t3, 255
