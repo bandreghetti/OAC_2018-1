@@ -111,6 +111,6 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2.inc TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2_inst.vhd TRUE
 -- Retrieval info: LIB_FILE: lpm
