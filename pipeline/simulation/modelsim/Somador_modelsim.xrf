@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Sara/Desktop/Antiga Sara/UnB/7 semestre/OAC_2018-1/pipeline/Somador.bdf
+source_file = 1, C:/Users/Sara/Desktop/Antiga Sara/UnB/7 semestre/OAC_2018-1/pipeline/db/Somador.cbx.xml
+source_file = 1, c:/altera/13.0/quartus/libraries/others/maxplus2/xor3.bdf
+design_name = Somador
+instance = comp, \A~I\, A, Somador, 1
+instance = comp, \C_in~I\, C_in, Somador, 1
+instance = comp, \B~I\, B, Somador, 1
+instance = comp, \inst1~0\, inst1~0, Somador, 1
+instance = comp, \S~I\, S, Somador, 1
+instance = comp, \C_out~I\, C_out, Somador, 1
