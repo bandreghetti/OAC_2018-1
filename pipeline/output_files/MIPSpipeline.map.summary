@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sun Jun 10 17:34:57 2018
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : MIPSpipeline
+Top-level Entity Name : RegBank
+Family : Cyclone IV GX
+Total logic elements : 2,457
+    Total combinational functions : 1,465
+    Dedicated logic registers : 992
+Total registers : 992
+Total pins : 113
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
