@@ -1,6 +1,6 @@
 Flow report for MIPSpipeline
-Sun Jun 10 17:45:51 2018
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fri Jun 15 14:43:49 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -40,26 +40,24 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun 10 17:45:51 2018      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Flow Status                        ; Successful - Fri Jun 15 14:43:49 2018      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; MIPSpipeline                               ;
 ; Top-level Entity Name              ; RegBank                                    ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 1,465 / 21,280 ( 7 % )                     ;
-;     Total combinational functions  ; 1,465 / 21,280 ( 7 % )                     ;
-;     Dedicated logic registers      ; 992 / 21,280 ( 5 % )                       ;
+; Total logic elements               ; 2,457                                      ;
+;     Total combinational functions  ; 1,465                                      ;
+;     Dedicated logic registers      ; 992                                        ;
 ; Total registers                    ; 992                                        ;
-; Total pins                         ; 113 / 167 ( 68 % )                         ;
+; Total pins                         ; 113                                        ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 774,144 ( 0 % )                        ;
-; Embedded Multiplier 9-bit elements ; 0 / 80 ( 0 % )                             ;
-; Total GXB Receiver Channel PCS     ; 0 / 4 ( 0 % )                              ;
-; Total GXB Receiver Channel PMA     ; 0 / 4 ( 0 % )                              ;
-; Total GXB Transmitter Channel PCS  ; 0 / 4 ( 0 % )                              ;
-; Total GXB Transmitter Channel PMA  ; 0 / 4 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
-; Device                             ; EP4CGX22CF19C6                             ;
-; Timing Models                      ; Final                                      ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -68,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/10/2018 17:34:46 ;
+; Start date & time ; 06/15/2018 14:43:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPSpipeline        ;
 +-------------------+---------------------+
@@ -79,7 +77,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                   ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.152866288615137                                       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.152908461804336                                       ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                      ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; /home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                             ; --            ; --          ; eda_simulation ;
@@ -87,6 +85,8 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                                             ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_MUX                                                 ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_DECODE                                              ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_MUX                                                 ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.1                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.1                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.1                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.1                                                    ; --            ; --          ; --             ;
@@ -96,6 +96,8 @@ applicable agreement for further details.
 ; MISC_FILE                           ; Mux32.cmp                                               ; --            ; --          ; --             ;
 ; MISC_FILE                           ; WBDemux.bsf                                             ; --            ; --          ; --             ;
 ; MISC_FILE                           ; WBDemux.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; Mux2.bsf                                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; Mux2.cmp                                                ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                                                ; --            ; RegBank     ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                   ; --            ; RegBank     ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                                  ; --            ; RegBank     ; Top            ;
@@ -104,65 +106,29 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 771 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:16     ; 1.0                     ; 956 MB              ; 00:00:16                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 666 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 638 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 894 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 917 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 917 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 913 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:41                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 714 MB              ; 00:00:11                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                           ;
-+---------------------------+------------------+--------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
-+---------------------------+------------------+--------------+------------+----------------+
-; Analysis & Synthesis      ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; Fitter                    ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; Assembler                 ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; TimeQuest Timing Analyzer ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-; EDA Netlist Writer        ; badubuntu        ; Ubuntu 17.10 ; 17         ; x86_64         ;
-+---------------------------+------------------+--------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; badlaptop        ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPSpipeline -c MIPSpipeline
-quartus_fit --read_settings_files=off --write_settings_files=off MIPSpipeline -c MIPSpipeline
-quartus_asm --read_settings_files=off --write_settings_files=off MIPSpipeline -c MIPSpipeline
-quartus_sta MIPSpipeline -c MIPSpipeline
-quartus_eda --read_settings_files=off --write_settings_files=off MIPSpipeline -c MIPSpipeline
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog MIPSpipeline -c MIPSpipeline --vector_source=/home/bandreghetti/OAC_2018-1/pipeline/regbank_testwave.vwf --testbench_file=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/regbank_testwave.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/ MIPSpipeline -c MIPSpipeline
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog MIPSpipeline -c MIPSpipeline --vector_source=/home/bandreghetti/OAC_2018-1/pipeline/regbank_testwave.vwf --testbench_file=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/regbank_testwave.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/ MIPSpipeline -c MIPSpipeline
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog MIPSpipeline -c MIPSpipeline --vector_source=/home/bandreghetti/OAC_2018-1/pipeline/regbank_testwave.vwf --testbench_file=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/regbank_testwave.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/ MIPSpipeline -c MIPSpipeline
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog MIPSpipeline -c MIPSpipeline --vector_source=/home/bandreghetti/OAC_2018-1/pipeline/regbank_testwave.vwf --testbench_file=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/regbank_testwave.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/ MIPSpipeline -c MIPSpipeline
 
 
 

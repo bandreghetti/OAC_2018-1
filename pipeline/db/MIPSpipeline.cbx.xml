@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MIPSpipeline">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegBank|Mux32:inst33|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_nee.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegBank|Mux32:inst34|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_nee.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegBank|WBDemux:inst36|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_tgf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
