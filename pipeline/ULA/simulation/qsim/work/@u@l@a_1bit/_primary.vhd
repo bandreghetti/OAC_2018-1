@@ -8,7 +8,9 @@ entity ULA_1bit is
         B               : in     vl_logic;
         B_inv           : in     vl_logic;
         C_in            : in     vl_logic;
-        Sa              : out    vl_logic;
-        Operacao        : in     vl_logic_vector(1 downto 0)
+        Saida           : out    vl_logic;
+        Less            : in     vl_logic;
+        Operacao        : in     vl_logic_vector(2 downto 0);
+        Set             : out    vl_logic
     );
 end ULA_1bit;

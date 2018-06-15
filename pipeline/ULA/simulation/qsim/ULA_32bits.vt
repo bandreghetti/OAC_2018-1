@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/10/2018 16:01:37"
+// Generated on "06/14/2018 21:36:11"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    ULA_32bits
 // 
@@ -197,7 +197,7 @@ ULA_32bits i1 (
 // A[ 31 ]
 initial
 begin
-	A[31] = 1'b1;
+	A[31] = 1'b0;
 end 
 // A[ 30 ]
 initial
@@ -323,36 +323,82 @@ end
 initial
 begin
 	A[6] = 1'b0;
+	A[6] = #650000 1'b1;
 end 
 // A[ 5 ]
 initial
 begin
 	A[5] = 1'b0;
+	A[5] = #350000 1'b1;
+	A[5] = #300000 1'b0;
 end 
 // A[ 4 ]
 initial
 begin
 	A[4] = 1'b0;
+	# 200000;
+	repeat(2)
+	begin
+		A[4] = 1'b1;
+		A[4] = #150000 1'b0;
+		# 150000;
+	end
+	A[4] = 1'b1;
 end 
 // A[ 3 ]
 initial
 begin
 	A[3] = 1'b0;
+	# 100000;
+	repeat(2)
+	begin
+		A[3] = 1'b1;
+		A[3] = #100000 1'b0;
+		# 50000;
+	end
+	A[3] = 1'b1;
+	# 100000;
+	repeat(2)
+	begin
+		A[3] = 1'b0;
+		A[3] = #100000 1'b1;
+		# 50000;
+	end
+	A[3] = 1'b0;
+	A[3] = #100000 1'b1;
 end 
 // A[ 2 ]
 initial
 begin
 	A[2] = 1'b0;
+	# 50000;
+	repeat(2)
+	begin
+		A[2] = 1'b1;
+		A[2] = #50000 1'b0;
+		A[2] = #50000 1'b1;
+		A[2] = #100000 1'b0;
+		A[2] = #50000 1'b1;
+		A[2] = #50000 1'b0;
+		# 100000;
+	end
+	A[2] = 1'b1;
+	A[2] = #50000 1'b0;
+	A[2] = #50000 1'b1;
 end 
 // A[ 1 ]
-initial
+always
 begin
 	A[1] = 1'b0;
+	A[1] = #100000 1'b1;
+	#100000;
 end 
 // A[ 0 ]
-initial
+always
 begin
 	A[0] = 1'b0;
+	A[0] = #50000 1'b1;
+	#50000;
 end 
 
 // A_inv
@@ -499,26 +545,39 @@ end
 initial
 begin
 	B[4] = 1'b0;
+	B[4] = #800000 1'b1;
 end 
 // B[ 3 ]
 initial
 begin
 	B[3] = 1'b0;
+	B[3] = #400000 1'b1;
+	B[3] = #400000 1'b0;
 end 
 // B[ 2 ]
 initial
 begin
+	repeat(2)
+	begin
+		B[2] = 1'b0;
+		B[2] = #200000 1'b1;
+		# 200000;
+	end
 	B[2] = 1'b0;
 end 
 // B[ 1 ]
-initial
+always
 begin
 	B[1] = 1'b0;
+	B[1] = #100000 1'b1;
+	#100000;
 end 
 // B[ 0 ]
-initial
+always
 begin
-	B[0] = 1'b1;
+	B[0] = 1'b0;
+	B[0] = #50000 1'b1;
+	#50000;
 end 
 
 // B_inv

@@ -32,27 +32,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|A")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("ULA_1bit_vlg_vec_tst|A_inv")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ULA_1bit_vlg_vec_tst|B")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -82,14 +62,34 @@ SIGNAL("ULA_1bit_vlg_vec_tst|C_in")
 	PARENT = "";
 }
 
+SIGNAL("ULA_1bit_vlg_vec_tst|Less")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 SIGNAL("ULA_1bit_vlg_vec_tst|Operacao")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 2;
+	WIDTH = 3;
 	LSB_INDEX = 0;
 	DIRECTION = INPUT;
 	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|Operacao[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ULA_1bit_vlg_vec_tst|Operacao";
 }
 
 SIGNAL("ULA_1bit_vlg_vec_tst|Operacao[1]")
@@ -122,7 +122,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|C_out")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|Sa")
+SIGNAL("ULA_1bit_vlg_vec_tst|Saida")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -132,7 +132,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|Sa")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|sampler")
+SIGNAL("ULA_1bit_vlg_vec_tst|Set")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -202,7 +202,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|C_in~combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|A~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -232,7 +232,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|B~combout")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst8|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -242,7 +242,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst8|LPM_MUX_component|auto_generated|result_no
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|A~combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|C_in~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -262,7 +262,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|A_inv~combout")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst5|inst2~4_combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst6|inst2~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -272,7 +272,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst5|inst2~4_combout")
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -282,7 +282,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_no
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst7|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst1|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -292,7 +292,57 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst7|LPM_MUX_component|auto_generated|result_no
 	PARENT = "";
 }
 
-SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~1_combout")
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|w_mux_outputs27w[0]~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|Less~combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~1_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst5~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|inst6|inst1~combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ULA_1bit_vlg_vec_tst|i1|Operacao~combout[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -322,25 +372,7 @@ SIGNAL("ULA_1bit_vlg_vec_tst|i1|Operacao~combout[0]")
 	PARENT = "";
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|A")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
 TRANSITION_LIST("ULA_1bit_vlg_vec_tst|A_inv")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|B")
 {
 	NODE
 	{
@@ -354,7 +386,7 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|B_inv")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -363,7 +395,25 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|C_in")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Less")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Operacao[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -372,7 +422,7 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Operacao[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -381,7 +431,7 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Operacao[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -390,20 +440,20 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|C_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Sa")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Saida")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|sampler")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|Set")
 {
 	NODE
 	{
@@ -466,12 +516,12 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|C_in~combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|A~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL Z FOR 1000.0;
 	}
 }
 
@@ -480,7 +530,7 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|B_inv~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -489,25 +539,25 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|B~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL Z FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst8|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|A~combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|C_in~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -520,39 +570,84 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|A_inv~combout")
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst5|inst2~4_combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst6|inst2~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst7|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst1|LPM_MUX_component|auto_generated|result_node[0]~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~1_combout")
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|w_mux_outputs27w[0]~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|Less~combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst5~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|inst6|inst1~combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|Operacao~combout[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -561,7 +656,7 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|Operacao~combout[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -570,13 +665,13 @@ TRANSITION_LIST("ULA_1bit_vlg_vec_tst|i1|Operacao~combout[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|A";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|A_inv";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -585,7 +680,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|A_inv";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|B_inv";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -594,7 +689,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|B";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|C_in";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -603,7 +698,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|B_inv";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|Less";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -612,21 +707,22 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|C_in";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|Operacao";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|Operacao";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|Operacao[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
-	CHILDREN = 6, 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -636,7 +732,7 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 5;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -646,7 +742,7 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 5;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -660,7 +756,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|Sa";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|Saida";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
@@ -669,7 +765,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|sampler";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|Set";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -732,7 +828,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|C_in~combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|A~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -759,7 +855,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst8|LPM_MUX_component|auto_generated|result_node[0]~0_combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst|LPM_MUX_component|auto_generated|result_node[0]~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -768,7 +864,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|A~combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|C_in~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -786,7 +882,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst5|inst2~4_combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst6|inst2~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
@@ -795,7 +891,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~0_combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;
@@ -804,7 +900,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst7|LPM_MUX_component|auto_generated|result_node[0]~0_combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst1|LPM_MUX_component|auto_generated|result_node[0]~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;
@@ -813,7 +909,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst3|LPM_MUX_component|auto_generated|result_node[0]~1_combout";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|w_mux_outputs27w[0]~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
@@ -822,7 +918,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Operacao~combout[1]";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Less~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
@@ -831,10 +927,55 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Operacao~combout[0]";
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst2|LPM_MUX_component|auto_generated|muxlut_result0w~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst5~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|inst6|inst1~combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Operacao~combout[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Operacao~combout[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ULA_1bit_vlg_vec_tst|i1|Operacao~combout[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 33;
 	TREE_LEVEL = 0;
 }
 ;
