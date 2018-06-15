@@ -135,7 +135,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1064 64 1288 224)
+	(rect 1032 56 1256 216)
 	(text "RegBank" (rect 5 0 60 12)(font "Arial" (font_size 8)))
 	(text "inst3" (rect 8 145 31 155)(font "Arial" ))
 	(port
