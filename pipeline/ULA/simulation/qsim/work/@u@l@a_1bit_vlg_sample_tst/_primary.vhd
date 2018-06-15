@@ -7,7 +7,8 @@ entity ULA_1bit_vlg_sample_tst is
         B               : in     vl_logic;
         B_inv           : in     vl_logic;
         C_in            : in     vl_logic;
-        Operacao        : in     vl_logic_vector(1 downto 0);
+        Less            : in     vl_logic;
+        Operacao        : in     vl_logic_vector(2 downto 0);
         sampler_tx      : out    vl_logic
     );
 end ULA_1bit_vlg_sample_tst;

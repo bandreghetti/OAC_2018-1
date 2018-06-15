@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 64 144 232 160)
+	(rect 64 152 232 168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "C_in" (rect 5 0 27 12)(font "Arial" ))
 	(pt 168 8)
@@ -100,7 +100,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 376 96 440 144)
+	(rect 384 88 448 136)
 	(text "XOR" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst" (rect 3 37 20 49)(font "Arial" ))
 	(port
@@ -316,80 +316,12 @@ applicable agreement for further details.
 	(pt 376 328)
 )
 (connector
-	(pt 376 264)
-	(pt 288 264)
-)
-(connector
-	(pt 288 264)
-	(pt 288 328)
-)
-(connector
-	(pt 288 112)
-	(pt 376 112)
-)
-(connector
-	(pt 288 104)
-	(pt 232 104)
-)
-(connector
-	(pt 288 104)
-	(pt 288 112)
-)
-(connector
-	(pt 376 184)
-	(pt 288 184)
-)
-(connector
-	(pt 288 112)
-	(pt 288 184)
-)
-(connector
-	(pt 288 184)
-	(pt 288 264)
-)
-(connector
 	(pt 376 312)
 	(pt 312 312)
 )
 (connector
-	(pt 312 312)
-	(pt 312 128)
-)
-(connector
-	(pt 232 128)
-	(pt 312 128)
-)
-(connector
-	(pt 312 128)
-	(pt 376 128)
-)
-(connector
-	(pt 232 152)
-	(pt 240 152)
-)
-(connector
 	(pt 376 248)
 	(pt 336 248)
-)
-(connector
-	(pt 336 200)
-	(pt 336 248)
-)
-(connector
-	(pt 240 200)
-	(pt 336 200)
-)
-(connector
-	(pt 336 200)
-	(pt 376 200)
-)
-(connector
-	(pt 440 120)
-	(pt 544 120)
-)
-(connector
-	(pt 544 120)
-	(pt 544 144)
 )
 (connector
 	(pt 544 144)
@@ -398,18 +330,6 @@ applicable agreement for further details.
 (connector
 	(pt 616 152)
 	(pt 656 152)
-)
-(connector
-	(pt 552 160)
-	(pt 240 160)
-)
-(connector
-	(pt 240 200)
-	(pt 240 160)
-)
-(connector
-	(pt 240 160)
-	(pt 240 152)
 )
 (connector
 	(pt 624 256)
@@ -435,9 +355,85 @@ applicable agreement for further details.
 	(pt 560 248)
 	(pt 488 248)
 )
-(junction (pt 288 112))
-(junction (pt 288 264))
-(junction (pt 288 184))
+(connector
+	(pt 232 128)
+	(pt 312 128)
+)
+(connector
+	(pt 544 112)
+	(pt 448 112)
+)
+(connector
+	(pt 544 144)
+	(pt 544 112)
+)
+(connector
+	(pt 312 120)
+	(pt 384 120)
+)
+(connector
+	(pt 232 104)
+	(pt 288 104)
+)
+(connector
+	(pt 288 104)
+	(pt 384 104)
+)
+(connector
+	(pt 312 120)
+	(pt 312 128)
+)
+(connector
+	(pt 288 184)
+	(pt 376 184)
+)
+(connector
+	(pt 288 104)
+	(pt 288 184)
+)
+(connector
+	(pt 336 200)
+	(pt 336 248)
+)
+(connector
+	(pt 256 200)
+	(pt 336 200)
+)
+(connector
+	(pt 336 200)
+	(pt 376 200)
+)
+(connector
+	(pt 256 160)
+	(pt 256 200)
+)
+(connector
+	(pt 232 160)
+	(pt 256 160)
+)
+(connector
+	(pt 256 160)
+	(pt 552 160)
+)
+(connector
+	(pt 288 184)
+	(pt 288 328)
+)
+(connector
+	(pt 376 264)
+	(pt 312 264)
+)
+(connector
+	(pt 312 128)
+	(pt 312 264)
+)
+(connector
+	(pt 312 264)
+	(pt 312 312)
+)
 (junction (pt 312 128))
+(junction (pt 288 104))
+(junction (pt 288 184))
 (junction (pt 336 200))
-(junction (pt 240 160))
+(junction (pt 256 160))
+(junction (pt 312 264))

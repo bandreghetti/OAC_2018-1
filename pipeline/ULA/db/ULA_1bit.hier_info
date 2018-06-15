@@ -7,18 +7,21 @@ B => inst7.IN0
 B => Mux2:inst.data0
 B_inv => Mux2:inst.sel
 C_in => Somador:inst6.C_in
-Saida <= Mux4:inst2.result
-Operacao[0] => Mux4:inst2.sel[0]
-Operacao[1] => Mux4:inst2.sel[1]
+Saida <= Mux5:inst2.result
+Less => Mux5:inst2.data4
+Operacao[0] => Mux5:inst2.sel[0]
+Operacao[1] => Mux5:inst2.sel[1]
+Operacao[2] => Mux5:inst2.sel[2]
+Set <= Somador:inst6.S
 
 
 |ULA_1bit|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -76,46 +79,47 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|ULA_1bit|Mux4:inst2
+|ULA_1bit|Mux5:inst2
 data0 => LPM_MUX:LPM_MUX_component.DATA[0][0]
 data1 => LPM_MUX:LPM_MUX_component.DATA[1][0]
 data2 => LPM_MUX:LPM_MUX_component.DATA[2][0]
 data3 => LPM_MUX:LPM_MUX_component.DATA[3][0]
+data4 => LPM_MUX:LPM_MUX_component.DATA[4][0]
 sel[0] => LPM_MUX:LPM_MUX_component.SEL[0]
 sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
+sel[2] => LPM_MUX:LPM_MUX_component.SEL[2]
 result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
-|ULA_1bit|Mux4:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_33e:auto_generated.data[0]
-data[1][0] => mux_33e:auto_generated.data[1]
-data[2][0] => mux_33e:auto_generated.data[2]
-data[3][0] => mux_33e:auto_generated.data[3]
-sel[0] => mux_33e:auto_generated.sel[0]
-sel[1] => mux_33e:auto_generated.sel[1]
+|ULA_1bit|Mux5:inst2|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_33e:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_1bit|Mux4:inst2|LPM_MUX:LPM_MUX_component|mux_33e:auto_generated
-data[0] => _.IN0
-data[0] => _.IN0
-data[1] => _.IN0
+|ULA_1bit|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
+data[0] => _.IN1
+data[1] => _.IN1
 data[2] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN0
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => _.IN1
-sel[0] => _.IN0
+data[3] => _.IN1
+data[4] => muxlut_result0w.IN0
+result[0] <= muxlut_result0w.DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => _.IN0
 sel[0] => _.IN0
 sel[0] => _.IN0
 sel[0] => _.IN0
 sel[1] => _.IN0
 sel[1] => _.IN0
-sel[1] => _.IN0
-sel[1] => _.IN0
+sel[2] => _.IN0
+sel[2] => muxlut_result0w.IN1
 
 

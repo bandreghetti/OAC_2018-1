@@ -339,7 +339,7 @@ Shamt[4] => Shift:inst4.distance[4]
 
 |ULA_Full|ULA_32bits:inst
 Overflow <= inst66.DB_MAX_OUTPUT_PORT_TYPE
-Op[0] => inst67.IN0
+Op[0] => inst66.IN2
 Op[0] => ULA_1bit:inst.Operacao[0]
 Op[0] => ULA_1bit:inst1.Operacao[0]
 Op[0] => ULA_1bit:inst2.Operacao[0]
@@ -405,7 +405,7 @@ Op[1] => ULA_1bit:inst28.Operacao[1]
 Op[1] => ULA_1bit:inst29.Operacao[1]
 Op[1] => ULA_1bit:inst30.Operacao[1]
 Op[1] => ULA_1bit:inst31.Operacao[1]
-Op[2] => inst68.IN0
+Op[2] => inst67.IN0
 Op[2] => ULA_1bit:inst.Operacao[2]
 Op[2] => ULA_1bit:inst1.Operacao[2]
 Op[2] => ULA_1bit:inst2.Operacao[2]
@@ -622,10 +622,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -641,16 +641,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -666,16 +666,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -696,21 +696,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst31|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -747,10 +747,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -766,16 +766,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -791,16 +791,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -821,21 +821,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst30|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -872,10 +872,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -891,16 +891,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -916,16 +916,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -946,21 +946,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst29|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -997,10 +997,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1016,16 +1016,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1041,16 +1041,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1071,21 +1071,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst28|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1122,10 +1122,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1141,16 +1141,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1166,16 +1166,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1196,21 +1196,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst27|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1247,10 +1247,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1266,16 +1266,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1291,16 +1291,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1321,21 +1321,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst26|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1372,10 +1372,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1391,16 +1391,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1416,16 +1416,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1446,21 +1446,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst25|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1497,10 +1497,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1516,16 +1516,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1541,16 +1541,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1571,21 +1571,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst24|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1622,10 +1622,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1641,16 +1641,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1666,16 +1666,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1696,21 +1696,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst23|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1747,10 +1747,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1766,16 +1766,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1791,16 +1791,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1821,21 +1821,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst22|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1872,10 +1872,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -1891,16 +1891,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1916,16 +1916,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -1946,21 +1946,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst21|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -1997,10 +1997,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2016,16 +2016,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2041,16 +2041,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2071,21 +2071,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst20|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2122,10 +2122,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2141,16 +2141,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2166,16 +2166,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2196,21 +2196,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst19|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2247,10 +2247,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2266,16 +2266,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2291,16 +2291,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2321,21 +2321,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst18|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2372,10 +2372,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2391,16 +2391,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2416,16 +2416,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2446,21 +2446,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst17|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2497,10 +2497,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2516,16 +2516,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2541,16 +2541,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2571,21 +2571,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst16|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2622,10 +2622,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2641,16 +2641,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2666,16 +2666,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2696,21 +2696,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst15|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2747,10 +2747,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2766,16 +2766,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2791,16 +2791,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2821,21 +2821,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst14|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2872,10 +2872,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -2891,16 +2891,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2916,16 +2916,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -2946,21 +2946,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst13|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -2997,10 +2997,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3016,16 +3016,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3041,16 +3041,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3071,21 +3071,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst12|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3122,10 +3122,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3141,16 +3141,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3166,16 +3166,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3196,21 +3196,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst11|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3247,10 +3247,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3266,16 +3266,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3291,16 +3291,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3321,21 +3321,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst10|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3372,10 +3372,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3391,16 +3391,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3416,16 +3416,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3446,21 +3446,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst9|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3497,10 +3497,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3516,16 +3516,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3541,16 +3541,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3571,21 +3571,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst8|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3622,10 +3622,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3641,16 +3641,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3666,16 +3666,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3696,21 +3696,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst7|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3747,10 +3747,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3766,16 +3766,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3791,16 +3791,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3821,21 +3821,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst6|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3872,10 +3872,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -3891,16 +3891,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3916,16 +3916,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -3946,21 +3946,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst5|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -3997,10 +3997,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -4016,16 +4016,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4041,16 +4041,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4071,21 +4071,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst4|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -4122,10 +4122,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -4141,16 +4141,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4166,16 +4166,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4196,21 +4196,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst3|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -4247,10 +4247,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -4266,16 +4266,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4291,16 +4291,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4321,21 +4321,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst2|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -4372,10 +4372,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -4391,16 +4391,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4416,16 +4416,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4446,21 +4446,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst1|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -4497,10 +4497,10 @@ Set <= Somador:inst6.S
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Somador:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
-A => inst4.IN1
 A => inst5.IN1
 A => inst3.IN0
 B => inst.IN1
+B => inst4.IN1
 B => inst5.IN0
 C_in => inst1.IN1
 C_in => inst4.IN0
@@ -4516,16 +4516,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst1|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst1|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4541,16 +4541,16 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_cbe:auto_generated.data[0]
-data[1][0] => mux_cbe:auto_generated.data[1]
-sel[0] => mux_cbe:auto_generated.sel[0]
+data[0][0] => mux_03e:auto_generated.data[0]
+data[1][0] => mux_03e:auto_generated.data[1]
+sel[0] => mux_03e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_cbe:auto_generated.result[0]
+result[0] <= mux_03e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_cbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux2:inst|LPM_MUX:LPM_MUX_component|mux_03e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[0].IN1
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4571,21 +4571,21 @@ result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
 |ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux5:inst2|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_hbe:auto_generated.data[0]
-data[1][0] => mux_hbe:auto_generated.data[1]
-data[2][0] => mux_hbe:auto_generated.data[2]
-data[3][0] => mux_hbe:auto_generated.data[3]
-data[4][0] => mux_hbe:auto_generated.data[4]
-sel[0] => mux_hbe:auto_generated.sel[0]
-sel[1] => mux_hbe:auto_generated.sel[1]
-sel[2] => mux_hbe:auto_generated.sel[2]
+data[0][0] => mux_53e:auto_generated.data[0]
+data[1][0] => mux_53e:auto_generated.data[1]
+data[2][0] => mux_53e:auto_generated.data[2]
+data[3][0] => mux_53e:auto_generated.data[3]
+data[4][0] => mux_53e:auto_generated.data[4]
+sel[0] => mux_53e:auto_generated.sel[0]
+sel[1] => mux_53e:auto_generated.sel[1]
+sel[2] => mux_53e:auto_generated.sel[2]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_hbe:auto_generated.result[0]
+result[0] <= mux_53e:auto_generated.result[0]
 
 
-|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_hbe:auto_generated
+|ULA_Full|ULA_32bits:inst|ULA_1bit:inst|Mux5:inst2|LPM_MUX:LPM_MUX_component|mux_53e:auto_generated
 data[0] => _.IN1
 data[1] => _.IN1
 data[2] => _.IN1
@@ -4739,109 +4739,109 @@ result[31] <= LPM_MUX:LPM_MUX_component.RESULT[31]
 
 
 |ULA_Full|Mux_2:inst12|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_0de:auto_generated.data[0]
-data[0][1] => mux_0de:auto_generated.data[1]
-data[0][2] => mux_0de:auto_generated.data[2]
-data[0][3] => mux_0de:auto_generated.data[3]
-data[0][4] => mux_0de:auto_generated.data[4]
-data[0][5] => mux_0de:auto_generated.data[5]
-data[0][6] => mux_0de:auto_generated.data[6]
-data[0][7] => mux_0de:auto_generated.data[7]
-data[0][8] => mux_0de:auto_generated.data[8]
-data[0][9] => mux_0de:auto_generated.data[9]
-data[0][10] => mux_0de:auto_generated.data[10]
-data[0][11] => mux_0de:auto_generated.data[11]
-data[0][12] => mux_0de:auto_generated.data[12]
-data[0][13] => mux_0de:auto_generated.data[13]
-data[0][14] => mux_0de:auto_generated.data[14]
-data[0][15] => mux_0de:auto_generated.data[15]
-data[0][16] => mux_0de:auto_generated.data[16]
-data[0][17] => mux_0de:auto_generated.data[17]
-data[0][18] => mux_0de:auto_generated.data[18]
-data[0][19] => mux_0de:auto_generated.data[19]
-data[0][20] => mux_0de:auto_generated.data[20]
-data[0][21] => mux_0de:auto_generated.data[21]
-data[0][22] => mux_0de:auto_generated.data[22]
-data[0][23] => mux_0de:auto_generated.data[23]
-data[0][24] => mux_0de:auto_generated.data[24]
-data[0][25] => mux_0de:auto_generated.data[25]
-data[0][26] => mux_0de:auto_generated.data[26]
-data[0][27] => mux_0de:auto_generated.data[27]
-data[0][28] => mux_0de:auto_generated.data[28]
-data[0][29] => mux_0de:auto_generated.data[29]
-data[0][30] => mux_0de:auto_generated.data[30]
-data[0][31] => mux_0de:auto_generated.data[31]
-data[1][0] => mux_0de:auto_generated.data[32]
-data[1][1] => mux_0de:auto_generated.data[33]
-data[1][2] => mux_0de:auto_generated.data[34]
-data[1][3] => mux_0de:auto_generated.data[35]
-data[1][4] => mux_0de:auto_generated.data[36]
-data[1][5] => mux_0de:auto_generated.data[37]
-data[1][6] => mux_0de:auto_generated.data[38]
-data[1][7] => mux_0de:auto_generated.data[39]
-data[1][8] => mux_0de:auto_generated.data[40]
-data[1][9] => mux_0de:auto_generated.data[41]
-data[1][10] => mux_0de:auto_generated.data[42]
-data[1][11] => mux_0de:auto_generated.data[43]
-data[1][12] => mux_0de:auto_generated.data[44]
-data[1][13] => mux_0de:auto_generated.data[45]
-data[1][14] => mux_0de:auto_generated.data[46]
-data[1][15] => mux_0de:auto_generated.data[47]
-data[1][16] => mux_0de:auto_generated.data[48]
-data[1][17] => mux_0de:auto_generated.data[49]
-data[1][18] => mux_0de:auto_generated.data[50]
-data[1][19] => mux_0de:auto_generated.data[51]
-data[1][20] => mux_0de:auto_generated.data[52]
-data[1][21] => mux_0de:auto_generated.data[53]
-data[1][22] => mux_0de:auto_generated.data[54]
-data[1][23] => mux_0de:auto_generated.data[55]
-data[1][24] => mux_0de:auto_generated.data[56]
-data[1][25] => mux_0de:auto_generated.data[57]
-data[1][26] => mux_0de:auto_generated.data[58]
-data[1][27] => mux_0de:auto_generated.data[59]
-data[1][28] => mux_0de:auto_generated.data[60]
-data[1][29] => mux_0de:auto_generated.data[61]
-data[1][30] => mux_0de:auto_generated.data[62]
-data[1][31] => mux_0de:auto_generated.data[63]
-sel[0] => mux_0de:auto_generated.sel[0]
+data[0][0] => mux_k4e:auto_generated.data[0]
+data[0][1] => mux_k4e:auto_generated.data[1]
+data[0][2] => mux_k4e:auto_generated.data[2]
+data[0][3] => mux_k4e:auto_generated.data[3]
+data[0][4] => mux_k4e:auto_generated.data[4]
+data[0][5] => mux_k4e:auto_generated.data[5]
+data[0][6] => mux_k4e:auto_generated.data[6]
+data[0][7] => mux_k4e:auto_generated.data[7]
+data[0][8] => mux_k4e:auto_generated.data[8]
+data[0][9] => mux_k4e:auto_generated.data[9]
+data[0][10] => mux_k4e:auto_generated.data[10]
+data[0][11] => mux_k4e:auto_generated.data[11]
+data[0][12] => mux_k4e:auto_generated.data[12]
+data[0][13] => mux_k4e:auto_generated.data[13]
+data[0][14] => mux_k4e:auto_generated.data[14]
+data[0][15] => mux_k4e:auto_generated.data[15]
+data[0][16] => mux_k4e:auto_generated.data[16]
+data[0][17] => mux_k4e:auto_generated.data[17]
+data[0][18] => mux_k4e:auto_generated.data[18]
+data[0][19] => mux_k4e:auto_generated.data[19]
+data[0][20] => mux_k4e:auto_generated.data[20]
+data[0][21] => mux_k4e:auto_generated.data[21]
+data[0][22] => mux_k4e:auto_generated.data[22]
+data[0][23] => mux_k4e:auto_generated.data[23]
+data[0][24] => mux_k4e:auto_generated.data[24]
+data[0][25] => mux_k4e:auto_generated.data[25]
+data[0][26] => mux_k4e:auto_generated.data[26]
+data[0][27] => mux_k4e:auto_generated.data[27]
+data[0][28] => mux_k4e:auto_generated.data[28]
+data[0][29] => mux_k4e:auto_generated.data[29]
+data[0][30] => mux_k4e:auto_generated.data[30]
+data[0][31] => mux_k4e:auto_generated.data[31]
+data[1][0] => mux_k4e:auto_generated.data[32]
+data[1][1] => mux_k4e:auto_generated.data[33]
+data[1][2] => mux_k4e:auto_generated.data[34]
+data[1][3] => mux_k4e:auto_generated.data[35]
+data[1][4] => mux_k4e:auto_generated.data[36]
+data[1][5] => mux_k4e:auto_generated.data[37]
+data[1][6] => mux_k4e:auto_generated.data[38]
+data[1][7] => mux_k4e:auto_generated.data[39]
+data[1][8] => mux_k4e:auto_generated.data[40]
+data[1][9] => mux_k4e:auto_generated.data[41]
+data[1][10] => mux_k4e:auto_generated.data[42]
+data[1][11] => mux_k4e:auto_generated.data[43]
+data[1][12] => mux_k4e:auto_generated.data[44]
+data[1][13] => mux_k4e:auto_generated.data[45]
+data[1][14] => mux_k4e:auto_generated.data[46]
+data[1][15] => mux_k4e:auto_generated.data[47]
+data[1][16] => mux_k4e:auto_generated.data[48]
+data[1][17] => mux_k4e:auto_generated.data[49]
+data[1][18] => mux_k4e:auto_generated.data[50]
+data[1][19] => mux_k4e:auto_generated.data[51]
+data[1][20] => mux_k4e:auto_generated.data[52]
+data[1][21] => mux_k4e:auto_generated.data[53]
+data[1][22] => mux_k4e:auto_generated.data[54]
+data[1][23] => mux_k4e:auto_generated.data[55]
+data[1][24] => mux_k4e:auto_generated.data[56]
+data[1][25] => mux_k4e:auto_generated.data[57]
+data[1][26] => mux_k4e:auto_generated.data[58]
+data[1][27] => mux_k4e:auto_generated.data[59]
+data[1][28] => mux_k4e:auto_generated.data[60]
+data[1][29] => mux_k4e:auto_generated.data[61]
+data[1][30] => mux_k4e:auto_generated.data[62]
+data[1][31] => mux_k4e:auto_generated.data[63]
+sel[0] => mux_k4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_0de:auto_generated.result[0]
-result[1] <= mux_0de:auto_generated.result[1]
-result[2] <= mux_0de:auto_generated.result[2]
-result[3] <= mux_0de:auto_generated.result[3]
-result[4] <= mux_0de:auto_generated.result[4]
-result[5] <= mux_0de:auto_generated.result[5]
-result[6] <= mux_0de:auto_generated.result[6]
-result[7] <= mux_0de:auto_generated.result[7]
-result[8] <= mux_0de:auto_generated.result[8]
-result[9] <= mux_0de:auto_generated.result[9]
-result[10] <= mux_0de:auto_generated.result[10]
-result[11] <= mux_0de:auto_generated.result[11]
-result[12] <= mux_0de:auto_generated.result[12]
-result[13] <= mux_0de:auto_generated.result[13]
-result[14] <= mux_0de:auto_generated.result[14]
-result[15] <= mux_0de:auto_generated.result[15]
-result[16] <= mux_0de:auto_generated.result[16]
-result[17] <= mux_0de:auto_generated.result[17]
-result[18] <= mux_0de:auto_generated.result[18]
-result[19] <= mux_0de:auto_generated.result[19]
-result[20] <= mux_0de:auto_generated.result[20]
-result[21] <= mux_0de:auto_generated.result[21]
-result[22] <= mux_0de:auto_generated.result[22]
-result[23] <= mux_0de:auto_generated.result[23]
-result[24] <= mux_0de:auto_generated.result[24]
-result[25] <= mux_0de:auto_generated.result[25]
-result[26] <= mux_0de:auto_generated.result[26]
-result[27] <= mux_0de:auto_generated.result[27]
-result[28] <= mux_0de:auto_generated.result[28]
-result[29] <= mux_0de:auto_generated.result[29]
-result[30] <= mux_0de:auto_generated.result[30]
-result[31] <= mux_0de:auto_generated.result[31]
+result[0] <= mux_k4e:auto_generated.result[0]
+result[1] <= mux_k4e:auto_generated.result[1]
+result[2] <= mux_k4e:auto_generated.result[2]
+result[3] <= mux_k4e:auto_generated.result[3]
+result[4] <= mux_k4e:auto_generated.result[4]
+result[5] <= mux_k4e:auto_generated.result[5]
+result[6] <= mux_k4e:auto_generated.result[6]
+result[7] <= mux_k4e:auto_generated.result[7]
+result[8] <= mux_k4e:auto_generated.result[8]
+result[9] <= mux_k4e:auto_generated.result[9]
+result[10] <= mux_k4e:auto_generated.result[10]
+result[11] <= mux_k4e:auto_generated.result[11]
+result[12] <= mux_k4e:auto_generated.result[12]
+result[13] <= mux_k4e:auto_generated.result[13]
+result[14] <= mux_k4e:auto_generated.result[14]
+result[15] <= mux_k4e:auto_generated.result[15]
+result[16] <= mux_k4e:auto_generated.result[16]
+result[17] <= mux_k4e:auto_generated.result[17]
+result[18] <= mux_k4e:auto_generated.result[18]
+result[19] <= mux_k4e:auto_generated.result[19]
+result[20] <= mux_k4e:auto_generated.result[20]
+result[21] <= mux_k4e:auto_generated.result[21]
+result[22] <= mux_k4e:auto_generated.result[22]
+result[23] <= mux_k4e:auto_generated.result[23]
+result[24] <= mux_k4e:auto_generated.result[24]
+result[25] <= mux_k4e:auto_generated.result[25]
+result[26] <= mux_k4e:auto_generated.result[26]
+result[27] <= mux_k4e:auto_generated.result[27]
+result[28] <= mux_k4e:auto_generated.result[28]
+result[29] <= mux_k4e:auto_generated.result[29]
+result[30] <= mux_k4e:auto_generated.result[30]
+result[31] <= mux_k4e:auto_generated.result[31]
 
 
-|ULA_Full|Mux_2:inst12|LPM_MUX:LPM_MUX_component|mux_0de:auto_generated
+|ULA_Full|Mux_2:inst12|LPM_MUX:LPM_MUX_component|mux_k4e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[2].IN1
@@ -5136,141 +5136,141 @@ result[63] <= lpm_mult:lpm_mult_component.result[63]
 
 
 |ULA_Full|Mult:inst2|lpm_mult:lpm_mult_component
-dataa[0] => mult_gcn:auto_generated.dataa[0]
-dataa[1] => mult_gcn:auto_generated.dataa[1]
-dataa[2] => mult_gcn:auto_generated.dataa[2]
-dataa[3] => mult_gcn:auto_generated.dataa[3]
-dataa[4] => mult_gcn:auto_generated.dataa[4]
-dataa[5] => mult_gcn:auto_generated.dataa[5]
-dataa[6] => mult_gcn:auto_generated.dataa[6]
-dataa[7] => mult_gcn:auto_generated.dataa[7]
-dataa[8] => mult_gcn:auto_generated.dataa[8]
-dataa[9] => mult_gcn:auto_generated.dataa[9]
-dataa[10] => mult_gcn:auto_generated.dataa[10]
-dataa[11] => mult_gcn:auto_generated.dataa[11]
-dataa[12] => mult_gcn:auto_generated.dataa[12]
-dataa[13] => mult_gcn:auto_generated.dataa[13]
-dataa[14] => mult_gcn:auto_generated.dataa[14]
-dataa[15] => mult_gcn:auto_generated.dataa[15]
-dataa[16] => mult_gcn:auto_generated.dataa[16]
-dataa[17] => mult_gcn:auto_generated.dataa[17]
-dataa[18] => mult_gcn:auto_generated.dataa[18]
-dataa[19] => mult_gcn:auto_generated.dataa[19]
-dataa[20] => mult_gcn:auto_generated.dataa[20]
-dataa[21] => mult_gcn:auto_generated.dataa[21]
-dataa[22] => mult_gcn:auto_generated.dataa[22]
-dataa[23] => mult_gcn:auto_generated.dataa[23]
-dataa[24] => mult_gcn:auto_generated.dataa[24]
-dataa[25] => mult_gcn:auto_generated.dataa[25]
-dataa[26] => mult_gcn:auto_generated.dataa[26]
-dataa[27] => mult_gcn:auto_generated.dataa[27]
-dataa[28] => mult_gcn:auto_generated.dataa[28]
-dataa[29] => mult_gcn:auto_generated.dataa[29]
-dataa[30] => mult_gcn:auto_generated.dataa[30]
-dataa[31] => mult_gcn:auto_generated.dataa[31]
-datab[0] => mult_gcn:auto_generated.datab[0]
-datab[1] => mult_gcn:auto_generated.datab[1]
-datab[2] => mult_gcn:auto_generated.datab[2]
-datab[3] => mult_gcn:auto_generated.datab[3]
-datab[4] => mult_gcn:auto_generated.datab[4]
-datab[5] => mult_gcn:auto_generated.datab[5]
-datab[6] => mult_gcn:auto_generated.datab[6]
-datab[7] => mult_gcn:auto_generated.datab[7]
-datab[8] => mult_gcn:auto_generated.datab[8]
-datab[9] => mult_gcn:auto_generated.datab[9]
-datab[10] => mult_gcn:auto_generated.datab[10]
-datab[11] => mult_gcn:auto_generated.datab[11]
-datab[12] => mult_gcn:auto_generated.datab[12]
-datab[13] => mult_gcn:auto_generated.datab[13]
-datab[14] => mult_gcn:auto_generated.datab[14]
-datab[15] => mult_gcn:auto_generated.datab[15]
-datab[16] => mult_gcn:auto_generated.datab[16]
-datab[17] => mult_gcn:auto_generated.datab[17]
-datab[18] => mult_gcn:auto_generated.datab[18]
-datab[19] => mult_gcn:auto_generated.datab[19]
-datab[20] => mult_gcn:auto_generated.datab[20]
-datab[21] => mult_gcn:auto_generated.datab[21]
-datab[22] => mult_gcn:auto_generated.datab[22]
-datab[23] => mult_gcn:auto_generated.datab[23]
-datab[24] => mult_gcn:auto_generated.datab[24]
-datab[25] => mult_gcn:auto_generated.datab[25]
-datab[26] => mult_gcn:auto_generated.datab[26]
-datab[27] => mult_gcn:auto_generated.datab[27]
-datab[28] => mult_gcn:auto_generated.datab[28]
-datab[29] => mult_gcn:auto_generated.datab[29]
-datab[30] => mult_gcn:auto_generated.datab[30]
-datab[31] => mult_gcn:auto_generated.datab[31]
+dataa[0] => mult_44n:auto_generated.dataa[0]
+dataa[1] => mult_44n:auto_generated.dataa[1]
+dataa[2] => mult_44n:auto_generated.dataa[2]
+dataa[3] => mult_44n:auto_generated.dataa[3]
+dataa[4] => mult_44n:auto_generated.dataa[4]
+dataa[5] => mult_44n:auto_generated.dataa[5]
+dataa[6] => mult_44n:auto_generated.dataa[6]
+dataa[7] => mult_44n:auto_generated.dataa[7]
+dataa[8] => mult_44n:auto_generated.dataa[8]
+dataa[9] => mult_44n:auto_generated.dataa[9]
+dataa[10] => mult_44n:auto_generated.dataa[10]
+dataa[11] => mult_44n:auto_generated.dataa[11]
+dataa[12] => mult_44n:auto_generated.dataa[12]
+dataa[13] => mult_44n:auto_generated.dataa[13]
+dataa[14] => mult_44n:auto_generated.dataa[14]
+dataa[15] => mult_44n:auto_generated.dataa[15]
+dataa[16] => mult_44n:auto_generated.dataa[16]
+dataa[17] => mult_44n:auto_generated.dataa[17]
+dataa[18] => mult_44n:auto_generated.dataa[18]
+dataa[19] => mult_44n:auto_generated.dataa[19]
+dataa[20] => mult_44n:auto_generated.dataa[20]
+dataa[21] => mult_44n:auto_generated.dataa[21]
+dataa[22] => mult_44n:auto_generated.dataa[22]
+dataa[23] => mult_44n:auto_generated.dataa[23]
+dataa[24] => mult_44n:auto_generated.dataa[24]
+dataa[25] => mult_44n:auto_generated.dataa[25]
+dataa[26] => mult_44n:auto_generated.dataa[26]
+dataa[27] => mult_44n:auto_generated.dataa[27]
+dataa[28] => mult_44n:auto_generated.dataa[28]
+dataa[29] => mult_44n:auto_generated.dataa[29]
+dataa[30] => mult_44n:auto_generated.dataa[30]
+dataa[31] => mult_44n:auto_generated.dataa[31]
+datab[0] => mult_44n:auto_generated.datab[0]
+datab[1] => mult_44n:auto_generated.datab[1]
+datab[2] => mult_44n:auto_generated.datab[2]
+datab[3] => mult_44n:auto_generated.datab[3]
+datab[4] => mult_44n:auto_generated.datab[4]
+datab[5] => mult_44n:auto_generated.datab[5]
+datab[6] => mult_44n:auto_generated.datab[6]
+datab[7] => mult_44n:auto_generated.datab[7]
+datab[8] => mult_44n:auto_generated.datab[8]
+datab[9] => mult_44n:auto_generated.datab[9]
+datab[10] => mult_44n:auto_generated.datab[10]
+datab[11] => mult_44n:auto_generated.datab[11]
+datab[12] => mult_44n:auto_generated.datab[12]
+datab[13] => mult_44n:auto_generated.datab[13]
+datab[14] => mult_44n:auto_generated.datab[14]
+datab[15] => mult_44n:auto_generated.datab[15]
+datab[16] => mult_44n:auto_generated.datab[16]
+datab[17] => mult_44n:auto_generated.datab[17]
+datab[18] => mult_44n:auto_generated.datab[18]
+datab[19] => mult_44n:auto_generated.datab[19]
+datab[20] => mult_44n:auto_generated.datab[20]
+datab[21] => mult_44n:auto_generated.datab[21]
+datab[22] => mult_44n:auto_generated.datab[22]
+datab[23] => mult_44n:auto_generated.datab[23]
+datab[24] => mult_44n:auto_generated.datab[24]
+datab[25] => mult_44n:auto_generated.datab[25]
+datab[26] => mult_44n:auto_generated.datab[26]
+datab[27] => mult_44n:auto_generated.datab[27]
+datab[28] => mult_44n:auto_generated.datab[28]
+datab[29] => mult_44n:auto_generated.datab[29]
+datab[30] => mult_44n:auto_generated.datab[30]
+datab[31] => mult_44n:auto_generated.datab[31]
 sum[0] => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clock => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mult_gcn:auto_generated.result[0]
-result[1] <= mult_gcn:auto_generated.result[1]
-result[2] <= mult_gcn:auto_generated.result[2]
-result[3] <= mult_gcn:auto_generated.result[3]
-result[4] <= mult_gcn:auto_generated.result[4]
-result[5] <= mult_gcn:auto_generated.result[5]
-result[6] <= mult_gcn:auto_generated.result[6]
-result[7] <= mult_gcn:auto_generated.result[7]
-result[8] <= mult_gcn:auto_generated.result[8]
-result[9] <= mult_gcn:auto_generated.result[9]
-result[10] <= mult_gcn:auto_generated.result[10]
-result[11] <= mult_gcn:auto_generated.result[11]
-result[12] <= mult_gcn:auto_generated.result[12]
-result[13] <= mult_gcn:auto_generated.result[13]
-result[14] <= mult_gcn:auto_generated.result[14]
-result[15] <= mult_gcn:auto_generated.result[15]
-result[16] <= mult_gcn:auto_generated.result[16]
-result[17] <= mult_gcn:auto_generated.result[17]
-result[18] <= mult_gcn:auto_generated.result[18]
-result[19] <= mult_gcn:auto_generated.result[19]
-result[20] <= mult_gcn:auto_generated.result[20]
-result[21] <= mult_gcn:auto_generated.result[21]
-result[22] <= mult_gcn:auto_generated.result[22]
-result[23] <= mult_gcn:auto_generated.result[23]
-result[24] <= mult_gcn:auto_generated.result[24]
-result[25] <= mult_gcn:auto_generated.result[25]
-result[26] <= mult_gcn:auto_generated.result[26]
-result[27] <= mult_gcn:auto_generated.result[27]
-result[28] <= mult_gcn:auto_generated.result[28]
-result[29] <= mult_gcn:auto_generated.result[29]
-result[30] <= mult_gcn:auto_generated.result[30]
-result[31] <= mult_gcn:auto_generated.result[31]
-result[32] <= mult_gcn:auto_generated.result[32]
-result[33] <= mult_gcn:auto_generated.result[33]
-result[34] <= mult_gcn:auto_generated.result[34]
-result[35] <= mult_gcn:auto_generated.result[35]
-result[36] <= mult_gcn:auto_generated.result[36]
-result[37] <= mult_gcn:auto_generated.result[37]
-result[38] <= mult_gcn:auto_generated.result[38]
-result[39] <= mult_gcn:auto_generated.result[39]
-result[40] <= mult_gcn:auto_generated.result[40]
-result[41] <= mult_gcn:auto_generated.result[41]
-result[42] <= mult_gcn:auto_generated.result[42]
-result[43] <= mult_gcn:auto_generated.result[43]
-result[44] <= mult_gcn:auto_generated.result[44]
-result[45] <= mult_gcn:auto_generated.result[45]
-result[46] <= mult_gcn:auto_generated.result[46]
-result[47] <= mult_gcn:auto_generated.result[47]
-result[48] <= mult_gcn:auto_generated.result[48]
-result[49] <= mult_gcn:auto_generated.result[49]
-result[50] <= mult_gcn:auto_generated.result[50]
-result[51] <= mult_gcn:auto_generated.result[51]
-result[52] <= mult_gcn:auto_generated.result[52]
-result[53] <= mult_gcn:auto_generated.result[53]
-result[54] <= mult_gcn:auto_generated.result[54]
-result[55] <= mult_gcn:auto_generated.result[55]
-result[56] <= mult_gcn:auto_generated.result[56]
-result[57] <= mult_gcn:auto_generated.result[57]
-result[58] <= mult_gcn:auto_generated.result[58]
-result[59] <= mult_gcn:auto_generated.result[59]
-result[60] <= mult_gcn:auto_generated.result[60]
-result[61] <= mult_gcn:auto_generated.result[61]
-result[62] <= mult_gcn:auto_generated.result[62]
-result[63] <= mult_gcn:auto_generated.result[63]
+result[0] <= mult_44n:auto_generated.result[0]
+result[1] <= mult_44n:auto_generated.result[1]
+result[2] <= mult_44n:auto_generated.result[2]
+result[3] <= mult_44n:auto_generated.result[3]
+result[4] <= mult_44n:auto_generated.result[4]
+result[5] <= mult_44n:auto_generated.result[5]
+result[6] <= mult_44n:auto_generated.result[6]
+result[7] <= mult_44n:auto_generated.result[7]
+result[8] <= mult_44n:auto_generated.result[8]
+result[9] <= mult_44n:auto_generated.result[9]
+result[10] <= mult_44n:auto_generated.result[10]
+result[11] <= mult_44n:auto_generated.result[11]
+result[12] <= mult_44n:auto_generated.result[12]
+result[13] <= mult_44n:auto_generated.result[13]
+result[14] <= mult_44n:auto_generated.result[14]
+result[15] <= mult_44n:auto_generated.result[15]
+result[16] <= mult_44n:auto_generated.result[16]
+result[17] <= mult_44n:auto_generated.result[17]
+result[18] <= mult_44n:auto_generated.result[18]
+result[19] <= mult_44n:auto_generated.result[19]
+result[20] <= mult_44n:auto_generated.result[20]
+result[21] <= mult_44n:auto_generated.result[21]
+result[22] <= mult_44n:auto_generated.result[22]
+result[23] <= mult_44n:auto_generated.result[23]
+result[24] <= mult_44n:auto_generated.result[24]
+result[25] <= mult_44n:auto_generated.result[25]
+result[26] <= mult_44n:auto_generated.result[26]
+result[27] <= mult_44n:auto_generated.result[27]
+result[28] <= mult_44n:auto_generated.result[28]
+result[29] <= mult_44n:auto_generated.result[29]
+result[30] <= mult_44n:auto_generated.result[30]
+result[31] <= mult_44n:auto_generated.result[31]
+result[32] <= mult_44n:auto_generated.result[32]
+result[33] <= mult_44n:auto_generated.result[33]
+result[34] <= mult_44n:auto_generated.result[34]
+result[35] <= mult_44n:auto_generated.result[35]
+result[36] <= mult_44n:auto_generated.result[36]
+result[37] <= mult_44n:auto_generated.result[37]
+result[38] <= mult_44n:auto_generated.result[38]
+result[39] <= mult_44n:auto_generated.result[39]
+result[40] <= mult_44n:auto_generated.result[40]
+result[41] <= mult_44n:auto_generated.result[41]
+result[42] <= mult_44n:auto_generated.result[42]
+result[43] <= mult_44n:auto_generated.result[43]
+result[44] <= mult_44n:auto_generated.result[44]
+result[45] <= mult_44n:auto_generated.result[45]
+result[46] <= mult_44n:auto_generated.result[46]
+result[47] <= mult_44n:auto_generated.result[47]
+result[48] <= mult_44n:auto_generated.result[48]
+result[49] <= mult_44n:auto_generated.result[49]
+result[50] <= mult_44n:auto_generated.result[50]
+result[51] <= mult_44n:auto_generated.result[51]
+result[52] <= mult_44n:auto_generated.result[52]
+result[53] <= mult_44n:auto_generated.result[53]
+result[54] <= mult_44n:auto_generated.result[54]
+result[55] <= mult_44n:auto_generated.result[55]
+result[56] <= mult_44n:auto_generated.result[56]
+result[57] <= mult_44n:auto_generated.result[57]
+result[58] <= mult_44n:auto_generated.result[58]
+result[59] <= mult_44n:auto_generated.result[59]
+result[60] <= mult_44n:auto_generated.result[60]
+result[61] <= mult_44n:auto_generated.result[61]
+result[62] <= mult_44n:auto_generated.result[62]
+result[63] <= mult_44n:auto_generated.result[63]
 
 
-|ULA_Full|Mult:inst2|lpm_mult:lpm_mult_component|mult_gcn:auto_generated
+|ULA_Full|Mult:inst2|lpm_mult:lpm_mult_component|mult_44n:auto_generated
 dataa[0] => mac_mult1.DATAA
 dataa[0] => mac_mult3.DATAA
 dataa[1] => mac_mult1.DATAA1
@@ -5597,140 +5597,140 @@ remain[31] <= lpm_divide:LPM_DIVIDE_component.remain[31]
 
 
 |ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component
-numer[0] => lpm_divide_vqp:auto_generated.numer[0]
-numer[1] => lpm_divide_vqp:auto_generated.numer[1]
-numer[2] => lpm_divide_vqp:auto_generated.numer[2]
-numer[3] => lpm_divide_vqp:auto_generated.numer[3]
-numer[4] => lpm_divide_vqp:auto_generated.numer[4]
-numer[5] => lpm_divide_vqp:auto_generated.numer[5]
-numer[6] => lpm_divide_vqp:auto_generated.numer[6]
-numer[7] => lpm_divide_vqp:auto_generated.numer[7]
-numer[8] => lpm_divide_vqp:auto_generated.numer[8]
-numer[9] => lpm_divide_vqp:auto_generated.numer[9]
-numer[10] => lpm_divide_vqp:auto_generated.numer[10]
-numer[11] => lpm_divide_vqp:auto_generated.numer[11]
-numer[12] => lpm_divide_vqp:auto_generated.numer[12]
-numer[13] => lpm_divide_vqp:auto_generated.numer[13]
-numer[14] => lpm_divide_vqp:auto_generated.numer[14]
-numer[15] => lpm_divide_vqp:auto_generated.numer[15]
-numer[16] => lpm_divide_vqp:auto_generated.numer[16]
-numer[17] => lpm_divide_vqp:auto_generated.numer[17]
-numer[18] => lpm_divide_vqp:auto_generated.numer[18]
-numer[19] => lpm_divide_vqp:auto_generated.numer[19]
-numer[20] => lpm_divide_vqp:auto_generated.numer[20]
-numer[21] => lpm_divide_vqp:auto_generated.numer[21]
-numer[22] => lpm_divide_vqp:auto_generated.numer[22]
-numer[23] => lpm_divide_vqp:auto_generated.numer[23]
-numer[24] => lpm_divide_vqp:auto_generated.numer[24]
-numer[25] => lpm_divide_vqp:auto_generated.numer[25]
-numer[26] => lpm_divide_vqp:auto_generated.numer[26]
-numer[27] => lpm_divide_vqp:auto_generated.numer[27]
-numer[28] => lpm_divide_vqp:auto_generated.numer[28]
-numer[29] => lpm_divide_vqp:auto_generated.numer[29]
-numer[30] => lpm_divide_vqp:auto_generated.numer[30]
-numer[31] => lpm_divide_vqp:auto_generated.numer[31]
-denom[0] => lpm_divide_vqp:auto_generated.denom[0]
-denom[1] => lpm_divide_vqp:auto_generated.denom[1]
-denom[2] => lpm_divide_vqp:auto_generated.denom[2]
-denom[3] => lpm_divide_vqp:auto_generated.denom[3]
-denom[4] => lpm_divide_vqp:auto_generated.denom[4]
-denom[5] => lpm_divide_vqp:auto_generated.denom[5]
-denom[6] => lpm_divide_vqp:auto_generated.denom[6]
-denom[7] => lpm_divide_vqp:auto_generated.denom[7]
-denom[8] => lpm_divide_vqp:auto_generated.denom[8]
-denom[9] => lpm_divide_vqp:auto_generated.denom[9]
-denom[10] => lpm_divide_vqp:auto_generated.denom[10]
-denom[11] => lpm_divide_vqp:auto_generated.denom[11]
-denom[12] => lpm_divide_vqp:auto_generated.denom[12]
-denom[13] => lpm_divide_vqp:auto_generated.denom[13]
-denom[14] => lpm_divide_vqp:auto_generated.denom[14]
-denom[15] => lpm_divide_vqp:auto_generated.denom[15]
-denom[16] => lpm_divide_vqp:auto_generated.denom[16]
-denom[17] => lpm_divide_vqp:auto_generated.denom[17]
-denom[18] => lpm_divide_vqp:auto_generated.denom[18]
-denom[19] => lpm_divide_vqp:auto_generated.denom[19]
-denom[20] => lpm_divide_vqp:auto_generated.denom[20]
-denom[21] => lpm_divide_vqp:auto_generated.denom[21]
-denom[22] => lpm_divide_vqp:auto_generated.denom[22]
-denom[23] => lpm_divide_vqp:auto_generated.denom[23]
-denom[24] => lpm_divide_vqp:auto_generated.denom[24]
-denom[25] => lpm_divide_vqp:auto_generated.denom[25]
-denom[26] => lpm_divide_vqp:auto_generated.denom[26]
-denom[27] => lpm_divide_vqp:auto_generated.denom[27]
-denom[28] => lpm_divide_vqp:auto_generated.denom[28]
-denom[29] => lpm_divide_vqp:auto_generated.denom[29]
-denom[30] => lpm_divide_vqp:auto_generated.denom[30]
-denom[31] => lpm_divide_vqp:auto_generated.denom[31]
+numer[0] => lpm_divide_jip:auto_generated.numer[0]
+numer[1] => lpm_divide_jip:auto_generated.numer[1]
+numer[2] => lpm_divide_jip:auto_generated.numer[2]
+numer[3] => lpm_divide_jip:auto_generated.numer[3]
+numer[4] => lpm_divide_jip:auto_generated.numer[4]
+numer[5] => lpm_divide_jip:auto_generated.numer[5]
+numer[6] => lpm_divide_jip:auto_generated.numer[6]
+numer[7] => lpm_divide_jip:auto_generated.numer[7]
+numer[8] => lpm_divide_jip:auto_generated.numer[8]
+numer[9] => lpm_divide_jip:auto_generated.numer[9]
+numer[10] => lpm_divide_jip:auto_generated.numer[10]
+numer[11] => lpm_divide_jip:auto_generated.numer[11]
+numer[12] => lpm_divide_jip:auto_generated.numer[12]
+numer[13] => lpm_divide_jip:auto_generated.numer[13]
+numer[14] => lpm_divide_jip:auto_generated.numer[14]
+numer[15] => lpm_divide_jip:auto_generated.numer[15]
+numer[16] => lpm_divide_jip:auto_generated.numer[16]
+numer[17] => lpm_divide_jip:auto_generated.numer[17]
+numer[18] => lpm_divide_jip:auto_generated.numer[18]
+numer[19] => lpm_divide_jip:auto_generated.numer[19]
+numer[20] => lpm_divide_jip:auto_generated.numer[20]
+numer[21] => lpm_divide_jip:auto_generated.numer[21]
+numer[22] => lpm_divide_jip:auto_generated.numer[22]
+numer[23] => lpm_divide_jip:auto_generated.numer[23]
+numer[24] => lpm_divide_jip:auto_generated.numer[24]
+numer[25] => lpm_divide_jip:auto_generated.numer[25]
+numer[26] => lpm_divide_jip:auto_generated.numer[26]
+numer[27] => lpm_divide_jip:auto_generated.numer[27]
+numer[28] => lpm_divide_jip:auto_generated.numer[28]
+numer[29] => lpm_divide_jip:auto_generated.numer[29]
+numer[30] => lpm_divide_jip:auto_generated.numer[30]
+numer[31] => lpm_divide_jip:auto_generated.numer[31]
+denom[0] => lpm_divide_jip:auto_generated.denom[0]
+denom[1] => lpm_divide_jip:auto_generated.denom[1]
+denom[2] => lpm_divide_jip:auto_generated.denom[2]
+denom[3] => lpm_divide_jip:auto_generated.denom[3]
+denom[4] => lpm_divide_jip:auto_generated.denom[4]
+denom[5] => lpm_divide_jip:auto_generated.denom[5]
+denom[6] => lpm_divide_jip:auto_generated.denom[6]
+denom[7] => lpm_divide_jip:auto_generated.denom[7]
+denom[8] => lpm_divide_jip:auto_generated.denom[8]
+denom[9] => lpm_divide_jip:auto_generated.denom[9]
+denom[10] => lpm_divide_jip:auto_generated.denom[10]
+denom[11] => lpm_divide_jip:auto_generated.denom[11]
+denom[12] => lpm_divide_jip:auto_generated.denom[12]
+denom[13] => lpm_divide_jip:auto_generated.denom[13]
+denom[14] => lpm_divide_jip:auto_generated.denom[14]
+denom[15] => lpm_divide_jip:auto_generated.denom[15]
+denom[16] => lpm_divide_jip:auto_generated.denom[16]
+denom[17] => lpm_divide_jip:auto_generated.denom[17]
+denom[18] => lpm_divide_jip:auto_generated.denom[18]
+denom[19] => lpm_divide_jip:auto_generated.denom[19]
+denom[20] => lpm_divide_jip:auto_generated.denom[20]
+denom[21] => lpm_divide_jip:auto_generated.denom[21]
+denom[22] => lpm_divide_jip:auto_generated.denom[22]
+denom[23] => lpm_divide_jip:auto_generated.denom[23]
+denom[24] => lpm_divide_jip:auto_generated.denom[24]
+denom[25] => lpm_divide_jip:auto_generated.denom[25]
+denom[26] => lpm_divide_jip:auto_generated.denom[26]
+denom[27] => lpm_divide_jip:auto_generated.denom[27]
+denom[28] => lpm_divide_jip:auto_generated.denom[28]
+denom[29] => lpm_divide_jip:auto_generated.denom[29]
+denom[30] => lpm_divide_jip:auto_generated.denom[30]
+denom[31] => lpm_divide_jip:auto_generated.denom[31]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-quotient[0] <= lpm_divide_vqp:auto_generated.quotient[0]
-quotient[1] <= lpm_divide_vqp:auto_generated.quotient[1]
-quotient[2] <= lpm_divide_vqp:auto_generated.quotient[2]
-quotient[3] <= lpm_divide_vqp:auto_generated.quotient[3]
-quotient[4] <= lpm_divide_vqp:auto_generated.quotient[4]
-quotient[5] <= lpm_divide_vqp:auto_generated.quotient[5]
-quotient[6] <= lpm_divide_vqp:auto_generated.quotient[6]
-quotient[7] <= lpm_divide_vqp:auto_generated.quotient[7]
-quotient[8] <= lpm_divide_vqp:auto_generated.quotient[8]
-quotient[9] <= lpm_divide_vqp:auto_generated.quotient[9]
-quotient[10] <= lpm_divide_vqp:auto_generated.quotient[10]
-quotient[11] <= lpm_divide_vqp:auto_generated.quotient[11]
-quotient[12] <= lpm_divide_vqp:auto_generated.quotient[12]
-quotient[13] <= lpm_divide_vqp:auto_generated.quotient[13]
-quotient[14] <= lpm_divide_vqp:auto_generated.quotient[14]
-quotient[15] <= lpm_divide_vqp:auto_generated.quotient[15]
-quotient[16] <= lpm_divide_vqp:auto_generated.quotient[16]
-quotient[17] <= lpm_divide_vqp:auto_generated.quotient[17]
-quotient[18] <= lpm_divide_vqp:auto_generated.quotient[18]
-quotient[19] <= lpm_divide_vqp:auto_generated.quotient[19]
-quotient[20] <= lpm_divide_vqp:auto_generated.quotient[20]
-quotient[21] <= lpm_divide_vqp:auto_generated.quotient[21]
-quotient[22] <= lpm_divide_vqp:auto_generated.quotient[22]
-quotient[23] <= lpm_divide_vqp:auto_generated.quotient[23]
-quotient[24] <= lpm_divide_vqp:auto_generated.quotient[24]
-quotient[25] <= lpm_divide_vqp:auto_generated.quotient[25]
-quotient[26] <= lpm_divide_vqp:auto_generated.quotient[26]
-quotient[27] <= lpm_divide_vqp:auto_generated.quotient[27]
-quotient[28] <= lpm_divide_vqp:auto_generated.quotient[28]
-quotient[29] <= lpm_divide_vqp:auto_generated.quotient[29]
-quotient[30] <= lpm_divide_vqp:auto_generated.quotient[30]
-quotient[31] <= lpm_divide_vqp:auto_generated.quotient[31]
-remain[0] <= lpm_divide_vqp:auto_generated.remain[0]
-remain[1] <= lpm_divide_vqp:auto_generated.remain[1]
-remain[2] <= lpm_divide_vqp:auto_generated.remain[2]
-remain[3] <= lpm_divide_vqp:auto_generated.remain[3]
-remain[4] <= lpm_divide_vqp:auto_generated.remain[4]
-remain[5] <= lpm_divide_vqp:auto_generated.remain[5]
-remain[6] <= lpm_divide_vqp:auto_generated.remain[6]
-remain[7] <= lpm_divide_vqp:auto_generated.remain[7]
-remain[8] <= lpm_divide_vqp:auto_generated.remain[8]
-remain[9] <= lpm_divide_vqp:auto_generated.remain[9]
-remain[10] <= lpm_divide_vqp:auto_generated.remain[10]
-remain[11] <= lpm_divide_vqp:auto_generated.remain[11]
-remain[12] <= lpm_divide_vqp:auto_generated.remain[12]
-remain[13] <= lpm_divide_vqp:auto_generated.remain[13]
-remain[14] <= lpm_divide_vqp:auto_generated.remain[14]
-remain[15] <= lpm_divide_vqp:auto_generated.remain[15]
-remain[16] <= lpm_divide_vqp:auto_generated.remain[16]
-remain[17] <= lpm_divide_vqp:auto_generated.remain[17]
-remain[18] <= lpm_divide_vqp:auto_generated.remain[18]
-remain[19] <= lpm_divide_vqp:auto_generated.remain[19]
-remain[20] <= lpm_divide_vqp:auto_generated.remain[20]
-remain[21] <= lpm_divide_vqp:auto_generated.remain[21]
-remain[22] <= lpm_divide_vqp:auto_generated.remain[22]
-remain[23] <= lpm_divide_vqp:auto_generated.remain[23]
-remain[24] <= lpm_divide_vqp:auto_generated.remain[24]
-remain[25] <= lpm_divide_vqp:auto_generated.remain[25]
-remain[26] <= lpm_divide_vqp:auto_generated.remain[26]
-remain[27] <= lpm_divide_vqp:auto_generated.remain[27]
-remain[28] <= lpm_divide_vqp:auto_generated.remain[28]
-remain[29] <= lpm_divide_vqp:auto_generated.remain[29]
-remain[30] <= lpm_divide_vqp:auto_generated.remain[30]
-remain[31] <= lpm_divide_vqp:auto_generated.remain[31]
+quotient[0] <= lpm_divide_jip:auto_generated.quotient[0]
+quotient[1] <= lpm_divide_jip:auto_generated.quotient[1]
+quotient[2] <= lpm_divide_jip:auto_generated.quotient[2]
+quotient[3] <= lpm_divide_jip:auto_generated.quotient[3]
+quotient[4] <= lpm_divide_jip:auto_generated.quotient[4]
+quotient[5] <= lpm_divide_jip:auto_generated.quotient[5]
+quotient[6] <= lpm_divide_jip:auto_generated.quotient[6]
+quotient[7] <= lpm_divide_jip:auto_generated.quotient[7]
+quotient[8] <= lpm_divide_jip:auto_generated.quotient[8]
+quotient[9] <= lpm_divide_jip:auto_generated.quotient[9]
+quotient[10] <= lpm_divide_jip:auto_generated.quotient[10]
+quotient[11] <= lpm_divide_jip:auto_generated.quotient[11]
+quotient[12] <= lpm_divide_jip:auto_generated.quotient[12]
+quotient[13] <= lpm_divide_jip:auto_generated.quotient[13]
+quotient[14] <= lpm_divide_jip:auto_generated.quotient[14]
+quotient[15] <= lpm_divide_jip:auto_generated.quotient[15]
+quotient[16] <= lpm_divide_jip:auto_generated.quotient[16]
+quotient[17] <= lpm_divide_jip:auto_generated.quotient[17]
+quotient[18] <= lpm_divide_jip:auto_generated.quotient[18]
+quotient[19] <= lpm_divide_jip:auto_generated.quotient[19]
+quotient[20] <= lpm_divide_jip:auto_generated.quotient[20]
+quotient[21] <= lpm_divide_jip:auto_generated.quotient[21]
+quotient[22] <= lpm_divide_jip:auto_generated.quotient[22]
+quotient[23] <= lpm_divide_jip:auto_generated.quotient[23]
+quotient[24] <= lpm_divide_jip:auto_generated.quotient[24]
+quotient[25] <= lpm_divide_jip:auto_generated.quotient[25]
+quotient[26] <= lpm_divide_jip:auto_generated.quotient[26]
+quotient[27] <= lpm_divide_jip:auto_generated.quotient[27]
+quotient[28] <= lpm_divide_jip:auto_generated.quotient[28]
+quotient[29] <= lpm_divide_jip:auto_generated.quotient[29]
+quotient[30] <= lpm_divide_jip:auto_generated.quotient[30]
+quotient[31] <= lpm_divide_jip:auto_generated.quotient[31]
+remain[0] <= lpm_divide_jip:auto_generated.remain[0]
+remain[1] <= lpm_divide_jip:auto_generated.remain[1]
+remain[2] <= lpm_divide_jip:auto_generated.remain[2]
+remain[3] <= lpm_divide_jip:auto_generated.remain[3]
+remain[4] <= lpm_divide_jip:auto_generated.remain[4]
+remain[5] <= lpm_divide_jip:auto_generated.remain[5]
+remain[6] <= lpm_divide_jip:auto_generated.remain[6]
+remain[7] <= lpm_divide_jip:auto_generated.remain[7]
+remain[8] <= lpm_divide_jip:auto_generated.remain[8]
+remain[9] <= lpm_divide_jip:auto_generated.remain[9]
+remain[10] <= lpm_divide_jip:auto_generated.remain[10]
+remain[11] <= lpm_divide_jip:auto_generated.remain[11]
+remain[12] <= lpm_divide_jip:auto_generated.remain[12]
+remain[13] <= lpm_divide_jip:auto_generated.remain[13]
+remain[14] <= lpm_divide_jip:auto_generated.remain[14]
+remain[15] <= lpm_divide_jip:auto_generated.remain[15]
+remain[16] <= lpm_divide_jip:auto_generated.remain[16]
+remain[17] <= lpm_divide_jip:auto_generated.remain[17]
+remain[18] <= lpm_divide_jip:auto_generated.remain[18]
+remain[19] <= lpm_divide_jip:auto_generated.remain[19]
+remain[20] <= lpm_divide_jip:auto_generated.remain[20]
+remain[21] <= lpm_divide_jip:auto_generated.remain[21]
+remain[22] <= lpm_divide_jip:auto_generated.remain[22]
+remain[23] <= lpm_divide_jip:auto_generated.remain[23]
+remain[24] <= lpm_divide_jip:auto_generated.remain[24]
+remain[25] <= lpm_divide_jip:auto_generated.remain[25]
+remain[26] <= lpm_divide_jip:auto_generated.remain[26]
+remain[27] <= lpm_divide_jip:auto_generated.remain[27]
+remain[28] <= lpm_divide_jip:auto_generated.remain[28]
+remain[29] <= lpm_divide_jip:auto_generated.remain[29]
+remain[30] <= lpm_divide_jip:auto_generated.remain[30]
+remain[31] <= lpm_divide_jip:auto_generated.remain[31]
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated
 denom[0] => abs_divider_4dg:divider.denominator[0]
 denom[1] => abs_divider_4dg:divider.denominator[1]
 denom[2] => abs_divider_4dg:divider.denominator[2]
@@ -5861,7 +5861,7 @@ remain[30] <= abs_divider_4dg:divider.remainder[30]
 remain[31] <= abs_divider_4dg:divider.remainder[31]
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider
 denominator[0] => lpm_abs_c4a:my_abs_den.data[0]
 denominator[1] => lpm_abs_c4a:my_abs_den.data[1]
 denominator[2] => lpm_abs_c4a:my_abs_den.data[2]
@@ -6027,7 +6027,7 @@ remainder[30] <= remainder[30].DB_MAX_OUTPUT_PORT_TYPE
 remainder[31] <= remainder[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider
 denominator[0] => add_sub_1tc:add_sub_0.datab[0]
 denominator[0] => add_sub_2tc:add_sub_1.datab[0]
 denominator[0] => op_11.IN8
@@ -7709,7 +7709,7 @@ remainder[30] <= StageOut[1022].DB_MAX_OUTPUT_PORT_TYPE
 remainder[31] <= StageOut[1023].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider|add_sub_1tc:add_sub_0
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider|add_sub_1tc:add_sub_0
 cout <= carry_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => carry_eqn[0].IN0
 dataa[0] => _.IN0
@@ -7718,7 +7718,7 @@ datab[0] => datab_node[0].IN0
 result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider|add_sub_2tc:add_sub_1
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider|alt_u_div_0ef:divider|add_sub_2tc:add_sub_1
 cout <= carry_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => carry_eqn[0].IN0
 dataa[0] => _.IN0
@@ -7732,7 +7732,7 @@ result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider|lpm_abs_c4a:my_abs_den
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider|lpm_abs_c4a:my_abs_den
 data[0] => _.IN0
 data[0] => cs1a[0].SUM_IN
 data[0] => result[0].DATAIN
@@ -7893,7 +7893,7 @@ result[30] <= cs1a[30].DB_MAX_OUTPUT_PORT_TYPE
 result[31] <= cs1a[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_vqp:auto_generated|abs_divider_4dg:divider|lpm_abs_c4a:my_abs_num
+|ULA_Full|Divide1:inst3|lpm_divide:LPM_DIVIDE_component|lpm_divide_jip:auto_generated|abs_divider_4dg:divider|lpm_abs_c4a:my_abs_num
 data[0] => _.IN0
 data[0] => cs1a[0].SUM_IN
 data[0] => result[0].DATAIN
@@ -8155,109 +8155,109 @@ result[31] <= LPM_MUX:LPM_MUX_component.RESULT[31]
 
 
 |ULA_Full|Mux_2:inst13|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_0de:auto_generated.data[0]
-data[0][1] => mux_0de:auto_generated.data[1]
-data[0][2] => mux_0de:auto_generated.data[2]
-data[0][3] => mux_0de:auto_generated.data[3]
-data[0][4] => mux_0de:auto_generated.data[4]
-data[0][5] => mux_0de:auto_generated.data[5]
-data[0][6] => mux_0de:auto_generated.data[6]
-data[0][7] => mux_0de:auto_generated.data[7]
-data[0][8] => mux_0de:auto_generated.data[8]
-data[0][9] => mux_0de:auto_generated.data[9]
-data[0][10] => mux_0de:auto_generated.data[10]
-data[0][11] => mux_0de:auto_generated.data[11]
-data[0][12] => mux_0de:auto_generated.data[12]
-data[0][13] => mux_0de:auto_generated.data[13]
-data[0][14] => mux_0de:auto_generated.data[14]
-data[0][15] => mux_0de:auto_generated.data[15]
-data[0][16] => mux_0de:auto_generated.data[16]
-data[0][17] => mux_0de:auto_generated.data[17]
-data[0][18] => mux_0de:auto_generated.data[18]
-data[0][19] => mux_0de:auto_generated.data[19]
-data[0][20] => mux_0de:auto_generated.data[20]
-data[0][21] => mux_0de:auto_generated.data[21]
-data[0][22] => mux_0de:auto_generated.data[22]
-data[0][23] => mux_0de:auto_generated.data[23]
-data[0][24] => mux_0de:auto_generated.data[24]
-data[0][25] => mux_0de:auto_generated.data[25]
-data[0][26] => mux_0de:auto_generated.data[26]
-data[0][27] => mux_0de:auto_generated.data[27]
-data[0][28] => mux_0de:auto_generated.data[28]
-data[0][29] => mux_0de:auto_generated.data[29]
-data[0][30] => mux_0de:auto_generated.data[30]
-data[0][31] => mux_0de:auto_generated.data[31]
-data[1][0] => mux_0de:auto_generated.data[32]
-data[1][1] => mux_0de:auto_generated.data[33]
-data[1][2] => mux_0de:auto_generated.data[34]
-data[1][3] => mux_0de:auto_generated.data[35]
-data[1][4] => mux_0de:auto_generated.data[36]
-data[1][5] => mux_0de:auto_generated.data[37]
-data[1][6] => mux_0de:auto_generated.data[38]
-data[1][7] => mux_0de:auto_generated.data[39]
-data[1][8] => mux_0de:auto_generated.data[40]
-data[1][9] => mux_0de:auto_generated.data[41]
-data[1][10] => mux_0de:auto_generated.data[42]
-data[1][11] => mux_0de:auto_generated.data[43]
-data[1][12] => mux_0de:auto_generated.data[44]
-data[1][13] => mux_0de:auto_generated.data[45]
-data[1][14] => mux_0de:auto_generated.data[46]
-data[1][15] => mux_0de:auto_generated.data[47]
-data[1][16] => mux_0de:auto_generated.data[48]
-data[1][17] => mux_0de:auto_generated.data[49]
-data[1][18] => mux_0de:auto_generated.data[50]
-data[1][19] => mux_0de:auto_generated.data[51]
-data[1][20] => mux_0de:auto_generated.data[52]
-data[1][21] => mux_0de:auto_generated.data[53]
-data[1][22] => mux_0de:auto_generated.data[54]
-data[1][23] => mux_0de:auto_generated.data[55]
-data[1][24] => mux_0de:auto_generated.data[56]
-data[1][25] => mux_0de:auto_generated.data[57]
-data[1][26] => mux_0de:auto_generated.data[58]
-data[1][27] => mux_0de:auto_generated.data[59]
-data[1][28] => mux_0de:auto_generated.data[60]
-data[1][29] => mux_0de:auto_generated.data[61]
-data[1][30] => mux_0de:auto_generated.data[62]
-data[1][31] => mux_0de:auto_generated.data[63]
-sel[0] => mux_0de:auto_generated.sel[0]
+data[0][0] => mux_k4e:auto_generated.data[0]
+data[0][1] => mux_k4e:auto_generated.data[1]
+data[0][2] => mux_k4e:auto_generated.data[2]
+data[0][3] => mux_k4e:auto_generated.data[3]
+data[0][4] => mux_k4e:auto_generated.data[4]
+data[0][5] => mux_k4e:auto_generated.data[5]
+data[0][6] => mux_k4e:auto_generated.data[6]
+data[0][7] => mux_k4e:auto_generated.data[7]
+data[0][8] => mux_k4e:auto_generated.data[8]
+data[0][9] => mux_k4e:auto_generated.data[9]
+data[0][10] => mux_k4e:auto_generated.data[10]
+data[0][11] => mux_k4e:auto_generated.data[11]
+data[0][12] => mux_k4e:auto_generated.data[12]
+data[0][13] => mux_k4e:auto_generated.data[13]
+data[0][14] => mux_k4e:auto_generated.data[14]
+data[0][15] => mux_k4e:auto_generated.data[15]
+data[0][16] => mux_k4e:auto_generated.data[16]
+data[0][17] => mux_k4e:auto_generated.data[17]
+data[0][18] => mux_k4e:auto_generated.data[18]
+data[0][19] => mux_k4e:auto_generated.data[19]
+data[0][20] => mux_k4e:auto_generated.data[20]
+data[0][21] => mux_k4e:auto_generated.data[21]
+data[0][22] => mux_k4e:auto_generated.data[22]
+data[0][23] => mux_k4e:auto_generated.data[23]
+data[0][24] => mux_k4e:auto_generated.data[24]
+data[0][25] => mux_k4e:auto_generated.data[25]
+data[0][26] => mux_k4e:auto_generated.data[26]
+data[0][27] => mux_k4e:auto_generated.data[27]
+data[0][28] => mux_k4e:auto_generated.data[28]
+data[0][29] => mux_k4e:auto_generated.data[29]
+data[0][30] => mux_k4e:auto_generated.data[30]
+data[0][31] => mux_k4e:auto_generated.data[31]
+data[1][0] => mux_k4e:auto_generated.data[32]
+data[1][1] => mux_k4e:auto_generated.data[33]
+data[1][2] => mux_k4e:auto_generated.data[34]
+data[1][3] => mux_k4e:auto_generated.data[35]
+data[1][4] => mux_k4e:auto_generated.data[36]
+data[1][5] => mux_k4e:auto_generated.data[37]
+data[1][6] => mux_k4e:auto_generated.data[38]
+data[1][7] => mux_k4e:auto_generated.data[39]
+data[1][8] => mux_k4e:auto_generated.data[40]
+data[1][9] => mux_k4e:auto_generated.data[41]
+data[1][10] => mux_k4e:auto_generated.data[42]
+data[1][11] => mux_k4e:auto_generated.data[43]
+data[1][12] => mux_k4e:auto_generated.data[44]
+data[1][13] => mux_k4e:auto_generated.data[45]
+data[1][14] => mux_k4e:auto_generated.data[46]
+data[1][15] => mux_k4e:auto_generated.data[47]
+data[1][16] => mux_k4e:auto_generated.data[48]
+data[1][17] => mux_k4e:auto_generated.data[49]
+data[1][18] => mux_k4e:auto_generated.data[50]
+data[1][19] => mux_k4e:auto_generated.data[51]
+data[1][20] => mux_k4e:auto_generated.data[52]
+data[1][21] => mux_k4e:auto_generated.data[53]
+data[1][22] => mux_k4e:auto_generated.data[54]
+data[1][23] => mux_k4e:auto_generated.data[55]
+data[1][24] => mux_k4e:auto_generated.data[56]
+data[1][25] => mux_k4e:auto_generated.data[57]
+data[1][26] => mux_k4e:auto_generated.data[58]
+data[1][27] => mux_k4e:auto_generated.data[59]
+data[1][28] => mux_k4e:auto_generated.data[60]
+data[1][29] => mux_k4e:auto_generated.data[61]
+data[1][30] => mux_k4e:auto_generated.data[62]
+data[1][31] => mux_k4e:auto_generated.data[63]
+sel[0] => mux_k4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_0de:auto_generated.result[0]
-result[1] <= mux_0de:auto_generated.result[1]
-result[2] <= mux_0de:auto_generated.result[2]
-result[3] <= mux_0de:auto_generated.result[3]
-result[4] <= mux_0de:auto_generated.result[4]
-result[5] <= mux_0de:auto_generated.result[5]
-result[6] <= mux_0de:auto_generated.result[6]
-result[7] <= mux_0de:auto_generated.result[7]
-result[8] <= mux_0de:auto_generated.result[8]
-result[9] <= mux_0de:auto_generated.result[9]
-result[10] <= mux_0de:auto_generated.result[10]
-result[11] <= mux_0de:auto_generated.result[11]
-result[12] <= mux_0de:auto_generated.result[12]
-result[13] <= mux_0de:auto_generated.result[13]
-result[14] <= mux_0de:auto_generated.result[14]
-result[15] <= mux_0de:auto_generated.result[15]
-result[16] <= mux_0de:auto_generated.result[16]
-result[17] <= mux_0de:auto_generated.result[17]
-result[18] <= mux_0de:auto_generated.result[18]
-result[19] <= mux_0de:auto_generated.result[19]
-result[20] <= mux_0de:auto_generated.result[20]
-result[21] <= mux_0de:auto_generated.result[21]
-result[22] <= mux_0de:auto_generated.result[22]
-result[23] <= mux_0de:auto_generated.result[23]
-result[24] <= mux_0de:auto_generated.result[24]
-result[25] <= mux_0de:auto_generated.result[25]
-result[26] <= mux_0de:auto_generated.result[26]
-result[27] <= mux_0de:auto_generated.result[27]
-result[28] <= mux_0de:auto_generated.result[28]
-result[29] <= mux_0de:auto_generated.result[29]
-result[30] <= mux_0de:auto_generated.result[30]
-result[31] <= mux_0de:auto_generated.result[31]
+result[0] <= mux_k4e:auto_generated.result[0]
+result[1] <= mux_k4e:auto_generated.result[1]
+result[2] <= mux_k4e:auto_generated.result[2]
+result[3] <= mux_k4e:auto_generated.result[3]
+result[4] <= mux_k4e:auto_generated.result[4]
+result[5] <= mux_k4e:auto_generated.result[5]
+result[6] <= mux_k4e:auto_generated.result[6]
+result[7] <= mux_k4e:auto_generated.result[7]
+result[8] <= mux_k4e:auto_generated.result[8]
+result[9] <= mux_k4e:auto_generated.result[9]
+result[10] <= mux_k4e:auto_generated.result[10]
+result[11] <= mux_k4e:auto_generated.result[11]
+result[12] <= mux_k4e:auto_generated.result[12]
+result[13] <= mux_k4e:auto_generated.result[13]
+result[14] <= mux_k4e:auto_generated.result[14]
+result[15] <= mux_k4e:auto_generated.result[15]
+result[16] <= mux_k4e:auto_generated.result[16]
+result[17] <= mux_k4e:auto_generated.result[17]
+result[18] <= mux_k4e:auto_generated.result[18]
+result[19] <= mux_k4e:auto_generated.result[19]
+result[20] <= mux_k4e:auto_generated.result[20]
+result[21] <= mux_k4e:auto_generated.result[21]
+result[22] <= mux_k4e:auto_generated.result[22]
+result[23] <= mux_k4e:auto_generated.result[23]
+result[24] <= mux_k4e:auto_generated.result[24]
+result[25] <= mux_k4e:auto_generated.result[25]
+result[26] <= mux_k4e:auto_generated.result[26]
+result[27] <= mux_k4e:auto_generated.result[27]
+result[28] <= mux_k4e:auto_generated.result[28]
+result[29] <= mux_k4e:auto_generated.result[29]
+result[30] <= mux_k4e:auto_generated.result[30]
+result[31] <= mux_k4e:auto_generated.result[31]
 
 
-|ULA_Full|Mux_2:inst13|LPM_MUX:LPM_MUX_component|mux_0de:auto_generated
+|ULA_Full|Mux_2:inst13|LPM_MUX:LPM_MUX_component|mux_k4e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[2].IN1
@@ -8521,109 +8521,109 @@ result[31] <= LPM_MUX:LPM_MUX_component.RESULT[31]
 
 
 |ULA_Full|Mux_2:inst14|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_0de:auto_generated.data[0]
-data[0][1] => mux_0de:auto_generated.data[1]
-data[0][2] => mux_0de:auto_generated.data[2]
-data[0][3] => mux_0de:auto_generated.data[3]
-data[0][4] => mux_0de:auto_generated.data[4]
-data[0][5] => mux_0de:auto_generated.data[5]
-data[0][6] => mux_0de:auto_generated.data[6]
-data[0][7] => mux_0de:auto_generated.data[7]
-data[0][8] => mux_0de:auto_generated.data[8]
-data[0][9] => mux_0de:auto_generated.data[9]
-data[0][10] => mux_0de:auto_generated.data[10]
-data[0][11] => mux_0de:auto_generated.data[11]
-data[0][12] => mux_0de:auto_generated.data[12]
-data[0][13] => mux_0de:auto_generated.data[13]
-data[0][14] => mux_0de:auto_generated.data[14]
-data[0][15] => mux_0de:auto_generated.data[15]
-data[0][16] => mux_0de:auto_generated.data[16]
-data[0][17] => mux_0de:auto_generated.data[17]
-data[0][18] => mux_0de:auto_generated.data[18]
-data[0][19] => mux_0de:auto_generated.data[19]
-data[0][20] => mux_0de:auto_generated.data[20]
-data[0][21] => mux_0de:auto_generated.data[21]
-data[0][22] => mux_0de:auto_generated.data[22]
-data[0][23] => mux_0de:auto_generated.data[23]
-data[0][24] => mux_0de:auto_generated.data[24]
-data[0][25] => mux_0de:auto_generated.data[25]
-data[0][26] => mux_0de:auto_generated.data[26]
-data[0][27] => mux_0de:auto_generated.data[27]
-data[0][28] => mux_0de:auto_generated.data[28]
-data[0][29] => mux_0de:auto_generated.data[29]
-data[0][30] => mux_0de:auto_generated.data[30]
-data[0][31] => mux_0de:auto_generated.data[31]
-data[1][0] => mux_0de:auto_generated.data[32]
-data[1][1] => mux_0de:auto_generated.data[33]
-data[1][2] => mux_0de:auto_generated.data[34]
-data[1][3] => mux_0de:auto_generated.data[35]
-data[1][4] => mux_0de:auto_generated.data[36]
-data[1][5] => mux_0de:auto_generated.data[37]
-data[1][6] => mux_0de:auto_generated.data[38]
-data[1][7] => mux_0de:auto_generated.data[39]
-data[1][8] => mux_0de:auto_generated.data[40]
-data[1][9] => mux_0de:auto_generated.data[41]
-data[1][10] => mux_0de:auto_generated.data[42]
-data[1][11] => mux_0de:auto_generated.data[43]
-data[1][12] => mux_0de:auto_generated.data[44]
-data[1][13] => mux_0de:auto_generated.data[45]
-data[1][14] => mux_0de:auto_generated.data[46]
-data[1][15] => mux_0de:auto_generated.data[47]
-data[1][16] => mux_0de:auto_generated.data[48]
-data[1][17] => mux_0de:auto_generated.data[49]
-data[1][18] => mux_0de:auto_generated.data[50]
-data[1][19] => mux_0de:auto_generated.data[51]
-data[1][20] => mux_0de:auto_generated.data[52]
-data[1][21] => mux_0de:auto_generated.data[53]
-data[1][22] => mux_0de:auto_generated.data[54]
-data[1][23] => mux_0de:auto_generated.data[55]
-data[1][24] => mux_0de:auto_generated.data[56]
-data[1][25] => mux_0de:auto_generated.data[57]
-data[1][26] => mux_0de:auto_generated.data[58]
-data[1][27] => mux_0de:auto_generated.data[59]
-data[1][28] => mux_0de:auto_generated.data[60]
-data[1][29] => mux_0de:auto_generated.data[61]
-data[1][30] => mux_0de:auto_generated.data[62]
-data[1][31] => mux_0de:auto_generated.data[63]
-sel[0] => mux_0de:auto_generated.sel[0]
+data[0][0] => mux_k4e:auto_generated.data[0]
+data[0][1] => mux_k4e:auto_generated.data[1]
+data[0][2] => mux_k4e:auto_generated.data[2]
+data[0][3] => mux_k4e:auto_generated.data[3]
+data[0][4] => mux_k4e:auto_generated.data[4]
+data[0][5] => mux_k4e:auto_generated.data[5]
+data[0][6] => mux_k4e:auto_generated.data[6]
+data[0][7] => mux_k4e:auto_generated.data[7]
+data[0][8] => mux_k4e:auto_generated.data[8]
+data[0][9] => mux_k4e:auto_generated.data[9]
+data[0][10] => mux_k4e:auto_generated.data[10]
+data[0][11] => mux_k4e:auto_generated.data[11]
+data[0][12] => mux_k4e:auto_generated.data[12]
+data[0][13] => mux_k4e:auto_generated.data[13]
+data[0][14] => mux_k4e:auto_generated.data[14]
+data[0][15] => mux_k4e:auto_generated.data[15]
+data[0][16] => mux_k4e:auto_generated.data[16]
+data[0][17] => mux_k4e:auto_generated.data[17]
+data[0][18] => mux_k4e:auto_generated.data[18]
+data[0][19] => mux_k4e:auto_generated.data[19]
+data[0][20] => mux_k4e:auto_generated.data[20]
+data[0][21] => mux_k4e:auto_generated.data[21]
+data[0][22] => mux_k4e:auto_generated.data[22]
+data[0][23] => mux_k4e:auto_generated.data[23]
+data[0][24] => mux_k4e:auto_generated.data[24]
+data[0][25] => mux_k4e:auto_generated.data[25]
+data[0][26] => mux_k4e:auto_generated.data[26]
+data[0][27] => mux_k4e:auto_generated.data[27]
+data[0][28] => mux_k4e:auto_generated.data[28]
+data[0][29] => mux_k4e:auto_generated.data[29]
+data[0][30] => mux_k4e:auto_generated.data[30]
+data[0][31] => mux_k4e:auto_generated.data[31]
+data[1][0] => mux_k4e:auto_generated.data[32]
+data[1][1] => mux_k4e:auto_generated.data[33]
+data[1][2] => mux_k4e:auto_generated.data[34]
+data[1][3] => mux_k4e:auto_generated.data[35]
+data[1][4] => mux_k4e:auto_generated.data[36]
+data[1][5] => mux_k4e:auto_generated.data[37]
+data[1][6] => mux_k4e:auto_generated.data[38]
+data[1][7] => mux_k4e:auto_generated.data[39]
+data[1][8] => mux_k4e:auto_generated.data[40]
+data[1][9] => mux_k4e:auto_generated.data[41]
+data[1][10] => mux_k4e:auto_generated.data[42]
+data[1][11] => mux_k4e:auto_generated.data[43]
+data[1][12] => mux_k4e:auto_generated.data[44]
+data[1][13] => mux_k4e:auto_generated.data[45]
+data[1][14] => mux_k4e:auto_generated.data[46]
+data[1][15] => mux_k4e:auto_generated.data[47]
+data[1][16] => mux_k4e:auto_generated.data[48]
+data[1][17] => mux_k4e:auto_generated.data[49]
+data[1][18] => mux_k4e:auto_generated.data[50]
+data[1][19] => mux_k4e:auto_generated.data[51]
+data[1][20] => mux_k4e:auto_generated.data[52]
+data[1][21] => mux_k4e:auto_generated.data[53]
+data[1][22] => mux_k4e:auto_generated.data[54]
+data[1][23] => mux_k4e:auto_generated.data[55]
+data[1][24] => mux_k4e:auto_generated.data[56]
+data[1][25] => mux_k4e:auto_generated.data[57]
+data[1][26] => mux_k4e:auto_generated.data[58]
+data[1][27] => mux_k4e:auto_generated.data[59]
+data[1][28] => mux_k4e:auto_generated.data[60]
+data[1][29] => mux_k4e:auto_generated.data[61]
+data[1][30] => mux_k4e:auto_generated.data[62]
+data[1][31] => mux_k4e:auto_generated.data[63]
+sel[0] => mux_k4e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_0de:auto_generated.result[0]
-result[1] <= mux_0de:auto_generated.result[1]
-result[2] <= mux_0de:auto_generated.result[2]
-result[3] <= mux_0de:auto_generated.result[3]
-result[4] <= mux_0de:auto_generated.result[4]
-result[5] <= mux_0de:auto_generated.result[5]
-result[6] <= mux_0de:auto_generated.result[6]
-result[7] <= mux_0de:auto_generated.result[7]
-result[8] <= mux_0de:auto_generated.result[8]
-result[9] <= mux_0de:auto_generated.result[9]
-result[10] <= mux_0de:auto_generated.result[10]
-result[11] <= mux_0de:auto_generated.result[11]
-result[12] <= mux_0de:auto_generated.result[12]
-result[13] <= mux_0de:auto_generated.result[13]
-result[14] <= mux_0de:auto_generated.result[14]
-result[15] <= mux_0de:auto_generated.result[15]
-result[16] <= mux_0de:auto_generated.result[16]
-result[17] <= mux_0de:auto_generated.result[17]
-result[18] <= mux_0de:auto_generated.result[18]
-result[19] <= mux_0de:auto_generated.result[19]
-result[20] <= mux_0de:auto_generated.result[20]
-result[21] <= mux_0de:auto_generated.result[21]
-result[22] <= mux_0de:auto_generated.result[22]
-result[23] <= mux_0de:auto_generated.result[23]
-result[24] <= mux_0de:auto_generated.result[24]
-result[25] <= mux_0de:auto_generated.result[25]
-result[26] <= mux_0de:auto_generated.result[26]
-result[27] <= mux_0de:auto_generated.result[27]
-result[28] <= mux_0de:auto_generated.result[28]
-result[29] <= mux_0de:auto_generated.result[29]
-result[30] <= mux_0de:auto_generated.result[30]
-result[31] <= mux_0de:auto_generated.result[31]
+result[0] <= mux_k4e:auto_generated.result[0]
+result[1] <= mux_k4e:auto_generated.result[1]
+result[2] <= mux_k4e:auto_generated.result[2]
+result[3] <= mux_k4e:auto_generated.result[3]
+result[4] <= mux_k4e:auto_generated.result[4]
+result[5] <= mux_k4e:auto_generated.result[5]
+result[6] <= mux_k4e:auto_generated.result[6]
+result[7] <= mux_k4e:auto_generated.result[7]
+result[8] <= mux_k4e:auto_generated.result[8]
+result[9] <= mux_k4e:auto_generated.result[9]
+result[10] <= mux_k4e:auto_generated.result[10]
+result[11] <= mux_k4e:auto_generated.result[11]
+result[12] <= mux_k4e:auto_generated.result[12]
+result[13] <= mux_k4e:auto_generated.result[13]
+result[14] <= mux_k4e:auto_generated.result[14]
+result[15] <= mux_k4e:auto_generated.result[15]
+result[16] <= mux_k4e:auto_generated.result[16]
+result[17] <= mux_k4e:auto_generated.result[17]
+result[18] <= mux_k4e:auto_generated.result[18]
+result[19] <= mux_k4e:auto_generated.result[19]
+result[20] <= mux_k4e:auto_generated.result[20]
+result[21] <= mux_k4e:auto_generated.result[21]
+result[22] <= mux_k4e:auto_generated.result[22]
+result[23] <= mux_k4e:auto_generated.result[23]
+result[24] <= mux_k4e:auto_generated.result[24]
+result[25] <= mux_k4e:auto_generated.result[25]
+result[26] <= mux_k4e:auto_generated.result[26]
+result[27] <= mux_k4e:auto_generated.result[27]
+result[28] <= mux_k4e:auto_generated.result[28]
+result[29] <= mux_k4e:auto_generated.result[29]
+result[30] <= mux_k4e:auto_generated.result[30]
+result[31] <= mux_k4e:auto_generated.result[31]
 
 
-|ULA_Full|Mux_2:inst14|LPM_MUX:LPM_MUX_component|mux_0de:auto_generated
+|ULA_Full|Mux_2:inst14|LPM_MUX:LPM_MUX_component|mux_k4e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[2].IN1
