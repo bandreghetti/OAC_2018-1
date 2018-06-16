@@ -73,3 +73,4 @@ set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/bad/OAC_2018-
 set_global_assignment -name QIP_FILE Mux2_5bits.qip
 set_global_assignment -name QIP_FILE PCpp.qip
 set_global_assignment -name BDF_FILE "EX-MW_barrier.bdf"
+set_global_assignment -name QIP_FILE DataMemory.qip
