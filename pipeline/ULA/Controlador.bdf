@@ -3439,11 +3439,6 @@ applicable agreement for further details.
 	(pt 2528 656)
 )
 (connector
-	(text "ALUSrc[1]" (rect 2512 723 2524 773)(font "Arial" )(vertical))
-	(pt 2528 776)
-	(pt 2528 656)
-)
-(connector
 	(pt 3104 528)
 	(pt 3104 112)
 )
@@ -3458,14 +3453,6 @@ applicable agreement for further details.
 (connector
 	(pt 3152 528)
 	(pt 3152 320)
-)
-(connector
-	(pt 3168 528)
-	(pt 3168 384)
-)
-(connector
-	(pt 3184 528)
-	(pt 3184 456)
 )
 (connector
 	(pt 3240 528)
@@ -4233,10 +4220,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 128 88)
-	(pt 144 88)
-)
-(connector
 	(pt 2392 88)
 	(pt 2528 88)
 )
@@ -4341,21 +4324,12 @@ applicable agreement for further details.
 	(pt 3392 176)
 )
 (connector
-	(pt 128 224)
-	(pt 144 224)
-)
-(connector
 	(pt 3120 176)
 	(pt 3256 176)
 )
 (connector
 	(pt 2952 176)
 	(pt 3120 176)
-)
-(connector
-	(text "OpCode[3]" (rect 128 208 181 220)(font "Arial" ))
-	(pt 144 224)
-	(pt 304 224)
 )
 (connector
 	(pt 304 224)
@@ -4459,15 +4433,6 @@ applicable agreement for further details.
 	(pt 4656 224)
 )
 (connector
-	(pt 128 296)
-	(pt 144 296)
-)
-(connector
-	(text "OpCode[2]" (rect 128 280 181 292)(font "Arial" ))
-	(pt 144 296)
-	(pt 456 296)
-)
-(connector
 	(pt 456 296)
 	(pt 592 296)
 )
@@ -4536,10 +4501,6 @@ applicable agreement for further details.
 	(pt 4536 320)
 )
 (connector
-	(pt 128 360)
-	(pt 144 360)
-)
-(connector
 	(pt 3720 320)
 	(pt 3856 320)
 )
@@ -4596,10 +4557,6 @@ applicable agreement for further details.
 	(pt 3000 360)
 )
 (connector
-	(pt 3000 360)
-	(pt 3304 360)
-)
-(connector
 	(pt 3304 360)
 	(pt 3440 360)
 )
@@ -4632,29 +4589,12 @@ applicable agreement for further details.
 	(pt 4144 384)
 )
 (connector
-	(pt 3168 384)
-	(pt 3736 384)
-)
-(connector
 	(pt 3736 384)
 	(pt 4008 384)
 )
 (connector
-	(pt 2864 384)
-	(pt 3168 384)
-)
-(connector
 	(pt 2728 384)
 	(pt 2864 384)
-)
-(connector
-	(pt 128 432)
-	(pt 144 432)
-)
-(connector
-	(text "OpCode[0]" (rect 128 416 181 428)(font "Arial" ))
-	(pt 144 432)
-	(pt 624 432)
 )
 (connector
 	(pt 2320 384)
@@ -4679,10 +4619,6 @@ applicable agreement for further details.
 (connector
 	(pt 2472 432)
 	(pt 2608 432)
-)
-(connector
-	(pt 2608 432)
-	(pt 3320 432)
 )
 (connector
 	(pt 3320 432)
@@ -4862,11 +4798,6 @@ applicable agreement for further details.
 	(pt 1136 320)
 )
 (connector
-	(text "OpCode[5]" (rect 144 72 197 84)(font "Arial" ))
-	(pt 144 88)
-	(pt 2392 88)
-)
-(connector
 	(pt 224 320)
 	(pt 320 320)
 )
@@ -4885,11 +4816,6 @@ applicable agreement for further details.
 (connector
 	(pt 288 176)
 	(pt 424 176)
-)
-(connector
-	(text "OpCode[1]" (rect 128 344 181 356)(font "Arial" ))
-	(pt 144 360)
-	(pt 744 360)
 )
 (connector
 	(pt 336 528)
@@ -5508,14 +5434,6 @@ applicable agreement for further details.
 	(pt 5688 640)
 )
 (connector
-	(pt 5352 696)
-	(pt 5352 736)
-)
-(connector
-	(pt 5680 704)
-	(pt 5680 736)
-)
-(connector
 	(pt 224 456)
 	(pt 352 456)
 )
@@ -5564,14 +5482,6 @@ applicable agreement for further details.
 	(pt 3016 456)
 )
 (connector
-	(pt 3016 456)
-	(pt 3184 456)
-)
-(connector
-	(pt 3184 456)
-	(pt 3752 456)
-)
-(connector
 	(pt 3752 456)
 	(pt 4024 456)
 )
@@ -5592,39 +5502,6 @@ applicable agreement for further details.
 	(pt 5712 528)
 )
 (connector
-	(pt 128 152)
-	(pt 144 152)
-)
-(connector
-	(text "OpCode[4]" (rect 154 136 207 148)(font "Arial" ))
-	(pt 144 152)
-	(pt 5736 152)
-)
-(connector
-	(pt 1000 768)
-	(pt 1000 704)
-)
-(connector
-	(pt 1528 768)
-	(pt 1528 752)
-)
-(connector
-	(text "OpALU[2]" (rect 496 727 508 775)(font "Arial" )(vertical))
-	(pt 512 792)
-	(pt 512 784)
-	(bus)
-)
-(connector
-	(text "OpALU[1]" (rect 984 741 996 789)(font "Arial" )(vertical))
-	(pt 1000 768)
-	(pt 1000 792)
-	(bus)
-)
-(connector
-	(pt 512 712)
-	(pt 512 784)
-)
-(connector
 	(pt 488 648)
 	(pt 488 632)
 )
@@ -5641,93 +5518,85 @@ applicable agreement for further details.
 	(pt 536 632)
 )
 (connector
-	(text "<<__$DEF_ALIAS108695>>" (rect 3464 700 3476 835)(font "Arial" )(vertical)(invisible))
-	(pt 3480 688)
-	(pt 3480 776)
+	(text "<<__$DEF_ALIAS632>>" (rect 144 72 262 84)(font "Arial" )(invisible))
+	(pt 144 88)
+	(pt 2392 88)
 )
 (connector
-	(text "MemToReg[1]" (rect 3200 710 3212 778)(font "Arial" )(vertical)(invisible))
-	(pt 3216 784)
-	(pt 3216 800)
-	(bus)
+	(text "<<__$DEF_ALIAS634>>" (rect 154 136 272 148)(font "Arial" )(invisible))
+	(pt 144 152)
+	(pt 5736 152)
 )
 (connector
-	(text "<<__$DEF_ALIAS108697>>" (rect 3200 692 3212 827)(font "Arial" )(vertical)(invisible))
-	(pt 3216 784)
-	(pt 3216 688)
+	(text "<<__$DEF_ALIAS636>>" (rect 128 208 246 220)(font "Arial" )(invisible))
+	(pt 144 224)
+	(pt 304 224)
 )
 (connector
-	(text "OpALU[0]" (rect 1528 749 1540 797)(font "Arial" )(vertical))
-	(pt 1528 768)
-	(pt 1528 792)
-	(bus)
+	(text "<<__$DEF_ALIAS638>>" (rect 128 280 246 292)(font "Arial" )(invisible))
+	(pt 144 296)
+	(pt 456 296)
 )
 (connector
-	(text "OpALU[2..0]" (rect 1538 776 1599 788)(font "Arial" )(invisible))
-	(pt 1528 792)
-	(pt 1632 792)
-	(bus)
+	(text "<<__$DEF_ALIAS640>>" (rect 128 344 246 356)(font "Arial" )(invisible))
+	(pt 144 360)
+	(pt 744 360)
 )
 (connector
-	(text "MemToReg[0]" (rect 3463 720 3475 788)(font "Arial" )(vertical)(invisible))
-	(pt 3480 776)
-	(pt 3480 800)
-	(bus)
+	(text "<<__$DEF_ALIAS642>>" (rect 128 416 246 428)(font "Arial" )(invisible))
+	(pt 144 432)
+	(pt 624 432)
 )
 (connector
-	(text "Branch[0]" (rect 5664 704 5676 751)(font "Arial" )(vertical)(invisible))
-	(pt 5680 744)
-	(pt 5680 736)
-	(bus)
+	(text "OpCode[5]" (rect 128 72 181 84)(font "Arial" ))
+	(pt 128 88)
+	(pt 144 88)
 )
 (connector
-	(text "Branch[1]" (rect 5336 704 5348 751)(font "Arial" )(vertical)(invisible))
+	(text "OpCode[4]" (rect 128 136 181 148)(font "Arial" ))
+	(pt 128 152)
+	(pt 144 152)
+)
+(connector
+	(text "OpCode[3]" (rect 128 208 181 220)(font "Arial" ))
+	(pt 128 224)
+	(pt 144 224)
+)
+(connector
+	(text "OpCode[2]" (rect 128 280 181 292)(font "Arial" ))
+	(pt 128 296)
+	(pt 144 296)
+)
+(connector
+	(text "OpCode[1]" (rect 128 344 181 356)(font "Arial" ))
+	(pt 128 360)
+	(pt 144 360)
+)
+(connector
+	(text "OpCode[0]" (rect 128 416 181 428)(font "Arial" ))
+	(pt 128 432)
+	(pt 144 432)
+)
+(connector
 	(pt 5352 744)
-	(pt 5352 736)
-	(bus)
-)
-(connector
-	(pt 5352 744)
 	(pt 5680 744)
 	(bus)
 )
 (connector
-	(text "ALUSrc[0]" (rect 2672 741 2684 791)(font "Arial" )(vertical)(invisible))
-	(pt 2688 784)
-	(pt 2688 776)
+	(text "Branch[1..0]" (rect 5690 728 5750 740)(font "Arial" )(invisible))
+	(pt 5680 744)
+	(pt 5752 744)
 	(bus)
 )
 (connector
-	(text "<<__$DEF_ALIAS680>>" (rect 2672 715 2684 833)(font "Arial" )(vertical)(invisible))
-	(pt 2688 720)
-	(pt 2688 776)
+	(text "Branch[0]" (rect 5664 694 5676 741)(font "Arial" )(vertical))
+	(pt 5680 744)
+	(pt 5680 704)
 )
 (connector
-	(pt 2528 784)
-	(pt 2688 784)
-	(bus)
-)
-(connector
-	(text "ALUSrc[1]" (rect 2512 731 2524 781)(font "Arial" )(vertical)(invisible))
-	(pt 2528 776)
-	(pt 2528 784)
-	(bus)
-)
-(connector
-	(pt 512 792)
-	(pt 1000 792)
-	(bus)
-)
-(connector
-	(pt 1000 792)
-	(pt 1528 792)
-	(bus)
-)
-(connector
-	(text "ALUSrc[1..0]" (rect 2698 768 2761 780)(font "Arial" )(invisible))
-	(pt 2688 784)
-	(pt 2896 784)
-	(bus)
+	(text "Branch[1]" (rect 5336 699 5348 746)(font "Arial" )(vertical))
+	(pt 5352 744)
+	(pt 5352 696)
 )
 (connector
 	(pt 3216 800)
@@ -5741,10 +5610,98 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "Branch[1..0]" (rect 5690 728 5750 740)(font "Arial" )(invisible))
-	(pt 5680 744)
-	(pt 5752 744)
+	(text "MemToReg[0]" (rect 3464 732 3476 800)(font "Arial" )(vertical))
+	(pt 3480 800)
+	(pt 3480 688)
+)
+(connector
+	(text "MemToReg[1]" (rect 3200 732 3212 800)(font "Arial" )(vertical))
+	(pt 3216 800)
+	(pt 3216 688)
+)
+(connector
+	(pt 2528 784)
+	(pt 2688 784)
 	(bus)
+)
+(connector
+	(text "ALUSrc[1..0]" (rect 2698 768 2761 780)(font "Arial" )(invisible))
+	(pt 2688 784)
+	(pt 2896 784)
+	(bus)
+)
+(connector
+	(text "ALUSrc[1]" (rect 2512 723 2524 773)(font "Arial" )(vertical))
+	(pt 2528 784)
+	(pt 2528 656)
+)
+(connector
+	(text "ALUSrc[0]" (rect 2672 731 2684 781)(font "Arial" )(vertical))
+	(pt 2688 720)
+	(pt 2688 784)
+)
+(connector
+	(text "OpALU[2..0]" (rect 1538 776 1599 788)(font "Arial" )(invisible))
+	(pt 1528 792)
+	(pt 1632 792)
+	(bus)
+)
+(connector
+	(text "OpALU[0]" (rect 1512 741 1524 789)(font "Arial" )(vertical))
+	(pt 1528 792)
+	(pt 1528 752)
+)
+(connector
+	(pt 512 792)
+	(pt 1000 792)
+	(bus)
+)
+(connector
+	(pt 1000 792)
+	(pt 1528 792)
+	(bus)
+)
+(connector
+	(text "OpALU[1]" (rect 984 741 996 789)(font "Arial" )(vertical))
+	(pt 1000 792)
+	(pt 1000 704)
+)
+(connector
+	(text "OpALU[2]" (rect 496 741 508 789)(font "Arial" )(vertical))
+	(pt 512 712)
+	(pt 512 792)
+)
+(connector
+	(pt 2864 384)
+	(pt 3736 384)
+)
+(connector
+	(pt 3168 360)
+	(pt 3168 528)
+)
+(connector
+	(pt 3000 360)
+	(pt 3168 360)
+)
+(connector
+	(pt 3168 360)
+	(pt 3304 360)
+)
+(connector
+	(pt 3016 456)
+	(pt 3752 456)
+)
+(connector
+	(pt 3184 528)
+	(pt 3184 432)
+)
+(connector
+	(pt 2608 432)
+	(pt 3184 432)
+)
+(connector
+	(pt 3184 432)
+	(pt 3320 432)
 )
 (junction (pt 1920 112))
 (junction (pt 1936 176))
@@ -5799,8 +5756,6 @@ applicable agreement for further details.
 (junction (pt 3120 176))
 (junction (pt 3136 248))
 (junction (pt 3152 320))
-(junction (pt 3168 384))
-(junction (pt 3184 456))
 (junction (pt 3240 112))
 (junction (pt 3256 176))
 (junction (pt 3272 224))
@@ -5981,8 +5936,10 @@ applicable agreement for further details.
 (junction (pt 5576 176))
 (junction (pt 5592 248))
 (junction (pt 5624 384))
-(junction (pt 3480 800))
-(junction (pt 1528 792))
 (junction (pt 5680 744))
+(junction (pt 3480 800))
 (junction (pt 2688 784))
+(junction (pt 1528 792))
 (junction (pt 1000 792))
+(junction (pt 3168 360))
+(junction (pt 3184 432))
