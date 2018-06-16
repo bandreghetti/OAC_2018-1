@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="ULA_1bit">
-		<CBX_INST_ENTRY INSTANCE_NAME="|ULA_1bit|Mux2:inst1|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_03e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ULA_1bit|Mux2:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_03e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|ULA_1bit|Mux5:inst2|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_53e.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

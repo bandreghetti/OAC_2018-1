@@ -1,2 +1,13 @@
-
 lempel-ziv/test\.asm
+
+pipeline/db/*
+pipeline/greybox_tmp/*
+pipeline/incremental_db/*
+pipeline/output_files/*
+pipeline/simulation/*
+
+pipeline/ULA/db/*
+pipeline/ULA/greybox_tmp/*
+pipeline/ULA/incremental_db/*
+pipeline/ULA/output_files/*
+pipeline/ULA/simulation/*
