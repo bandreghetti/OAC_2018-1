@@ -1,0 +1,113 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 344 680)
+	(text "EX-MW_barrier" (rect 5 0 95 12)(font "Arial" (font_size 8)))
+	(text "EX/MW" (rect 240 1 277 11)(font "Arial" ))
+	(port
+		(pt 0 104)
+		(input)
+		(text "IsZero" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "IsZero" (rect 21 99 59 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 568)
+		(input)
+		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
+		(text "FLUSH" (rect 21 563 65 575)(font "Arial" (font_size 8)))
+		(line (pt 0 568)(pt 16 568))
+	)
+	(port
+		(pt 0 584)
+		(input)
+		(text "CLK" (rect 0 0 28 12)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 579 49 591)(font "Arial" (font_size 8)))
+		(line (pt 0 584)(pt 16 584))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "BranchAddr[31..0]" (rect 0 0 106 12)(font "Arial" (font_size 8)))
+		(text "BranchAddr[31..0]" (rect 21 51 127 63)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "ALUOut[31..0]" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "ALUOut[31..0]" (rect 21 267 104 279)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 368)
+		(input)
+		(text "WrMemVal[31..0]" (rect 0 0 101 12)(font "Arial" (font_size 8)))
+		(text "WrMemVal[31..0]" (rect 21 363 122 375)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 16 368)(line_width 3))
+	)
+	(port
+		(pt 0 440)
+		(input)
+		(text "WrMemAddr[4..0]" (rect 0 0 103 12)(font "Arial" (font_size 8)))
+		(text "WrMemAddr[4..0]" (rect 21 435 124 447)(font "Arial" (font_size 8)))
+		(line (pt 0 440)(pt 16 440)(line_width 3))
+	)
+	(port
+		(pt 280 120)
+		(output)
+		(text "IsZeroOut" (rect -8 0 51 12)(font "Arial" (font_size 8)))
+		(text "IsZeroOut" (rect 200 115 259 127)(font "Arial" (font_size 8)))
+		(line (pt 280 120)(pt 264 120))
+	)
+	(port
+		(pt 280 72)
+		(output)
+		(text "BranchAddr[31..0]" (rect -8 0 98 12)(font "Arial" (font_size 8)))
+		(text "BranchAddr[31..0]" (rect 153 67 259 79)(font "Arial" (font_size 8)))
+		(line (pt 280 72)(pt 264 72)(line_width 3))
+	)
+	(port
+		(pt 280 288)
+		(output)
+		(text "ALUOut[31..0]" (rect -8 0 75 12)(font "Arial" (font_size 8)))
+		(text "ALUOut[31..0]" (rect 176 283 259 295)(font "Arial" (font_size 8)))
+		(line (pt 280 288)(pt 264 288)(line_width 3))
+	)
+	(port
+		(pt 280 384)
+		(output)
+		(text "WrMemValOutl[31..0]" (rect -8 0 117 12)(font "Arial" (font_size 8)))
+		(text "WrMemValOutl[31..0]" (rect 134 379 259 391)(font "Arial" (font_size 8)))
+		(line (pt 280 384)(pt 264 384)(line_width 3))
+	)
+	(port
+		(pt 280 456)
+		(output)
+		(text "WrMemAddrOut[4..0]" (rect -8 0 115 12)(font "Arial" (font_size 8)))
+		(text "WrMemAddrOut[4..0]" (rect 136 451 259 463)(font "Arial" (font_size 8)))
+		(line (pt 280 456)(pt 264 456)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 600))
+	)
+)

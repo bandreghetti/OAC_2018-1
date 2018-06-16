@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 344 936)
+	(text "ID-EX_barrier" (rect -3 -8 78 4)(font "Arial" (font_size 8)))
+	(text "inst" (rect 248 -7 265 3)(font "Arial" ))
+	(port
+		(pt 0 848)
+		(input)
+		(text "CLK" (rect 0 -8 28 4)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 843 49 855)(font "Arial" (font_size 8)))
+		(line (pt 0 848)(pt 16 848))
+	)
+	(port
+		(pt 0 312)
+		(input)
+		(text "OpA[31..0]" (rect 0 -8 63 4)(font "Arial" (font_size 8)))
+		(text "OpA[31..0]" (rect 21 307 84 319)(font "Arial" (font_size 8)))
+		(line (pt 0 312)(pt 16 312)(line_width 3))
+	)
+	(port
+		(pt 0 832)
+		(input)
+		(text "FLUSH" (rect 0 -8 44 4)(font "Arial" (font_size 8)))
+		(text "FLUSH" (rect 21 827 65 839)(font "Arial" (font_size 8)))
+		(line (pt 0 832)(pt 16 832))
+	)
+	(port
+		(pt 0 344)
+		(input)
+		(text "OpB[31..0]" (rect 0 -8 63 4)(font "Arial" (font_size 8)))
+		(text "OpB[31..0]" (rect 21 339 84 351)(font "Arial" (font_size 8)))
+		(line (pt 0 344)(pt 16 344)(line_width 3))
+	)
+	(port
+		(pt 0 544)
+		(input)
+		(text "SignExt[31..0]" (rect 0 -8 82 4)(font "Arial" (font_size 8)))
+		(text "SignExt[31..0]" (rect 21 539 103 551)(font "Arial" (font_size 8)))
+		(line (pt 0 544)(pt 16 544)(line_width 3))
+	)
+	(port
+		(pt 0 672)
+		(input)
+		(text "RtAddr[4..0]" (rect 0 -8 70 4)(font "Arial" (font_size 8)))
+		(text "RtAddr[4..0]" (rect 21 667 91 679)(font "Arial" (font_size 8)))
+		(line (pt 0 672)(pt 16 672)(line_width 3))
+	)
+	(port
+		(pt 0 704)
+		(input)
+		(text "RdAddr[4..0]" (rect 0 -8 74 4)(font "Arial" (font_size 8)))
+		(text "RdAddr[4..0]" (rect 21 699 95 711)(font "Arial" (font_size 8)))
+		(line (pt 0 704)(pt 16 704)(line_width 3))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "PC++[31..0]" (rect 0 -8 70 4)(font "Arial" (font_size 8)))
+		(text "PC++[31..0]" (rect 21 99 91 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104)(line_width 3))
+	)
+	(port
+		(pt 280 328)
+		(output)
+		(text "OpAOut[31..0]" (rect -8 -8 76 4)(font "Arial" (font_size 8)))
+		(text "OpAOut[31..0]" (rect 175 323 259 335)(font "Arial" (font_size 8)))
+		(line (pt 280 328)(pt 264 328)(line_width 3))
+	)
+	(port
+		(pt 280 360)
+		(output)
+		(text "OpBOut[31..0]" (rect -8 -8 76 4)(font "Arial" (font_size 8)))
+		(text "OpBOut[31..0]" (rect 175 355 259 367)(font "Arial" (font_size 8)))
+		(line (pt 280 360)(pt 264 360)(line_width 3))
+	)
+	(port
+		(pt 280 560)
+		(output)
+		(text "SignExtOut[31..0]" (rect -8 -8 95 4)(font "Arial" (font_size 8)))
+		(text "SignExtOut[31..0]" (rect 156 555 259 567)(font "Arial" (font_size 8)))
+		(line (pt 280 560)(pt 264 560)(line_width 3))
+	)
+	(port
+		(pt 280 688)
+		(output)
+		(text "RtAddrOut[4..0]" (rect -8 -8 84 4)(font "Arial" (font_size 8)))
+		(text "RtAddrOut[4..0]" (rect 167 683 259 695)(font "Arial" (font_size 8)))
+		(line (pt 280 688)(pt 264 688)(line_width 3))
+	)
+	(port
+		(pt 280 720)
+		(output)
+		(text "RdAddrOut[4..0]" (rect -8 -8 87 4)(font "Arial" (font_size 8)))
+		(text "RdAddrOut[4..0]" (rect 164 715 259 727)(font "Arial" (font_size 8)))
+		(line (pt 280 720)(pt 264 720)(line_width 3))
+	)
+	(port
+		(pt 280 120)
+		(output)
+		(text "PC++Out[31..0]" (rect -8 -8 84 4)(font "Arial" (font_size 8)))
+		(text "PC++Out[31..0]" (rect 184 112 276 124)(font "Arial" (font_size 8)))
+		(line (pt 280 120)(pt 264 120)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 8 264 864))
+	)
+)
