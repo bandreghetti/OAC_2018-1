@@ -52,11 +52,11 @@ applicable agreement for further details.
 		(line (pt 0 504)(pt 16 504))
 	)
 	(port
-		(pt 200 64)
+		(pt 200 144)
 		(output)
 		(text "PCppout[31..0]" (rect 0 0 88 12)(font "Arial" (font_size 8)))
-		(text "PCppout[31..0]" (rect 97 59 185 71)(font "Arial" (font_size 8)))
-		(line (pt 200 64)(pt 184 64)(line_width 3))
+		(text "PCppout[31..0]" (rect 97 139 185 151)(font "Arial" (font_size 8)))
+		(line (pt 200 144)(pt 184 144)(line_width 3))
 	)
 	(port
 		(pt 200 280)

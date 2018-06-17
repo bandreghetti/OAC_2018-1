@@ -44,7 +44,8 @@ ENTITY Mux2_5bits IS
 	(
 		data0x		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 		data1x		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-		sel		: IN STD_LOGIC ;
+		data2x		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+		sel		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		result		: OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
 	);
 END Mux2_5bits;
@@ -56,38 +57,41 @@ ARCHITECTURE SYN OF mux2_5bits IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (4 DOWNTO 0);
 	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (4 DOWNTO 0);
-	SIGNAL sub_wire2	: STD_LOGIC_2D (1 DOWNTO 0, 4 DOWNTO 0);
+	SIGNAL sub_wire2	: STD_LOGIC_2D (2 DOWNTO 0, 4 DOWNTO 0);
 	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (4 DOWNTO 0);
-	SIGNAL sub_wire4	: STD_LOGIC ;
-	SIGNAL sub_wire5	: STD_LOGIC_VECTOR (0 DOWNTO 0);
+	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (4 DOWNTO 0);
 
 BEGIN
-	sub_wire3    <= data0x(4 DOWNTO 0);
+	sub_wire4    <= data0x(4 DOWNTO 0);
+	sub_wire3    <= data1x(4 DOWNTO 0);
 	result    <= sub_wire0(4 DOWNTO 0);
-	sub_wire1    <= data1x(4 DOWNTO 0);
-	sub_wire2(1, 0)    <= sub_wire1(0);
-	sub_wire2(1, 1)    <= sub_wire1(1);
-	sub_wire2(1, 2)    <= sub_wire1(2);
-	sub_wire2(1, 3)    <= sub_wire1(3);
-	sub_wire2(1, 4)    <= sub_wire1(4);
-	sub_wire2(0, 0)    <= sub_wire3(0);
-	sub_wire2(0, 1)    <= sub_wire3(1);
-	sub_wire2(0, 2)    <= sub_wire3(2);
-	sub_wire2(0, 3)    <= sub_wire3(3);
-	sub_wire2(0, 4)    <= sub_wire3(4);
-	sub_wire4    <= sel;
-	sub_wire5(0)    <= sub_wire4;
+	sub_wire1    <= data2x(4 DOWNTO 0);
+	sub_wire2(2, 0)    <= sub_wire1(0);
+	sub_wire2(2, 1)    <= sub_wire1(1);
+	sub_wire2(2, 2)    <= sub_wire1(2);
+	sub_wire2(2, 3)    <= sub_wire1(3);
+	sub_wire2(2, 4)    <= sub_wire1(4);
+	sub_wire2(1, 0)    <= sub_wire3(0);
+	sub_wire2(1, 1)    <= sub_wire3(1);
+	sub_wire2(1, 2)    <= sub_wire3(2);
+	sub_wire2(1, 3)    <= sub_wire3(3);
+	sub_wire2(1, 4)    <= sub_wire3(4);
+	sub_wire2(0, 0)    <= sub_wire4(0);
+	sub_wire2(0, 1)    <= sub_wire4(1);
+	sub_wire2(0, 2)    <= sub_wire4(2);
+	sub_wire2(0, 3)    <= sub_wire4(3);
+	sub_wire2(0, 4)    <= sub_wire4(4);
 
 	LPM_MUX_component : LPM_MUX
 	GENERIC MAP (
-		lpm_size => 2,
+		lpm_size => 3,
 		lpm_type => "LPM_MUX",
 		lpm_width => 5,
-		lpm_widths => 1
+		lpm_widths => 2
 	)
 	PORT MAP (
 		data => sub_wire2,
-		sel => sub_wire5,
+		sel => sel,
 		result => sub_wire0
 	);
 
@@ -102,17 +106,19 @@ END SYN;
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: CONSTANT: LPM_SIZE NUMERIC "2"
+-- Retrieval info: CONSTANT: LPM_SIZE NUMERIC "3"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MUX"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "5"
--- Retrieval info: CONSTANT: LPM_WIDTHS NUMERIC "1"
+-- Retrieval info: CONSTANT: LPM_WIDTHS NUMERIC "2"
 -- Retrieval info: USED_PORT: data0x 0 0 5 0 INPUT NODEFVAL "data0x[4..0]"
 -- Retrieval info: USED_PORT: data1x 0 0 5 0 INPUT NODEFVAL "data1x[4..0]"
+-- Retrieval info: USED_PORT: data2x 0 0 5 0 INPUT NODEFVAL "data2x[4..0]"
 -- Retrieval info: USED_PORT: result 0 0 5 0 OUTPUT NODEFVAL "result[4..0]"
--- Retrieval info: USED_PORT: sel 0 0 0 0 INPUT NODEFVAL "sel"
+-- Retrieval info: USED_PORT: sel 0 0 2 0 INPUT NODEFVAL "sel[1..0]"
 -- Retrieval info: CONNECT: @data 1 0 5 0 data0x 0 0 5 0
 -- Retrieval info: CONNECT: @data 1 1 5 0 data1x 0 0 5 0
--- Retrieval info: CONNECT: @sel 0 0 1 0 sel 0 0 0 0
+-- Retrieval info: CONNECT: @data 1 2 5 0 data2x 0 0 5 0
+-- Retrieval info: CONNECT: @sel 0 0 2 0 sel 0 0 2 0
 -- Retrieval info: CONNECT: result 0 0 5 0 @result 0 0 5 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2_5bits.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Mux2_5bits.inc FALSE

@@ -66,11 +66,11 @@ applicable agreement for further details.
 		(line (pt 0 352)(pt 16 352)(line_width 3))
 	)
 	(port
-		(pt 0 640)
+		(pt 0 648)
 		(input)
 		(text "WrMemAddr[4..0]" (rect 0 -16 103 -4)(font "Arial" (font_size 8)))
-		(text "WrMemAddr[4..0]" (rect 21 635 124 647)(font "Arial" (font_size 8)))
-		(line (pt 0 640)(pt 16 640)(line_width 3))
+		(text "WrMemAddr[4..0]" (rect 21 643 124 655)(font "Arial" (font_size 8)))
+		(line (pt 0 648)(pt 16 648)(line_width 3))
 	)
 	(port
 		(pt 256 104)
