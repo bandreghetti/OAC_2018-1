@@ -52,11 +52,11 @@ applicable agreement for further details.
 		(line (pt 0 40)(pt 16 40)(line_width 3))
 	)
 	(port
-		(pt 0 352)
+		(pt 0 480)
 		(input)
 		(text "WrMemVal[31..0]" (rect 0 -16 101 -4)(font "Arial" (font_size 8)))
-		(text "WrMemVal[31..0]" (rect 21 347 122 359)(font "Arial" (font_size 8)))
-		(line (pt 0 352)(pt 16 352)(line_width 3))
+		(text "WrMemVal[31..0]" (rect 21 475 122 487)(font "Arial" (font_size 8)))
+		(line (pt 0 480)(pt 16 480)(line_width 3))
 	)
 	(port
 		(pt 0 648)
