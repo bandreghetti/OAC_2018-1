@@ -70,7 +70,7 @@ applicable agreement for further details.
 	(rotate270)
 )
 (symbol
-	(rect 1744 -96 1928 96)
+	(rect 1832 -96 2016 96)
 	(text "ULA_Full" (rect 5 0 60 12)(font "Arial" (font_size 8)))
 	(text "inst1" (rect 8 176 31 186)(font "Arial" ))
 	(port
@@ -1260,6 +1260,21 @@ applicable agreement for further details.
 	(pt 1368 320)
 	(pt 1312 320)
 	(bus)
+)
+(connector
+	(text "clk" (rect 1338 464 1352 474)(font "Arial" ))
+	(pt 1328 472)
+	(pt 1368 472)
+)
+(connector
+	(text "clk" (rect 2178 472 2192 482)(font "Arial" ))
+	(pt 2168 480)
+	(pt 2208 480)
+)
+(connector
+	(text "clk" (rect 2826 392 2840 402)(font "Arial" ))
+	(pt 2816 400)
+	(pt 2856 400)
 )
 (junction (pt 560 -216))
 (junction (pt 2520 -8))
