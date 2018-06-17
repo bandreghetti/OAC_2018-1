@@ -49,11 +49,40 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "/home/bandreghetti/OAC_2018-1/pipeline/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/bad/OAC_2018-1/pipeline/SignExt_testwave.vwf"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/bad/OAC_2018-1/pipeline/regbank_testwave.vwf"
+set_global_assignment -name VHDL_FILE ULA/Shift.vhd
+set_global_assignment -name VHDL_FILE ULA/Mult.vhd
+set_global_assignment -name VHDL_FILE ULA/Divide1.vhd
+set_global_assignment -name SOURCE_FILE Mux2_5bits.cmp
+set_global_assignment -name SOURCE_FILE PCpp.cmp
+set_global_assignment -name SOURCE_FILE Mux2.cmp
+set_global_assignment -name SOURCE_FILE Mux2_1bit.cmp
+set_global_assignment -name SOURCE_FILE InstMemory.cmp
+set_global_assignment -name SOURCE_FILE DataMemory.cmp
+set_global_assignment -name SOURCE_FILE Mux32.cmp
+set_global_assignment -name SOURCE_FILE WBDemux.cmp
+set_global_assignment -name SOURCE_FILE retaddr.cmp
+set_global_assignment -name QIP_FILE Mux2.qip
+set_global_assignment -name VHDL_FILE retaddr.vhd
+set_global_assignment -name VHDL_FILE Mux2_5bits.vhd
+set_global_assignment -name VHDL_FILE PCpp.vhd
+set_global_assignment -name VHDL_FILE WBDemux.vhd
+set_global_assignment -name VHDL_FILE Mux32.vhd
+set_global_assignment -name VHDL_FILE InstMemory.vhd
+set_global_assignment -name VHDL_FILE Mux2.vhd
+set_global_assignment -name VHDL_FILE DataMemory.vhd
+set_global_assignment -name VHDL_FILE Mux2_1bit.vhd
+set_global_assignment -name SOURCE_FILE ULA/Divide1.cmp
+set_global_assignment -name SOURCE_FILE ULA/Shift.cmp
+set_global_assignment -name SOURCE_FILE ULA/Mult.cmp
+set_global_assignment -name BDF_FILE ULA/or32.bdf
+set_global_assignment -name SOURCE_FILE ULA/Mux_2.cmp
+set_global_assignment -name SOURCE_FILE ULA/Mux2.cmp
+set_global_assignment -name VHDL_FILE ULA/Mux5.vhd
+set_global_assignment -name SOURCE_FILE ULA/Mux5.cmp
+set_global_assignment -name BDF_FILE ULA/Somador.bdf
+set_global_assignment -name BDF_FILE ULA/ULA_1bit.bdf
+set_global_assignment -name BDF_FILE ULA/ULA_32bits.bdf
 set_global_assignment -name BDF_FILE ULA/Controlador_ULA.bdf
 set_global_assignment -name BDF_FILE ULA/Controlador.bdf
 set_global_assignment -name BDF_FILE ULA/ULA_Full.bdf
@@ -65,7 +94,6 @@ set_global_assignment -name BDF_FILE RegBank.bdf
 set_global_assignment -name QIP_FILE Mux32.qip
 set_global_assignment -name QIP_FILE WBDemux.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE regbank_testwave.vwf
-set_global_assignment -name QIP_FILE Mux2.qip
 set_global_assignment -name BDF_FILE "IF-ID_barrier.bdf"
 set_global_assignment -name BDF_FILE reg5.bdf
 set_global_assignment -name BDF_FILE "ID-EX_barrier.bdf"
@@ -82,3 +110,9 @@ set_global_assignment -name BDF_FILE WBPipe.bdf
 set_global_assignment -name BDF_FILE MWPipe.bdf
 set_global_assignment -name QIP_FILE retaddr.qip
 set_global_assignment -name BDF_FILE EXPipe.bdf
+set_global_assignment -name QIP_FILE Mux2_1bit.qip
+set_global_assignment -name SOURCE_FILE db/MIPSpipeline.cmp.rdb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

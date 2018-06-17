@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -712,16 +713,6 @@ SIGNAL("WRITE[0]")
 	PARENT = "WRITE";
 }
 
-SIGNAL("FLUSHreg")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 TRANSITION_LIST("CLK")
 {
 	NODE
@@ -1029,8 +1020,8 @@ TRANSITION_LIST("W_EN")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 950.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 900.0;
 	}
 }
 
@@ -1347,16 +1338,6 @@ TRANSITION_LIST("WRITE[0]")
 			LEVEL 0 FOR 25.0;
 			LEVEL 1 FOR 25.0;
 		}
-	}
-}
-
-TRANSITION_LIST("FLUSHreg")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 730.0;
-		LEVEL 1 FOR 270.0;
 	}
 }
 
@@ -2036,15 +2017,6 @@ DISPLAY_LINE
 	TREE_INDEX = 67;
 	TREE_LEVEL = 1;
 	PARENT = 35;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "FLUSHreg";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 68;
-	TREE_LEVEL = 0;
 }
 
 TIME_BAR

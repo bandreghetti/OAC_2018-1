@@ -37,25 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 224 104 392 120)
-	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "FLUSH" (rect 5 0 40 10)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
 	(rect 456 112 624 128)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "MemWrite" (rect 5 0 55 10)(font "Arial" ))
+	(text "MemWrite" (rect 5 0 54 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 456 216 624 232)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "MemRead" (rect 5 0 56 10)(font "Arial" ))
+	(text "MemRead" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +71,23 @@ applicable agreement for further details.
 	(input)
 	(rect 288 392 456 408)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "Branch[1..0]" (rect 5 0 63 10)(font "Arial" ))
+	(text "Branch[1..0]" (rect 5 0 62 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 168 104 336 120)
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "FLUSH" (rect 5 0 40 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -391,15 +391,35 @@ applicable agreement for further details.
 		(circle (rect 28 68 36 76))
 	)
 )
+(symbol
+	(rect 336 96 384 128)
+	(text "NOT" (rect 1 0 22 9)(font "Arial" (font_size 6)))
+	(text "inst5" (rect 3 21 26 31)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 16 18)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 54 18)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 54 18)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
 (connector
 	(text "clk" (rect 410 72 424 82)(font "Arial" ))
 	(pt 440 80)
 	(pt 392 80)
-)
-(connector
-	(text "flush" (rect 406 104 429 114)(font "Arial" ))
-	(pt 392 112)
-	(pt 440 112)
 )
 (connector
 	(text "clk" (rect 594 128 608 138)(font "Arial" ))
@@ -416,18 +436,8 @@ applicable agreement for further details.
 	(pt 656 184)
 )
 (connector
-	(text "flush" (rect 622 176 645 186)(font "Arial" ))
-	(pt 656 184)
-	(pt 608 184)
-)
-(connector
 	(pt 656 280)
 	(pt 656 288)
-)
-(connector
-	(text "flush" (rect 622 280 645 290)(font "Arial" ))
-	(pt 656 288)
-	(pt 608 288)
 )
 (connector
 	(text "vcc" (rect 352 160 369 170)(font "Arial" ))
@@ -467,18 +477,8 @@ applicable agreement for further details.
 	(pt 656 392)
 )
 (connector
-	(text "flush" (rect 622 384 645 394)(font "Arial" ))
-	(pt 656 392)
-	(pt 608 392)
-)
-(connector
 	(pt 656 488)
 	(pt 656 496)
-)
-(connector
-	(text "flush" (rect 622 488 645 498)(font "Arial" ))
-	(pt 656 496)
-	(pt 608 496)
 )
 (connector
 	(text "vcc" (rect 600 352 617 362)(font "Arial" ))
@@ -509,4 +509,29 @@ applicable agreement for further details.
 	(text "BranchOut[0]" (rect 696 424 758 434)(font "Arial" ))
 	(pt 736 432)
 	(pt 688 432)
+)
+(connector
+	(text "flushinv" (rect 398 104 435 114)(font "Arial" ))
+	(pt 384 112)
+	(pt 432 112)
+)
+(connector
+	(text "flushinv" (rect 622 176 659 186)(font "Arial" ))
+	(pt 656 184)
+	(pt 608 184)
+)
+(connector
+	(text "flushinv" (rect 622 280 659 290)(font "Arial" ))
+	(pt 656 288)
+	(pt 608 288)
+)
+(connector
+	(text "flushinv" (rect 622 384 659 394)(font "Arial" ))
+	(pt 656 392)
+	(pt 608 392)
+)
+(connector
+	(text "flushinv" (rect 622 488 659 498)(font "Arial" ))
+	(pt 656 496)
+	(pt 608 496)
 )

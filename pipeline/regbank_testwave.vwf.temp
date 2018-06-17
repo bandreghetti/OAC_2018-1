@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -1227,7 +1228,7 @@ TRANSITION_LIST("ARegAddr[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1245,7 +1246,7 @@ TRANSITION_LIST("ARegAddr[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1254,7 +1255,7 @@ TRANSITION_LIST("ARegAddr[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1632,9 +1633,7 @@ TRANSITION_LIST("WriteAddr[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 660.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1652,9 +1651,7 @@ TRANSITION_LIST("WriteAddr[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 660.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1663,9 +1660,7 @@ TRANSITION_LIST("WriteAddr[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 300.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 660.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1674,7 +1669,9 @@ TRANSITION_LIST("WriteAddr[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 300.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 660.0;
 	}
 }
 

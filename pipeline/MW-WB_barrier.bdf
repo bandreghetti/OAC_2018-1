@@ -148,6 +148,22 @@ applicable agreement for further details.
 	)
 )
 (symbol
+	(rect -8 48 8 80)
+	(text "VCC" (rect 0 4 9 25)(font "Arial" (font_size 6))(vertical))
+	(text "inst3" (rect 5 6 15 29)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 28 18)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 7 4 18 13)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 16 16)(pt 8 16))
+	)
+	(drawing
+		(line (pt 8 24)(pt 8 8))
+	)
+	(rotate90)
+)
+(symbol
 	(rect 272 32 480 160)
 	(text "reg32" (rect 5 0 40 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 114 25 124)(font "Arial" ))
@@ -175,8 +191,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
-		(text "FLUSH" (rect 21 75 65 87)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 21 75 83 87)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
@@ -218,8 +234,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
-		(text "FLUSH" (rect 21 75 65 87)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 21 75 83 87)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
@@ -261,8 +277,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
-		(text "FLUSH" (rect 21 75 65 87)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 21 75 83 87)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
@@ -275,22 +291,6 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 176 112))
 	)
-)
-(symbol
-	(rect -8 48 8 80)
-	(text "VCC" (rect 0 4 9 25)(font "Arial" (font_size 6))(vertical))
-	(text "inst3" (rect 5 6 15 29)(font "Arial" )(vertical)(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 28 18)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 7 4 18 13)(font "Courier New" (bold))(vertical)(invisible))
-		(line (pt 16 16)(pt 8 16))
-	)
-	(drawing
-		(line (pt 8 24)(pt 8 8))
-	)
-	(rotate90)
 )
 (connector
 	(text "vcc" (rect 247 72 264 82)(font "Arial" ))

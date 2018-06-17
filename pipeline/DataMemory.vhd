@@ -102,7 +102,7 @@ BEGIN
 		outdata_aclr_a => "NONE",
 		outdata_reg_a => "UNREGISTERED",
 		power_up_uninitialized => "FALSE",
-		read_during_write_mode_port_a => "DONT_CARE",
+		read_during_write_mode_port_a => "NEW_DATA_NO_NBE_READ",
 		widthad_a => 16,
 		width_a => 32,
 		width_byteena_a => 1
@@ -145,7 +145,7 @@ END SYN;
 -- Retrieval info: PRIVATE: MIFfilename STRING "PipelineData.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "65536"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
--- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "2"
+-- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
 -- Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 -- Retrieval info: PRIVATE: RegData NUMERIC "1"
 -- Retrieval info: PRIVATE: RegOutput NUMERIC "0"
@@ -168,7 +168,7 @@ END SYN;
 -- Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
 -- Retrieval info: CONSTANT: OUTDATA_REG_A STRING "UNREGISTERED"
 -- Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
--- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_A STRING "DONT_CARE"
+-- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_A STRING "NEW_DATA_NO_NBE_READ"
 -- Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "16"
 -- Retrieval info: CONSTANT: WIDTH_A NUMERIC "32"
 -- Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"

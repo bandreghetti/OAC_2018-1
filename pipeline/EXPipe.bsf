@@ -54,8 +54,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "OpALU[1..0]" (rect 0 0 73 12)(font "Arial" (font_size 8)))
-		(text "OpALU[1..0]" (rect 21 91 94 103)(font "Arial" (font_size 8)))
+		(text "OpALU[2..0]" (rect 0 0 73 12)(font "Arial" (font_size 8)))
+		(text "OpALU[2..0]" (rect 21 91 94 103)(font "Arial" (font_size 8)))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
@@ -75,8 +75,8 @@ applicable agreement for further details.
 	(port
 		(pt 224 64)
 		(output)
-		(text "OpALUOut[1..0]" (rect 0 0 94 12)(font "Arial" (font_size 8)))
-		(text "OpALUOut[1..0]" (rect 109 59 203 71)(font "Arial" (font_size 8)))
+		(text "OpALUOut[2..0]" (rect 0 0 94 12)(font "Arial" (font_size 8)))
+		(text "OpALUOut[2..0]" (rect 109 59 203 71)(font "Arial" (font_size 8)))
 		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(drawing

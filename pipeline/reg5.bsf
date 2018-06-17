@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
-		(text "FLUSH" (rect 21 75 65 87)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "FLUSHreg" (rect 21 75 83 87)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
