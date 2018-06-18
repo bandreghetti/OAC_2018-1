@@ -309,7 +309,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 880 48 1078 64)
+	(rect 872 48 1070 64)
 	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
 	(text "INSTRUCTION[31..0]" (rect 90 0 192 10)(font "Arial" ))
 	(pt 0 8)
@@ -357,7 +357,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2024 -320 2200 -304)
+	(rect 2032 -312 2208 -296)
 	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
 	(text "AluSrc" (rect 90 0 123 10)(font "Arial" ))
 	(pt 0 8)
@@ -2834,27 +2834,6 @@ applicable agreement for further details.
 	(pt 192 80)
 )
 (connector
-	(pt 872 56)
-	(pt 880 56)
-	(bus)
-)
-(connector
-	(pt 872 16)
-	(pt 872 56)
-	(bus)
-)
-(connector
-	(pt 864 16)
-	(pt 872 16)
-	(bus)
-)
-(connector
-	(text "instr[31..0]" (rect 879 0 928 10)(font "Arial" ))
-	(pt 872 16)
-	(pt 928 16)
-	(bus)
-)
-(connector
 	(pt 408 0)
 	(pt 664 0)
 	(bus)
@@ -2918,18 +2897,6 @@ applicable agreement for further details.
 	(pt 2160 8)
 	(pt 2296 8)
 	(bus)
-)
-(connector
-	(pt 2024 -312)
-	(pt 1960 -312)
-)
-(connector
-	(pt 1960 -776)
-	(pt 1960 -312)
-)
-(connector
-	(pt 1960 -312)
-	(pt 1960 -24)
 )
 (connector
 	(pt 1296 360)
@@ -3002,12 +2969,46 @@ applicable agreement for further details.
 	(pt 2880 -40)
 	(bus)
 )
+(connector
+	(pt 1960 -304)
+	(pt 2032 -304)
+)
+(connector
+	(pt 1960 -776)
+	(pt 1960 -304)
+)
+(connector
+	(pt 1960 -304)
+	(pt 1960 -24)
+)
+(connector
+	(pt 864 16)
+	(pt 864 56)
+	(bus)
+)
+(connector
+	(text "instr[31..0]" (rect 879 0 928 10)(font "Arial" ))
+	(pt 864 16)
+	(pt 928 16)
+	(bus)
+)
+(connector
+	(pt 880 56)
+	(pt 872 56)
+	(bus)
+)
+(connector
+	(pt 872 56)
+	(pt 864 56)
+	(bus)
+)
 (junction (pt 560 -216))
 (junction (pt 1880 0))
-(junction (pt 872 16))
 (junction (pt 2192 -24))
 (junction (pt 2160 8))
-(junction (pt 1960 -312))
 (junction (pt 2576 -40))
 (junction (pt 2264 -128))
+(junction (pt 1960 -304))
+(junction (pt 864 16))
+(junction (pt 872 56))
 (text "clk" (rect 306 64 320 74)(font "Arial" ))
