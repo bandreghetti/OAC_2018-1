@@ -38,20 +38,6 @@ applicable agreement for further details.
 		(line (pt 0 536)(pt 16 536))
 	)
 	(port
-		(pt 0 112)
-		(input)
-		(text "MemRead[31..0]" (rect 0 0 97 12)(font "Arial" (font_size 8)))
-		(text "MemRead[31..0]" (rect 21 107 118 119)(font "Arial" (font_size 8)))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 240)
-		(input)
-		(text "ALUVal[31..0]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
-		(text "ALUVal[31..0]" (rect 21 235 102 247)(font "Arial" (font_size 8)))
-		(line (pt 0 240)(pt 16 240)(line_width 3))
-	)
-	(port
 		(pt 0 440)
 		(input)
 		(text "WBAddr[4..0]" (rect 0 0 79 12)(font "Arial" (font_size 8)))
@@ -59,18 +45,11 @@ applicable agreement for further details.
 		(line (pt 0 440)(pt 16 440)(line_width 3))
 	)
 	(port
-		(pt 264 80)
-		(output)
-		(text "MemReadOut[31..0]" (rect -8 0 110 12)(font "Arial" (font_size 8)))
-		(text "MemReadOut[31..0]" (rect 125 75 243 87)(font "Arial" (font_size 8)))
-		(line (pt 264 80)(pt 248 80)(line_width 3))
-	)
-	(port
-		(pt 264 64)
-		(output)
-		(text "ALUValOut[31..0]" (rect -8 0 94 12)(font "Arial" (font_size 8)))
-		(text "ALUValOut[31..0]" (rect 141 59 243 71)(font "Arial" (font_size 8)))
-		(line (pt 264 64)(pt 248 64)(line_width 3))
+		(pt 0 104)
+		(input)
+		(text "WBVal[31..0]" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "WBVal[31..0]" (rect 21 99 98 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104)(line_width 3))
 	)
 	(port
 		(pt 264 456)
@@ -78,6 +57,13 @@ applicable agreement for further details.
 		(text "WBAddrOut[4..0]" (rect -8 0 92 12)(font "Arial" (font_size 8)))
 		(text "WBAddrOut[4..0]" (rect 143 451 243 463)(font "Arial" (font_size 8)))
 		(line (pt 264 456)(pt 248 456)(line_width 3))
+	)
+	(port
+		(pt 264 408)
+		(output)
+		(text "WBValOut[31..0]" (rect -8 0 89 12)(font "Arial" (font_size 8)))
+		(text "WBValOut[31..0]" (rect 141 403 238 415)(font "Arial" (font_size 8)))
+		(line (pt 264 408)(pt 248 408)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 248 568))
