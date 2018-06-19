@@ -45,11 +45,11 @@ applicable agreement for further details.
 		(line (pt 0 832)(pt 16 832))
 	)
 	(port
-		(pt 0 328)
+		(pt 0 424)
 		(input)
 		(text "OpB[31..0]" (rect 0 -8 63 4)(font "Arial" (font_size 8)))
-		(text "OpB[31..0]" (rect 21 323 84 335)(font "Arial" (font_size 8)))
-		(line (pt 0 328)(pt 16 328)(line_width 3))
+		(text "OpB[31..0]" (rect 21 419 84 431)(font "Arial" (font_size 8)))
+		(line (pt 0 424)(pt 16 424)(line_width 3))
 	)
 	(port
 		(pt 0 736)

@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 192 152 360 168)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "IDRt[4..0]" (rect 5 0 50 10)(font "Arial" ))
+	(text "IDRt[4..0]" (rect 5 0 49 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 192 88 360 104)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "MEMRd[4..0]" (rect 5 0 68 10)(font "Arial" ))
+	(text "MEMRd[4..0]" (rect 5 0 67 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
