@@ -1,0 +1,13 @@
+DEPTH = 4096;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+00000000 : 8c080010;  % 2: 	lw $t0, 0x00000010 %
+00000001 : 01084020;  % 3: 	add $t0, $t0, $t0 %
+00000002 : 39090000;  % 4: 	xori $t1, $t0, 0 %
+00000003 : 3909ffff;  % 5: 	xori $t1, $t0, 0x0000FFFF %
+
+END;

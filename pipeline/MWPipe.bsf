@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 232 144)
+	(rect 16 16 232 176)
 	(text "MWPipe" (rect 5 0 55 12)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 114 25 124)(font "Arial" ))
+	(text "inst" (rect 8 146 25 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -47,16 +47,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "MemRead" (rect 0 0 61 12)(font "Arial" (font_size 8)))
-		(text "MemRead" (rect 21 75 82 87)(font "Arial" (font_size 8)))
+		(text "STALL" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "STALL" (rect 21 75 62 87)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 0 96)
 		(input)
+		(text "MemRead" (rect 0 0 61 12)(font "Arial" (font_size 8)))
+		(text "MemRead" (rect 21 91 82 103)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
 		(text "Branch[1..0]" (rect 0 0 71 12)(font "Arial" (font_size 8)))
-		(text "Branch[1..0]" (rect 21 91 92 103)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
+		(text "Branch[1..0]" (rect 21 107 92 119)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 216 32)
@@ -80,6 +87,6 @@ applicable agreement for further details.
 		(line (pt 216 64)(pt 200 64)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 200 112))
+		(rectangle (rect 16 16 200 144))
 	)
 )

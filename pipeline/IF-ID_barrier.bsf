@@ -23,13 +23,7 @@ applicable agreement for further details.
 	(rect 64 64 264 616)
 	(text "IF-ID_barrier" (rect 5 0 80 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 122)(font "Arial" ))
-	(port
-		(pt 0 520)
-		(input)
-		(text "CLK" (rect 0 0 28 12)(font "Arial" (font_size 8)))
-		(text "CLK" (rect 21 515 49 527)(font "Arial" (font_size 8)))
-		(line (pt 0 520)(pt 16 520))
-	)
+	
 	(port
 		(pt 0 48)
 		(input)
@@ -45,11 +39,25 @@ applicable agreement for further details.
 		(line (pt 0 264)(pt 16 264)(line_width 3))
 	)
 	(port
+		(pt 0 488)
+		(input)
+		(text "STALL" (rect 0 0 60 12)(font "Arial" (font_size 8)))
+		(text "STALL" (rect 21 483 81 495)(font "Arial" (font_size 8)))
+		(line (pt 0 488)(pt 16 488))
+	)
+	(port
 		(pt 0 504)
 		(input)
 		(text "FLUSH" (rect 0 0 44 12)(font "Arial" (font_size 8)))
 		(text "FLUSH" (rect 21 499 65 511)(font "Arial" (font_size 8)))
 		(line (pt 0 504)(pt 16 504))
+	)
+	(port
+		(pt 0 520)
+		(input)
+		(text "CLK" (rect 0 0 28 12)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 515 49 527)(font "Arial" (font_size 8)))
+		(line (pt 0 520)(pt 16 520))
 	)
 	(port
 		(pt 200 144)

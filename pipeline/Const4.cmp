@@ -13,12 +13,9 @@
 --applicable agreement for further details.
 
 
-component Mux2_5bits
+component Const4
 	PORT
 	(
-		data0x		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-		data1x		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
-		sel		: IN STD_LOGIC ;
 		result		: OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
 	);
 end component;
