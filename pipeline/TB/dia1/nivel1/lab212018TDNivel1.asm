@@ -1,5 +1,5 @@
 .data
-a: .word 1, 2, 3
+a: .word 0xfffffffa, 0x00000004, 0x00000010
 b: .word 3, 2, 1
 
 .text
