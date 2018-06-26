@@ -344,6 +344,22 @@ applicable agreement for further details.
 	)
 	(rotate270)
 )
+(symbol
+	(rect 488 120 504 152)
+	(text "VCC" (rect 0 4 9 25)(font "Arial" (font_size 6))(vertical))
+	(text "inst5" (rect 5 6 15 29)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 28 18)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 7 4 18 13)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 16 16)(pt 8 16))
+	)
+	(drawing
+		(line (pt 8 24)(pt 8 8))
+	)
+	(rotate90)
+)
 (connector
 	(pt 544 168)
 	(pt 536 168)
@@ -375,11 +391,6 @@ applicable agreement for further details.
 	(text "badaddr" (rect 425 272 465 282)(font "Arial" ))
 	(pt 424 280)
 	(pt 480 280)
-)
-(connector
-	(text "badaddr" (rect 505 136 545 146)(font "Arial" ))
-	(pt 544 136)
-	(pt 504 136)
 )
 (connector
 	(text "badaddr" (rect 577 264 617 274)(font "Arial" ))
@@ -441,4 +452,8 @@ applicable agreement for further details.
 (connector
 	(pt 376 432)
 	(pt 376 416)
+)
+(connector
+	(pt 504 136)
+	(pt 544 136)
 )
