@@ -4,7 +4,7 @@
 -- MODULE: LPM_CONSTANT 
 
 -- ============================================================
--- File Name: Const4.vhd
+-- File Name: ExceptionAddr.vhd
 -- Megafunction Name(s):
 -- 			LPM_CONSTANT
 --
@@ -33,48 +33,48 @@
 --applicable agreement for further details.
 
 
---lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=00000004 LPM_WIDTH=32 result
+--lpm_constant CBX_AUTO_BLACKBOX="ALL" ENABLE_RUNTIME_MOD="NO" LPM_CVALUE=80000080 LPM_WIDTH=32 result
 --VERSION_BEGIN 13.0 cbx_lpm_constant 2013:04:24:18:05:30:SJ cbx_mgl 2013:04:24:18:40:34:SJ  VERSION_END
 
 --synthesis_resources = 
  LIBRARY ieee;
  USE ieee.std_logic_1164.all;
 
- ENTITY  Const4_lpm_constant_v09 IS 
+ ENTITY  ExceptionAddr_lpm_constant_b19 IS 
 	 PORT 
 	 ( 
 		 result	:	OUT  STD_LOGIC_VECTOR (31 DOWNTO 0)
 	 ); 
- END Const4_lpm_constant_v09;
+ END ExceptionAddr_lpm_constant_b19;
 
- ARCHITECTURE RTL OF Const4_lpm_constant_v09 IS
+ ARCHITECTURE RTL OF ExceptionAddr_lpm_constant_b19 IS
 
  BEGIN
 
-	result <= "00000000000000000000000000000100";
+	result <= "10000000000000000000000010000000";
 
- END RTL; --Const4_lpm_constant_v09
+ END RTL; --ExceptionAddr_lpm_constant_b19
 --VALID FILE
 
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY Const4 IS
+ENTITY ExceptionAddr IS
 	PORT
 	(
 		result		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-END Const4;
+END ExceptionAddr;
 
 
-ARCHITECTURE RTL OF const4 IS
+ARCHITECTURE RTL OF exceptionaddr IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (31 DOWNTO 0);
 
 
 
-	COMPONENT Const4_lpm_constant_v09
+	COMPONENT ExceptionAddr_lpm_constant_b19
 	PORT (
 			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
@@ -83,7 +83,7 @@ ARCHITECTURE RTL OF const4 IS
 BEGIN
 	result    <= sub_wire0(31 DOWNTO 0);
 
-	Const4_lpm_constant_v09_component : Const4_lpm_constant_v09
+	ExceptionAddr_lpm_constant_b19_component : ExceptionAddr_lpm_constant_b19
 	PORT MAP (
 		result => sub_wire0
 	);
@@ -98,20 +98,20 @@ END RTL;
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
--- Retrieval info: PRIVATE: Radix NUMERIC "10"
+-- Retrieval info: PRIVATE: Radix NUMERIC "16"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: Value NUMERIC "4"
+-- Retrieval info: PRIVATE: Value NUMERIC "2147483776"
 -- Retrieval info: PRIVATE: nBit NUMERIC "32"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "4"
+-- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "2147483776"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
 -- Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 -- Retrieval info: CONNECT: result 0 0 32 0 @result 0 0 32 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL Const4.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL Const4.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL Const4.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL Const4.bsf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL Const4_inst.vhd FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ExceptionAddr.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ExceptionAddr.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ExceptionAddr.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ExceptionAddr.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ExceptionAddr_inst.vhd FALSE

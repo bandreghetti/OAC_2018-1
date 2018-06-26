@@ -31,6 +31,13 @@ applicable agreement for further details.
 		(line (pt 0 88)(pt 16 88))
 	)
 	(port
+		(pt 0 760)
+		(input)
+		(text "STALL" (rect 0 -16 60 -4)(font "Arial" (font_size 8)))
+		(text "STALL" (rect 21 755 81 767)(font "Arial" (font_size 8)))
+		(line (pt 0 760)(pt 16 760))
+	)
+	(port
 		(pt 0 776)
 		(input)
 		(text "FLUSH" (rect 0 -16 44 -4)(font "Arial" (font_size 8)))

@@ -13,7 +13,7 @@
 --applicable agreement for further details.
 
 
-component Const4
+component ExceptionAddr
 	PORT
 	(
 		result		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
