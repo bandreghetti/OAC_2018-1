@@ -452,6 +452,22 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 96 96 272 112)
+	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
+	(text "IFINST[31..0]" (rect 90 0 153 10)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 4352 -104 4536 88)
 	(text "ULA_Full" (rect 5 0 60 12)(font "Arial" (font_size 8)))
@@ -5146,11 +5162,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 48 -8)
-	(pt 256 -8)
-	(bus)
-)
-(connector
 	(pt 224 40)
 	(pt 240 40)
 	(bus)
@@ -5569,6 +5580,26 @@ applicable agreement for further details.
 	(pt 5640 88)
 	(bus)
 )
+(connector
+	(pt 96 104)
+	(pt 80 104)
+	(bus)
+)
+(connector
+	(pt 80 104)
+	(pt 80 -8)
+	(bus)
+)
+(connector
+	(pt 48 -8)
+	(pt 80 -8)
+	(bus)
+)
+(connector
+	(pt 80 -8)
+	(pt 256 -8)
+	(bus)
+)
 (junction (pt 1432 360))
 (junction (pt 2128 368))
 (junction (pt 2128 424))
@@ -5585,4 +5616,5 @@ applicable agreement for further details.
 (junction (pt 6336 -40))
 (junction (pt 6800 -248))
 (junction (pt 6248 -8))
+(junction (pt 80 -8))
 (text "clk" (rect -54 64 -40 74)(font "Arial" ))
