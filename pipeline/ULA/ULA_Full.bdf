@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -16 224 160 240)
+	(rect -256 248 -80 264)
 	(text "INPUT" (rect 133 0 162 9)(font "Arial" (font_size 6)))
 	(text "Direction" (rect 9 0 52 10)(font "Arial" ))
 	(pt 176 8)
@@ -274,7 +274,7 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 304 456 480 552)
-	(text "Divide1" (rect 69 0 122 15)(font "Arial" (font_size 10)))
+	(text "Divide1" (rect 69 0 120 15)(font "Arial" (font_size 10)))
 	(text "inst3" (rect 8 80 31 90)(font "Arial" ))
 	(port
 		(pt 0 24)
@@ -436,7 +436,7 @@ applicable agreement for further details.
 (symbol
 	(rect 720 88 864 168)
 	(text "Mux2" (rect 57 65 95 80)(font "Arial" (font_size 10)))
-	(text "inst1" (rect 8 5 31 15)(font "Arial" ))
+	(text "inst1" (rect 8 5 30 15)(font "Arial" ))
 	(port
 		(pt 0 40)
 		(input)
@@ -576,6 +576,31 @@ applicable agreement for further details.
 		(line (pt 0 80)(pt 0 80))
 	)
 	(flipx)
+)
+(symbol
+	(rect -64 240 -16 272)
+	(text "NOT" (rect 1 0 22 9)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 3 21 26 31)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 17 18)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 54 18)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 54 18)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
 )
 (connector
 	(pt 544 496)
@@ -778,10 +803,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 304 232)
-	(pt 160 232)
-)
-(connector
 	(pt 304 216)
 	(pt 160 216)
 	(bus)
@@ -796,6 +817,22 @@ applicable agreement for further details.
 	(pt 168 368)
 	(bus)
 )
+(connector
+	(pt -80 256)
+	(pt -64 256)
+)
+(connector
+	(pt 304 232)
+	(pt 0 232)
+)
+(connector
+	(pt -16 256)
+	(pt 0 256)
+)
+(connector
+	(pt 0 256)
+	(pt 0 232)
+)
 (junction (pt 208 336))
 (junction (pt 168 368))
 (junction (pt 560 352))
@@ -804,5 +841,5 @@ applicable agreement for further details.
 (junction (pt 208 112))
 (junction (pt 256 280))
 (junction (pt 168 200))
-(text "Shift para esquerda=1" (rect 488 232 617 244)(font "Arial" (font_size 8)))
+(text "Shift para esquerda=1" (rect 488 232 616 244)(font "Arial" (font_size 8)))
 (text "Shift para direita=0" (rect 488 248 598 260)(font "Arial" (font_size 8)))
