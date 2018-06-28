@@ -26,7 +26,7 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "address[11..0]" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "address[11..0]" (rect 0 0 82 12)(font "Arial" (font_size 8)))
 		(text "address[11..0]" (rect 4 20 75 31)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 88 32)(line_width 3))
 	)

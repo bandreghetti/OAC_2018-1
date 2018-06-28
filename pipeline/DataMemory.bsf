@@ -34,7 +34,7 @@ applicable agreement for further details.
 		(pt 0 48)
 		(input)
 		(text "wren" (rect 0 0 29 12)(font "Arial" (font_size 8)))
-		(text "wren" (rect 4 36 30 47)(font "Arial" (font_size 8)))
+		(text "wren" (rect 4 36 29 47)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 88 48))
 	)
 	(port
